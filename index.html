@@ -194,7 +194,7 @@
         </div>
         <div class="asana-meta">
           <div class="live-badge"><i class="ti ti-brand-asana"></i> Live from Asana</div>
-          <div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> Last updated May 14, 2026 at 02:21 PM CT · 38 of 128 tasks complete</div>
+          <div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> Last updated May 14, 2026 at 03:28 PM CT · 42 of 129 tasks complete</div>
         </div>
       </div>
 
@@ -202,7 +202,7 @@
         <div class="sec-label">Today's focus</div>
         <div class="focus-card">
           <p class="focus-text">The NFL data integration reached a critical inflection point on May 14 — Zach launched data sync to prod, David set up maples, and Jon pushed initial site updates, all sequentially dependent — any slip delays the NFL section going live.</p>
-          <div class="focus-meta"><i class="ti ti-sparkles"></i> AI-synthesized from 2026-05 Product Sprint · 90 open tasks</div>
+          <div class="focus-meta"><i class="ti ti-sparkles"></i> AI-synthesized from 2026-05 Product Sprint · 87 open tasks</div>
         </div>
       </div>
 
@@ -214,9 +214,9 @@
             <div class="attn-bar u-high"></div>
             <div class="attn-body">
               <div class="attn-title">NFL launch cluster — 8 tasks due May 14–15 across 3 people</div>
-              <div class="attn-why">David, Zach, and Jon all have sequentially dependent NFL launch tasks due May 14–15. No single owner; coordination risk is real.</div>
+              <div class="attn-why">David ran dev scripts May 14 night. Zach is running prod scripts May 15. Jon has site updates due May 15. Final step is period characters going live — Zach confirmed for May 15 morning.</div>
               <div class="attn-footer">
-                <div class="attn-action">Confirm all three are sequenced correctly for NFL go-live</div>
+                <div class="attn-action">Confirm with Zach that prod scripts and period characters are live May 15</div>
                 <div style="display:flex;align-items:center;gap:6px">
                   <span class="src-tag"><i class="ti ti-brand-asana"></i> Asana</span>
                   <span class="tag t-risk">Launch risk</span>
@@ -381,7 +381,7 @@
         </div>
         <div class="asana-meta">
           <div class="live-badge"><i class="ti ti-brand-asana"></i> Live from Asana</div>
-          <div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> Last updated May 14, 2026 at 02:21 PM CT</div>
+          <div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> Last updated May 14, 2026 at 03:28 PM CT</div>
         </div>
       </div>
 
@@ -409,10 +409,10 @@
         <div style="background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:14px 16px">
           <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-secondary);margin-bottom:6px">
             <span>Overall sprint progress</span>
-            <span style="font-weight:500;color:var(--text-primary)">38 / 128 tasks</span>
+            <span style="font-weight:500;color:var(--text-primary)">42 / 129 tasks</span>
           </div>
           <div style="height:8px;background:var(--bg-secondary);border-radius:4px;overflow:hidden">
-            <div style="height:100%;width:30%;background:var(--green);border-radius:4px"></div>
+            <div style="height:100%;width:33%;background:var(--green);border-radius:4px"></div>
           </div>
         </div>
       </div>
@@ -536,7 +536,7 @@
         <div><h1>Priorities</h1><div class="hdr-sub">2026-05 Product Sprint + Q2 Ops & Marketing · three-tier view</div></div>
         <div class="asana-meta">
           <div class="live-badge"><i class="ti ti-brand-asana"></i> Live from Asana</div>
-          <div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> Last updated May 14, 2026 at 02:21 PM CT · 2 projects</div>
+          <div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> Last updated May 14, 2026 at 03:28 PM CT · 2 projects</div>
         </div>
       </div>
 
@@ -649,34 +649,78 @@
         </div>
       </div>
 
-      <!-- Ownership confusion flag -->
+      <!-- Ownership conflicts flag -->
       <div class="sec">
-        <div class="sec-label" style="display:flex;align-items:center;gap:6px;color:var(--text-warning)"><i class="ti ti-alert-triangle" style="font-size:13px;color:var(--amber)"></i> Ownership conflicts — needs clarification</div>
-        <div class="proj-tbl">
-          <div class="pr hdr"><div>Area</div><div colspan="2">Who has tasks</div><div>What's missing</div><div>Source</div></div>
+        <div class="sec-label" style="display:flex;align-items:center;gap:6px"><i class="ti ti-alert-triangle" style="font-size:13px;color:var(--amber)"></i> Ownership conflicts — needs clarification</div>
 
-          <div class="pr" style="background:var(--bg-warning);background:rgba(239,159,39,0.05)">
-            <div><div class="pname">Discord</div><div style="font-size:10px;color:var(--text-tertiary);margin-top:2px">4 people, no single owner</div></div>
-            <div style="font-size:11px;color:var(--text-secondary)" colspan="2">Brock (bots, gating) · Jason (messaging) · Jon (verification system) · Tom (account linking decisions)</div>
-            <div><span class="tag t-risk">No clear owner</span></div>
-            <div style="font-size:10px;color:var(--text-tertiary)">Both projects</div>
+        <div class="attn-card">
+          <div class="attn-main" onclick="toggleDrawer('oc1',this)">
+            <div class="attn-bar u-high"></div>
+            <div class="attn-body">
+              <div class="attn-title">Discord — 4 people have tasks, no single owner</div>
+              <div class="attn-why">Brock owns bots and gating. Jason owns messaging. Jon owns the verification system. Tom owns account linking decisions. These are related but split across both projects with no one accountable for the whole.</div>
+              <div class="attn-footer">
+                <div class="attn-action">Assign a single Discord owner and clarify who covers what</div>
+                <div style="display:flex;align-items:center;gap:6px">
+                  <span class="tag t-risk">No clear owner</span>
+                  <button class="toggle-btn" id="btn-oc1"><i class="ti ti-list"></i> 6 tasks <i class="ti ti-chevron-down chevron"></i></button>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div class="pr" style="background:rgba(239,159,39,0.05)">
-            <div><div class="pname">YouTube strategy</div><div style="font-size:10px;color:var(--text-tertiary);margin-top:2px">Strategy reset done, execution plan unclear</div></div>
-            <div style="font-size:11px;color:var(--text-secondary)" colspan="2">Jason (reset strategy task done) · Brock (leverage recorded content) · No one owns production execution</div>
-            <div><span class="tag t-risk">Gap in execution</span></div>
-            <div style="font-size:10px;color:var(--text-tertiary)">Q2 Ops</div>
+          <div class="task-drawer hidden" id="oc1">
+            <div class="task-row"><div class="task-name">Build Discord bot(s)</div><div class="task-owner">Brock Bormann</div><div class="task-due due-ok">No date</div><a href="https://app.asana.com/1/3989879828064/project/1214137063402957/task/1214137290018240" target="_blank" style="font-size:10px;color:#1a56db;white-space:nowrap;text-decoration:none"><i class="ti ti-external-link" style="font-size:11px"></i> Asana</a></div>
+            <div class="task-row"><div class="task-name">Discord Gating Complete</div><div class="task-owner">Brock Bormann</div><div class="task-due due-ok">Jun 30</div><a href="https://app.asana.com/1/3989879828064/project/1214137063402957/task/1214433966638209" target="_blank" style="font-size:10px;color:#1a56db;white-space:nowrap;text-decoration:none"><i class="ti ti-external-link" style="font-size:11px"></i> Asana</a></div>
+            <div class="task-row"><div class="task-name">Manage Discord messaging</div><div class="task-owner">Jason Lisk</div><div class="task-due due-ok">Jun 30</div><a href="https://app.asana.com/1/3989879828064/project/1214137063402957/task/1214137361945502" target="_blank" style="font-size:10px;color:#1a56db;white-space:nowrap;text-decoration:none"><i class="ti ti-external-link" style="font-size:11px"></i> Asana</a></div>
+            <div class="task-row"><div class="task-name">Discord Channel Planning and Summer Content Planning</div><div class="task-owner">Jason Lisk</div><div class="task-due due-ok">May 29</div><a href="https://app.asana.com/1/3989879828064/project/1214137063402957/task/1214137403045543" target="_blank" style="font-size:10px;color:#1a56db;white-space:nowrap;text-decoration:none"><i class="ti ti-external-link" style="font-size:11px"></i> Asana</a></div>
+            <div class="task-row"><div class="task-name">Finalize and release Discord verification system</div><div class="task-owner">Jon Mires</div><div class="task-due due-ok">No date</div><a href="https://app.asana.com/1/3989879828064/project/1214266155771815/task/1211486477122493" target="_blank" style="font-size:10px;color:#1a56db;white-space:nowrap;text-decoration:none"><i class="ti ti-external-link" style="font-size:11px"></i> Asana</a></div>
+            <div class="task-row"><div class="task-name">Finalize plan/decisions for Discord account linking</div><div class="task-owner">Tom Federico</div><div class="task-due due-ok">No date</div><a href="https://app.asana.com/1/3989879828064/project/1214266155771815/task/1211668543540575" target="_blank" style="font-size:10px;color:#1a56db;white-space:nowrap;text-decoration:none"><i class="ti ti-external-link" style="font-size:11px"></i> Asana</a></div>
           </div>
-
-          <div class="pr" style="background:rgba(239,159,39,0.05)">
-            <div><div class="pname">Discord channel planning</div><div style="font-size:10px;color:var(--text-tertiary);margin-top:2px">In TO DISCUSS/DECIDE — overdue May 6</div></div>
-            <div style="font-size:11px;color:var(--text-secondary)" colspan="2">Unassigned task in decision queue — no owner, was due May 6</div>
-            <div><span class="tag t-blocker">Overdue + unassigned</span></div>
-            <div style="font-size:10px;color:var(--text-tertiary)">Q2 Ops</div>
-          </div>
-
         </div>
+
+        <div class="attn-card">
+          <div class="attn-main" onclick="toggleDrawer('oc2',this)">
+            <div class="attn-bar u-med"></div>
+            <div class="attn-body">
+              <div class="attn-title">YouTube — strategy reset done, execution ownership unclear</div>
+              <div class="attn-why">Jason owns the strategy reset and external show bookings. Brock owns leveraging recorded content and reducing production costs. No one owns end-to-end production execution or the channel itself.</div>
+              <div class="attn-footer">
+                <div class="attn-action">Clarify who owns YouTube production execution vs. strategy</div>
+                <div style="display:flex;align-items:center;gap:6px">
+                  <span class="tag t-risk">Gap in execution</span>
+                  <button class="toggle-btn" id="btn-oc2"><i class="ti ti-list"></i> 4 tasks <i class="ti ti-chevron-down chevron"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="task-drawer hidden" id="oc2">
+            <div class="task-row"><div class="task-name">Reset YouTube content strategy — evergreen focus, no more betting picks / bracketology on PG</div><div class="task-owner">Jason Lisk</div><div class="task-due due-over">Apr 24</div><a href="https://app.asana.com/1/3989879828064/project/1214137063402957/task/1214137403624214" target="_blank" style="font-size:10px;color:#1a56db;white-space:nowrap;text-decoration:none"><i class="ti ti-external-link" style="font-size:11px"></i> Asana</a></div>
+            <div class="task-row"><div class="task-name">Book Jason on more external shows</div><div class="task-owner">Jason Lisk</div><div class="task-due due-ok">Jun 30</div><a href="https://app.asana.com/1/3989879828064/project/1214137063402957/task/1214137290347887" target="_blank" style="font-size:10px;color:#1a56db;white-space:nowrap;text-decoration:none"><i class="ti ti-external-link" style="font-size:11px"></i> Asana</a></div>
+            <div class="task-row"><div class="task-name">Better leverage recorded content across channels</div><div class="task-owner">Brock Bormann</div><div class="task-due due-ok">Jun 30</div><a href="https://app.asana.com/1/3989879828064/project/1214137063402957/task/1214137290445065" target="_blank" style="font-size:10px;color:#1a56db;white-space:nowrap;text-decoration:none"><i class="ti ti-external-link" style="font-size:11px"></i> Asana</a></div>
+            <div class="task-row"><div class="task-name">Reduce production costs</div><div class="task-owner">Brock Bormann</div><div class="task-due due-ok">Jun 30</div><a href="https://app.asana.com/1/3989879828064/project/1214137063402957/task/1214137310094862" target="_blank" style="font-size:10px;color:#1a56db;white-space:nowrap;text-decoration:none"><i class="ti ti-external-link" style="font-size:11px"></i> Asana</a></div>
+          </div>
+        </div>
+
+        <div class="attn-card">
+          <div class="attn-main" onclick="toggleDrawer('oc3',this)">
+            <div class="attn-bar u-low"></div>
+            <div class="attn-body">
+              <div class="attn-title">Discord channel planning — now assigned to Jason, due May 29</div>
+              <div class="attn-why">Previously unassigned and overdue in TO DISCUSS/DECIDE. Now assigned to Jason Lisk and moved to Social & Community with a May 29 due date.</div>
+              <div class="attn-footer">
+                <div class="attn-action">No action needed — resolved</div>
+                <div style="display:flex;align-items:center;gap:6px">
+                  <span class="tag t-success" style="background:var(--bg-success);color:var(--text-success)">Resolved</span>
+                  <button class="toggle-btn" id="btn-oc3"><i class="ti ti-list"></i> 1 task <i class="ti ti-chevron-down chevron"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="task-drawer hidden" id="oc3">
+            <div class="task-row"><div class="task-name">Discord Channel Planning and Summer Content Planning</div><div class="task-owner">Jason Lisk</div><div class="task-due due-ok">May 29</div><a href="https://app.asana.com/1/3989879828064/project/1214137063402957/task/1214137403045543" target="_blank" style="font-size:10px;color:#1a56db;white-space:nowrap;text-decoration:none"><i class="ti ti-external-link" style="font-size:11px"></i> Asana</a></div>
+          </div>
+        </div>
+
       </div>
 
       <!-- Tier 3 -->
@@ -805,7 +849,7 @@
     </div>
     <!-- PROJECTS -->
     <div id="page-projects" class="page">
-      <div class="page-header"><div><h1>Projects</h1><div class="hdr-sub">Active initiatives · 2026-05 Product Sprint</div></div><div class="asana-meta"><div class="live-badge"><i class="ti ti-brand-asana"></i> Live from Asana</div><div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> Last updated May 14, 2026 at 02:21 PM CT</div></div></div>
+      <div class="page-header"><div><h1>Projects</h1><div class="hdr-sub">Active initiatives · 2026-05 Product Sprint</div></div><div class="asana-meta"><div class="live-badge"><i class="ti ti-brand-asana"></i> Live from Asana</div><div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> Last updated May 14, 2026 at 03:28 PM CT</div></div></div>
       <div class="proj-tbl">
         <div class="pr hdr"><div>Project</div><div>Health</div><div>Owner</div><div>Progress</div><div>Linked to</div></div>
         <div class="pr"><div><div class="pname">NFL data integration & launch</div></div><div><span class="sp at-risk" style="margin:0">At risk</span></div><div class="pown">David / Zach</div><div><div style="font-size:12px;color:var(--text-secondary)">60%</div><div class="mb"><div class="mf" style="width:60%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">NFL 2026 launch</div></div>
@@ -825,7 +869,7 @@
         <div><h1>Decisions</h1><div class="hdr-sub">Open queue · organized by decision owner · sourced from Slack</div></div>
         <div class="asana-meta">
           <div class="live-badge" style="background:#E8F0FE;color:#1a56db"><i class="ti ti-brand-slack"></i> Sourced from Slack</div>
-          <div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> Last pulled May 14, 2026 at 02:21 PM CT</div>
+          <div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> Last pulled May 14, 2026 at 03:28 PM CT</div>
         </div>
       </div>
 
@@ -950,7 +994,7 @@
         <div><h1>Communications</h1><div class="hdr-sub">Key threads & signals from Slack · most recent activity</div></div>
         <div class="asana-meta">
           <div class="live-badge" style="background:#E8F0FE;color:#1a56db"><i class="ti ti-brand-slack"></i> Live from Slack</div>
-          <div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> Pulled May 14, 2026 at 02:21 PM CT · 19 channels scanned</div>
+          <div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> Pulled May 14, 2026 at 03:28 PM CT · 19 channels scanned</div>
         </div>
       </div>
 
