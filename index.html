@@ -558,8 +558,131 @@
 
     <!-- PLACEHOLDER PAGES -->
     <div id="page-meetings" class="page"><div class="page-header"><div><h1>Meetings</h1><div class="hdr-sub">AI-extracted notes, commitments, and risks</div></div></div><div class="placeholder-page"><i class="ti ti-notes"></i>Upload meeting notes to populate this section.<br>Notes will be parsed for decisions, risks, and commitments.</div></div>
-    <div id="page-decisions" class="page"><div class="page-header"><div><h1>Decisions</h1><div class="hdr-sub">Open queue and full decision log</div></div></div><div class="placeholder-page"><i class="ti ti-checkbox"></i>No open decisions logged yet.<br>Items flagged as decisions from meetings or attention items will appear here.</div></div>
-    <div id="page-insights" class="page"><div class="page-header"><div><h1>Insights</h1><div class="hdr-sub">AI-surfaced patterns, risks, and signals</div></div></div><div class="placeholder-page"><i class="ti ti-sparkles"></i>Insights will generate as more data sources are connected.<br>Upload meeting notes or add more Asana projects to begin.</div></div>
+    <div id="page-decisions" class="page">
+      <div class="page-header">
+        <div><h1>Decisions</h1><div class="hdr-sub">Open queue · organized by decision owner · sourced from Slack</div></div>
+        <div class="asana-meta">
+          <div class="live-badge" style="background:#E8F0FE;color:#1a56db"><i class="ti ti-brand-slack"></i> Sourced from Slack</div>
+          <div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> Last pulled May 14, 2026 at 02:21 PM CT</div>
+        </div>
+      </div>
+
+      <!-- Tom & Brock decisions -->
+      <div class="sec">
+        <div class="sec-label" style="display:flex;align-items:center;gap:8px;font-size:11px">
+          <i class="ti ti-user-check" style="font-size:13px"></i> Decisions for Tom &amp; Brock — 3 open
+        </div>
+
+        <div style="background:var(--bg-primary);border:0.5px solid var(--border-t);border-left:3px solid var(--red);border-radius:var(--radius-lg);padding:16px;margin-bottom:10px">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:12px">
+            <div style="font-size:13px;font-weight:500;color:var(--text-primary)">Pool hosting launch strategy — stealth vs. public, domain, and brand separation</div>
+            <div style="display:flex;gap:6px;flex-shrink:0;align-items:center">
+              <span class="tag t-decision">Open</span>
+              <a href="https://teamrankings.slack.com/archives/C09D42KFX5G/p1778637375070259" target="_blank" style="font-size:10px;color:#1a56db;display:flex;align-items:center;gap:3px;text-decoration:none"><i class="ti ti-brand-slack" style="font-size:12px"></i> #pool-hosting ↗</a>
+            </div>
+          </div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;margin-bottom:10px">Tom shared his position May 12 — play it close to the vest, recruit initial admins directly, possibly launch under a different name/domain with no obvious TR link. The Rahul + Kenny sync was cancelled and has not been rescheduled. Brock has promotion ideas ready when the time comes. No formal decision has been recorded.</div>
+          <div style="font-size:11px;background:var(--purple-bg);border-radius:var(--radius-md);padding:8px 10px;margin-bottom:10px;line-height:1.6;color:var(--text-secondary)"><strong style="color:var(--purple)"><i class="ti ti-sparkles" style="font-size:11px"></i> AI recommendation:</strong> Stealth launch is the right call at this stage. Approve the separate domain approach and schedule the Rahul + Kenny sync before any external steps are taken.</div>
+          <div style="font-size:11px;color:var(--text-tertiary);margin-bottom:10px">Waiting on: Tom, Brock · Open since: May 12</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+            <a href="https://teamrankings.slack.com/archives/C09D42KFX5G/p1778637375070259" target="_blank" style="font-size:12px;font-weight:500;color:white;background:var(--purple);padding:6px 14px;border-radius:var(--radius-md);text-decoration:none;display:flex;align-items:center;gap:6px"><i class="ti ti-brand-slack" style="font-size:13px"></i> Take me there →</a>
+            <div style="display:flex;gap:6px">
+              <button onclick="markDecision(this,'delegated')" style="font-size:11px;padding:5px 12px;border-radius:var(--radius-md);border:0.5px solid var(--border-s);background:transparent;cursor:pointer;color:var(--text-secondary);font-family:var(--font)">Delegate</button>
+              <button onclick="markDecision(this,'deferred')" style="font-size:11px;padding:5px 12px;border-radius:var(--radius-md);border:0.5px solid var(--border-s);background:transparent;cursor:pointer;color:var(--text-secondary);font-family:var(--font)">Defer</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:var(--bg-primary);border:0.5px solid var(--border-t);border-left:3px solid var(--amber);border-radius:var(--radius-lg);padding:16px;margin-bottom:10px">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:12px">
+            <div style="font-size:13px;font-weight:500;color:var(--text-primary)">Select-package A/B test — approve desktop-only rollout and mobile retest plan</div>
+            <div style="display:flex;gap:6px;flex-shrink:0;align-items:center">
+              <span class="tag t-decision">Open</span>
+              <a href="https://teamrankings.slack.com/archives/C0AET66RQ4T/p1776929374901039" target="_blank" style="font-size:10px;color:#1a56db;display:flex;align-items:center;gap:3px;text-decoration:none"><i class="ti ti-brand-slack" style="font-size:12px"></i> #ab-testing ↗</a>
+            </div>
+          </div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;margin-bottom:10px">Rahul stopped the test April 23. Desktop was a clear win (+24% revenue/visitor, Mac +75%). Mobile was a clear loss (-22%, Android -60%). Draft PR #413 is ready to turn on desktop-only. Rahul has a fix for the mobile auto-select logic and wants a go/no-go before investing more time on the mobile iteration.</div>
+          <div style="font-size:11px;background:var(--purple-bg);border-radius:var(--radius-md);padding:8px 10px;margin-bottom:10px;line-height:1.6;color:var(--text-secondary)"><strong style="color:var(--purple)"><i class="ti ti-sparkles" style="font-size:11px"></i> AI recommendation:</strong> Approve the desktop-only rollout via PR #413 now — confirmed win. Approve the mobile retest plan in parallel. No reason to wait on the desktop win while mobile is being iterated.</div>
+          <div style="font-size:11px;color:var(--text-tertiary);margin-bottom:10px">Waiting on: Tom · Open since: April 23</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+            <a href="https://teamrankings.slack.com/archives/C0AET66RQ4T/p1776929374901039" target="_blank" style="font-size:12px;font-weight:500;color:white;background:var(--purple);padding:6px 14px;border-radius:var(--radius-md);text-decoration:none;display:flex;align-items:center;gap:6px"><i class="ti ti-brand-slack" style="font-size:13px"></i> Take me there →</a>
+            <div style="display:flex;gap:6px">
+              <button onclick="markDecision(this,'delegated')" style="font-size:11px;padding:5px 12px;border-radius:var(--radius-md);border:0.5px solid var(--border-s);background:transparent;cursor:pointer;color:var(--text-secondary);font-family:var(--font)">Delegate</button>
+              <button onclick="markDecision(this,'deferred')" style="font-size:11px;padding:5px 12px;border-radius:var(--radius-md);border:0.5px solid var(--border-s);background:transparent;cursor:pointer;color:var(--text-secondary);font-family:var(--font)">Defer</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:var(--bg-primary);border:0.5px solid var(--border-t);border-left:3px solid var(--amber);border-radius:var(--radius-lg);padding:16px;margin-bottom:10px">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:12px">
+            <div style="font-size:13px;font-weight:500;color:var(--text-primary)">NFL ID mapping — confirm period characters went live May 15</div>
+            <div style="display:flex;gap:6px;flex-shrink:0;align-items:center">
+              <span class="tag t-risk">Time sensitive</span>
+              <a href="https://teamrankings.slack.com/archives/C08RZDAHSMN/p1778776697768249" target="_blank" style="font-size:10px;color:#1a56db;display:flex;align-items:center;gap:3px;text-decoration:none"><i class="ti ti-brand-slack" style="font-size:12px"></i> #data-provider-integration ↗</a>
+            </div>
+          </div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;margin-bottom:10px">As of May 14, NFL ID mapping is live on prod except for period characters. Zach said he'd turn them on May 15. David confirmed file edits look good. This is the final step before the NFL data sync is fully operational — no confirmation has been posted yet as of May 14.</div>
+          <div style="font-size:11px;background:var(--purple-bg);border-radius:var(--radius-md);padding:8px 10px;margin-bottom:10px;line-height:1.6;color:var(--text-secondary)"><strong style="color:var(--purple)"><i class="ti ti-sparkles" style="font-size:11px"></i> AI recommendation:</strong> Quick check-in with Zach to confirm periods are live. This unblocks the full NFL data sync — should take 2 minutes to verify and close out.</div>
+          <div style="font-size:11px;color:var(--text-tertiary);margin-bottom:10px">Waiting on: Zach to confirm · Flagged for Tom/Brock awareness · Open since: May 14</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+            <a href="https://teamrankings.slack.com/archives/C08RZDAHSMN/p1778776697768249" target="_blank" style="font-size:12px;font-weight:500;color:white;background:var(--purple);padding:6px 14px;border-radius:var(--radius-md);text-decoration:none;display:flex;align-items:center;gap:6px"><i class="ti ti-brand-slack" style="font-size:13px"></i> Take me there →</a>
+            <div style="display:flex;gap:6px">
+              <button onclick="markDecision(this,'delegated')" style="font-size:11px;padding:5px 12px;border-radius:var(--radius-md);border:0.5px solid var(--border-s);background:transparent;cursor:pointer;color:var(--text-secondary);font-family:var(--font)">Delegate</button>
+              <button onclick="markDecision(this,'deferred')" style="font-size:11px;padding:5px 12px;border-radius:var(--radius-md);border:0.5px solid var(--border-s);background:transparent;cursor:pointer;color:var(--text-secondary);font-family:var(--font)">Defer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Decisions in progress — awareness -->
+      <div class="sec" style="margin-top:8px">
+        <div style="height:1px;background:var(--border-t);margin-bottom:24px"></div>
+        <div class="sec-label" style="display:flex;align-items:center;gap:8px;font-size:11px">
+          <i class="ti ti-eye" style="font-size:13px"></i> Decisions in progress — awareness only
+        </div>
+
+        <div style="background:var(--bg-secondary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:14px 16px;margin-bottom:8px">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px;gap:12px">
+            <div style="font-size:12px;font-weight:500;color:var(--text-primary)">Purchase flow PR #392 — Jon deciding whether to merge A/B pricing infrastructure</div>
+            <div style="display:flex;gap:6px;flex-shrink:0;align-items:center">
+              <span class="tag" style="background:var(--bg-primary);color:var(--text-tertiary);border:0.5px solid var(--border-t)">Jon Mires</span>
+              <a href="https://teamrankings.slack.com/archives/C0AH69XNA8K/p1774584953700349" target="_blank" style="font-size:10px;color:#1a56db;display:flex;align-items:center;gap:3px;text-decoration:none"><i class="ti ti-brand-slack" style="font-size:12px"></i> #purchase-flow ↗</a>
+            </div>
+          </div>
+          <div style="font-size:11px;color:var(--text-secondary);line-height:1.55">Rahul built the infrastructure for A/B testing prices and offers (PR #392). Code is disabled and safe. Jon acknowledged April 22 but hasn't merged or closed it. Stalled 22 days — if not resolved soon it risks missing the NFL season prep window.</div>
+        </div>
+
+        <div style="background:var(--bg-secondary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:14px 16px;margin-bottom:8px">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px;gap:12px">
+            <div style="font-size:12px;font-weight:500;color:var(--text-primary)">Select-package mobile retest — Rahul designing updated auto-select logic before retest</div>
+            <div style="display:flex;gap:6px;flex-shrink:0;align-items:center">
+              <span class="tag" style="background:var(--bg-primary);color:var(--text-tertiary);border:0.5px solid var(--border-t)">Rahul Caprihan</span>
+              <a href="https://teamrankings.slack.com/archives/C0AET66RQ4T/p1776929374901039" target="_blank" style="font-size:10px;color:#1a56db;display:flex;align-items:center;gap:3px;text-decoration:none"><i class="ti ti-brand-slack" style="font-size:12px"></i> #ab-testing ↗</a>
+            </div>
+          </div>
+          <div style="font-size:11px;color:var(--text-secondary);line-height:1.55">Mobile performance was poor in the last test (-22% revenue/visitor). Rahul is working on a fix to the auto-select logic before retesting on mobile. Desktop rollout is separate and awaiting Tom's approval above.</div>
+        </div>
+
+        <div style="background:var(--bg-secondary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:14px 16px;margin-bottom:8px">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px;gap:12px">
+            <div style="font-size:12px;font-weight:500;color:var(--text-primary)">NFL data sync — David running dev scripts, Zach running prod scripts May 15</div>
+            <div style="display:flex;gap:6px;flex-shrink:0;align-items:center">
+              <span class="tag" style="background:var(--bg-primary);color:var(--text-tertiary);border:0.5px solid var(--border-t)">David / Zach</span>
+              <a href="https://teamrankings.slack.com/archives/C08RZDAHSMN/p1778776697768249" target="_blank" style="font-size:10px;color:#1a56db;display:flex;align-items:center;gap:3px;text-decoration:none"><i class="ti ti-brand-slack" style="font-size:12px"></i> #data-provider-integration ↗</a>
+            </div>
+          </div>
+          <div style="font-size:11px;color:var(--text-secondary);line-height:1.55">Agreed plan as of May 14: David reviews file changes and runs dev scripts May 14 night to generate preseason ratings. QA and fixes in the morning. Zach runs prod scripts May 15. Period characters go live after schedule is available.</div>
+        </div>
+
+      </div>
+
+      <div class="sec">
+        <div class="sec-label">Meeting notes</div>
+        <div class="placeholder-page" style="padding:30px 0"><i class="ti ti-notes"></i>No meeting notes uploaded yet.<br>Upload notes and decisions will be extracted and added to this queue automatically.</div>
+      </div>
+
+    </div>
+        <div id="page-insights" class="page"><div class="page-header"><div><h1>Insights</h1><div class="hdr-sub">AI-surfaced patterns, risks, and signals</div></div></div><div class="placeholder-page"><i class="ti ti-sparkles"></i>Insights will generate as more data sources are connected.<br>Upload meeting notes or add more Asana projects to begin.</div></div>
     <div id="page-comms" class="page">
       <div class="page-header">
         <div><h1>Communications</h1><div class="hdr-sub">Key threads & signals from Slack · most recent activity</div></div>
@@ -569,81 +692,10 @@
         </div>
       </div>
 
-
-      <!-- Needs decision -->
-      <div class="sec">
-        <div class="sec-label">Needs a decision or response</div>
-
-        <div class="attn-card">
-          <div class="attn-main" onclick="toggleDrawer('s1',this)">
-            <div class="attn-bar u-high"></div>
-            <div class="attn-body">
-              <div class="attn-title">#data-provider-integration — NFL ID mapping on prod, periods still blocked</div>
-              <div class="attn-why">David and Zach confirmed May 14 that NFL ID mapping is live on prod — except for the period characters which can't be added yet. Zach plans to turn that on May 15. David confirmed the file edits look good. This is the final step before the NFL data sync is fully operational.</div>
-              <div class="attn-footer">
-                <div class="attn-action">Confirm with Zach that period additions go live May 15 as planned</div>
-                <div style="display:flex;align-items:center;gap:6px">
-                  <span class="src-tag"><i class="ti ti-brand-slack"></i> #data-provider-integration</span>
-                  <span class="tag t-risk">Launch blocker</span>
-                  <button class="toggle-btn" id="btn-s1"><i class="ti ti-message"></i> Messages <i class="ti ti-chevron-down chevron"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="task-drawer hidden" id="s1">
-            <div class="task-row"><div class="task-name">David: "ID mapping is on prod, except for the periods which we can't add yet"</div><div class="task-owner">David Hess</div><div class="task-due due-ok">May 14, 11:38am</div></div>
-            <div class="task-row"><div class="task-name">Zach: "Why don't you add the periods after schedule, and I can turn it on first thing in the morning May 15"</div><div class="task-owner">Zach Brownson</div><div class="task-due due-ok">May 14, 11:38am</div></div>
-            <div class="task-row"><div class="task-name">David: "File edits look good"</div><div class="task-owner">David Hess</div><div class="task-due due-ok">May 14, 12:10pm</div></div>
-          </div>
-        </div>
-
-        <div class="attn-card">
-          <div class="attn-main" onclick="toggleDrawer('s2',this)">
-            <div class="attn-bar u-high"></div>
-            <div class="attn-body">
-              <div class="attn-title">#pool-hosting — Tom cancelled Rahul sync, strategy discussion unresolved</div>
-              <div class="attn-why">Tom acknowledged he cancelled an update huddle Rahul had proposed and flagged the team is overdue for a status sync. More importantly, Tom shared a strategic position: keep the pool hosting product closer to the vest at this early stage — recruit initial admins directly rather than making any public announcement, possibly launch under a different name/domain with no obvious TR link. Brock noted he has promotion ideas when they're ready. No follow-up sync has been scheduled.</div>
-              <div class="attn-footer">
-                <div class="attn-action">Schedule the overdue Rahul + Kenny sync — strategy alignment needed before any public steps</div>
-                <div style="display:flex;align-items:center;gap:6px">
-                  <span class="src-tag"><i class="ti ti-brand-slack"></i> #pool-hosting</span>
-                  <span class="tag t-decision">Decision needed</span>
-                  <button class="toggle-btn" id="btn-s2"><i class="ti ti-message"></i> Messages <i class="ti ti-chevron-down chevron"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="task-drawer hidden" id="s2">
-            <div class="task-row"><div class="task-name">Tom: "Tom cancelled an update huddle Rahul proposed May 12 — that's on me. Tom noted he'd sync with Rahul and Kenny on May 13."</div><div class="task-owner">Tom Federico</div><div class="task-due due-over">May 12</div></div>
-            <div class="task-row"><div class="task-name">Tom's position: play it close to the vest — recruit initial admins directly, possibly launch under a different name/domain with no obvious TR link</div><div class="task-owner">Tom Federico</div><div class="task-due due-ok">May 12</div></div>
-            <div class="task-row"><div class="task-name">David: Curtis (pool admin) already set up World Cup pools on ESPN — competitor context</div><div class="task-owner">David Hess</div><div class="task-due due-ok">May 12</div></div>
-            <div class="task-row"><div class="task-name">Brock: "I have other ideas for how we can promote it when we are ready for that"</div><div class="task-owner">Brock Bormann</div><div class="task-due due-ok">May 12</div></div>
-          </div>
-        </div>
-
-        <div class="attn-card">
-          <div class="attn-main" onclick="toggleDrawer('s3',this)">
-            <div class="attn-bar u-med"></div>
-            <div class="attn-body">
-              <div class="attn-title">#purchase-flow — A/B test PR unreviewed, pricing test infrastructure ready to merge</div>
-              <div class="attn-why">Rahul built a PR (#392) that enables A/B testing of prices and offers — the code is disabled/commented so it's safe to merge now, and gives the team the option to run a pricing test before NFL season without re-figuring out the setup. Jon said he'd look at it but that was April 22 — no merge decision since.</div>
-              <div class="attn-footer">
-                <div class="attn-action">Follow up with Jon on PR #392 — merge decision needed before NFL prep window</div>
-                <div style="display:flex;align-items:center;gap:6px">
-                  <span class="src-tag"><i class="ti ti-brand-slack"></i> #purchase-flow</span>
-                  <span class="tag t-decision">Pending merge</span>
-                  <button class="toggle-btn" id="btn-s3"><i class="ti ti-message"></i> Messages <i class="ti ti-chevron-down chevron"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="task-drawer hidden" id="s3">
-            <div class="task-row"><div class="task-name">Rahul: PR #392 enables A/B testing of prices/offers — code is disabled, safe to merge, gives option to test without re-setup</div><div class="task-owner">Rahul Caprihan</div><div class="task-due due-over">Apr 22</div></div>
-            <div class="task-row"><div class="task-name">Jon: "ah yeah sorry, forgot to come back to that one — will take a look"</div><div class="task-owner">Jon Mires</div><div class="task-due due-over">Apr 22</div></div>
-            <div class="task-row"><div class="task-name">No merge or decision recorded since</div><div class="task-owner">—</div><div class="task-due due-ok">Stalled</div></div>
-          </div>
-        </div>
-
+      <!-- Decisions note -->
+      <div style="background:var(--bg-secondary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:10px 14px;margin-bottom:24px;display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-secondary)">
+        <i class="ti ti-arrow-right" style="color:var(--purple);font-size:14px;flex-shrink:0"></i>
+        Threads requiring decisions are in the <a onclick="showPage('decisions', document.querySelector('.nav-item:nth-child(6)'))" style="color:var(--purple);font-weight:500;cursor:pointer;text-decoration:none">Decisions tab</a>. Everything here is for awareness.
       </div>
 
       <!-- Active threads to be aware of -->
@@ -757,6 +809,16 @@ function showPage(id,el){
   document.getElementById('page-'+id).classList.add('active');
   el.classList.add('active');
 }
+function markDecision(btn, action) {
+  const card = btn.closest('[style*="border-radius"]');
+  const colors = { delegated: '#EF9F27', deferred: '#888780' };
+  const labels = { delegated: 'Delegated', deferred: 'Deferred' };
+  const now = new Date().toLocaleTimeString('en-US', {hour:'numeric',minute:'2-digit',hour12:true});
+  card.style.opacity = '0.6';
+  const footer = btn.parentElement.parentElement;
+  footer.innerHTML = '<span style="font-size:11px;font-weight:500;color:' + colors[action] + '">' + labels[action] + ' · ' + now + '</span>';
+}
+
 function toggleDrawer(id){
   const drawer=document.getElementById(id);
   const btn=document.getElementById('btn-'+id);
