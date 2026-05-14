@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadence — TR Leadership Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<style>
+  :root {
+    --bg-primary:#ffffff;--bg-secondary:#f7f7f5;--bg-tertiary:#f0efe9;
+    --bg-info:#e6f1fb;--bg-success:#eaf3de;--bg-warning:#faeeda;--bg-danger:#fcebeb;
+    --text-primary:#1a1a18;--text-secondary:#5f5e5a;--text-tertiary:#888780;
+    --text-info:#185fa5;--text-success:#3b6d11;--text-warning:#854f0b;--text-danger:#a32d2d;
+    --border-t:rgba(26,26,24,0.12);--border-s:rgba(26,26,24,0.22);--border-p:rgba(26,26,24,0.32);
+    --radius-md:8px;--radius-lg:12px;
+    --purple:#534AB7;--purple-bg:#EEEDFE;--purple-text:#3C3489;
+    --amber:#EF9F27;--red:#E24B4A;--green:#1D9E75;
+    --font:'Geist',-apple-system,BlinkMacSystemFont,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-primary);font-size:14px;line-height:1.5;min-height:100vh}
+  .app{display:flex;min-height:100vh}
+
+  /* Sidebar */
+  .sidebar{width:210px;flex-shrink:0;background:var(--bg-primary);border-right:0.5px solid var(--border-t);padding:20px 0;display:flex;flex-direction:column;gap:2px;position:sticky;top:0;height:100vh;overflow-y:auto}
+  .sidebar-logo{padding:0 16px 16px;border-bottom:0.5px solid var(--border-t);margin-bottom:8px}
+  .sidebar-logo .name{font-size:15px;font-weight:500;color:var(--text-primary);letter-spacing:-.3px}
+  .sidebar-logo .sub{font-size:11px;color:var(--text-secondary);margin-top:2px}
+  .nav-item{display:flex;align-items:center;gap:8px;padding:7px 16px;font-size:13px;color:var(--text-secondary);cursor:pointer;transition:background .12s,color .12s;user-select:none}
+  .nav-item:hover{background:var(--bg-secondary);color:var(--text-primary)}
+  .nav-item.active{background:var(--bg-secondary);color:var(--text-primary);font-weight:500}
+  .nav-item i{font-size:15px;width:16px;flex-shrink:0}
+  .nav-group{font-size:10px;color:var(--text-tertiary);padding:10px 16px 3px;text-transform:uppercase;letter-spacing:.07em}
+  .nav-bottom{margin-top:auto;padding-top:12px;border-top:0.5px solid var(--border-t)}
+
+  /* Main */
+  .main{flex:1;overflow-y:auto;padding:32px 36px;max-width:980px}
+  .page{display:none}
+  .page.active{display:block}
+
+  /* Page header */
+  .page-header{margin-bottom:28px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+  .page-header h1{font-size:19px;font-weight:500;letter-spacing:-.3px}
+  .hdr-sub{font-size:13px;color:var(--text-secondary);margin-top:3px}
+
+  /* Asana badge block */
+  .asana-meta{display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0}
+  .live-badge{font-size:11px;background:var(--bg-success);color:var(--text-success);padding:4px 10px;border-radius:20px;display:flex;align-items:center;gap:4px;font-weight:500;white-space:nowrap}
+  .last-updated{font-size:10px;color:var(--text-tertiary);text-align:right;white-space:nowrap}
+
+  /* Section */
+  .sec{margin-bottom:32px}
+  .sec-label{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-tertiary);margin-bottom:10px;font-weight:500}
+
+  /* Focus card */
+  .focus-card{background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:20px 22px;position:relative;overflow:hidden}
+  .focus-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--purple)}
+  .focus-text{font-size:15px;line-height:1.7;color:var(--text-primary);padding-left:14px}
+  .focus-meta{font-size:11px;color:var(--purple);margin-top:10px;padding-left:14px;display:flex;align-items:center;gap:5px;opacity:.8}
+
+  /* Attention cards */
+  .attn-card{background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);margin-bottom:8px;overflow:hidden;transition:border-color .15s}
+  .attn-card:hover{border-color:var(--border-s)}
+  .attn-main{display:flex;padding:14px 16px;cursor:pointer}
+  .attn-bar{width:3px;flex-shrink:0;margin:-14px 13px -14px -16px;align-self:stretch}
+  .u-high{background:var(--red)}.u-med{background:var(--amber)}.u-low{background:var(--green)}
+  .attn-body{flex:1;min-width:0}
+  .attn-title{font-size:13px;font-weight:500;color:var(--text-primary);margin-bottom:4px;transition:color .1s}
+  .attn-main:hover .attn-title{color:var(--purple)}
+  .attn-why{font-size:12px;color:var(--text-secondary);line-height:1.55;margin-bottom:8px}
+  .attn-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
+  .attn-action{font-size:11px;color:var(--purple);font-weight:500}
+
+  .toggle-btn{font-size:11px;color:var(--text-tertiary);display:flex;align-items:center;gap:4px;padding:3px 8px;border:0.5px solid var(--border-t);border-radius:var(--radius-md);background:var(--bg-secondary);cursor:pointer;white-space:nowrap;transition:background .1s,border-color .1s;font-family:var(--font)}
+  .toggle-btn:hover{background:var(--bg-primary);border-color:var(--border-s)}
+  .toggle-btn i{font-size:12px;transition:transform .2s}
+  .toggle-btn.open i.chevron{transform:rotate(180deg)}
+
+  /* Tags */
+  .tag{font-size:10px;padding:2px 7px;border-radius:4px;font-weight:500;white-space:nowrap}
+  .t-blocker{background:var(--bg-danger);color:var(--text-danger)}
+  .t-risk{background:var(--bg-warning);color:var(--text-warning)}
+  .t-decision{background:var(--purple-bg);color:var(--purple-text)}
+  .t-info{background:var(--bg-info);color:var(--text-info)}
+  .t-success{background:var(--bg-success);color:var(--text-success)}
+  .src-tag{font-size:10px;color:var(--text-tertiary);display:flex;align-items:center;gap:3px}
+
+  /* Task drawer */
+  .task-drawer{border-top:0.5px solid var(--border-t);background:var(--bg-secondary);padding:10px 16px 12px 32px}
+  .task-drawer.hidden{display:none}
+  .task-row{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:0.5px solid var(--border-t)}
+  .task-row:last-child{border-bottom:none}
+  .task-name{font-size:12px;color:var(--text-primary);flex:1;line-height:1.4}
+  .task-owner{font-size:11px;color:var(--text-secondary);white-space:nowrap}
+  .task-due{font-size:10px;padding:2px 7px;border-radius:4px;white-space:nowrap;font-weight:500}
+  .due-today{background:var(--bg-warning);color:var(--text-warning)}
+  .due-over{background:var(--bg-danger);color:var(--text-danger)}
+  .due-ok{background:var(--bg-primary);color:var(--text-tertiary);border:0.5px solid var(--border-t)}
+
+  /* Priorities */
+  .pri-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .pri-card{background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:16px;transition:border-color .15s}
+  .pri-card:hover{border-color:var(--border-s)}
+  .sp{font-size:10px;padding:2px 8px;border-radius:20px;font-weight:500;display:inline-block;margin-bottom:8px}
+  .on-track{background:var(--bg-success);color:var(--text-success)}
+  .at-risk{background:var(--bg-warning);color:var(--text-warning)}
+  .blocked{background:var(--bg-danger);color:var(--text-danger)}
+  .pri-name{font-size:13px;font-weight:500;color:var(--text-primary);margin-bottom:5px}
+  .pri-why{font-size:11px;color:var(--text-secondary);line-height:1.55;margin-bottom:10px}
+  .pri-owner{font-size:11px;color:var(--text-tertiary);display:flex;align-items:center;gap:4px}
+  .pb{height:3px;background:var(--bg-secondary);border-radius:2px;margin-top:10px}
+  .pf{height:100%;border-radius:2px}
+
+  /* Goals section */
+  .goals-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+  .goal-card{background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:16px;transition:border-color .15s}
+  .goal-card:hover{border-color:var(--border-s)}
+  .goal-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px;gap:8px}
+  .goal-name{font-size:13px;font-weight:500;color:var(--text-primary);line-height:1.4}
+  .goal-desc{font-size:11px;color:var(--text-secondary);line-height:1.55;margin-bottom:10px}
+  .goal-meta{display:flex;align-items:center;justify-content:space-between;margin-top:8px}
+  .goal-stat{font-size:11px;color:var(--text-tertiary)}
+  .goal-stat strong{color:var(--text-primary);font-weight:500}
+  .goal-pb{height:5px;background:var(--bg-secondary);border-radius:3px;margin-top:8px}
+  .goal-pf{height:100%;border-radius:3px;transition:width .3s}
+
+  /* Sprint summary bar */
+  .sprint-summary{background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:16px 20px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-bottom:10px}
+  .summary-stat{text-align:center;padding:0 12px;border-right:0.5px solid var(--border-t)}
+  .summary-stat:first-child{padding-left:0;text-align:left}
+  .summary-stat:last-child{border-right:none;text-align:right}
+  .stat-val{font-size:22px;font-weight:500;color:var(--text-primary);letter-spacing:-.5px;line-height:1.2}
+  .stat-label{font-size:10px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.07em;margin-top:2px}
+
+  /* Recent completions */
+  .recent-card{background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);overflow:hidden}
+  .recent-row{display:flex;align-items:center;gap:10px;padding:9px 16px;border-bottom:0.5px solid var(--border-t);font-size:12px}
+  .recent-row:last-child{border-bottom:none}
+  .recent-name{flex:1;color:var(--text-primary);line-height:1.4}
+  .recent-who{font-size:11px;color:var(--text-secondary);white-space:nowrap}
+  .recent-when{font-size:10px;color:var(--text-tertiary);white-space:nowrap}
+  .check-icon{color:var(--green);font-size:14px;flex-shrink:0}
+
+  /* Projects table */
+  .proj-tbl{background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);overflow:hidden}
+  .pr{display:grid;grid-template-columns:2fr 1fr 1fr 80px 1fr;padding:11px 16px;border-bottom:0.5px solid var(--border-t);align-items:center;font-size:12px;gap:8px}
+  .pr:last-child{border-bottom:none}
+  .pr.hdr{font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:var(--text-tertiary);background:var(--bg-secondary);padding:9px 16px;font-weight:500}
+  .pname{font-size:12px;font-weight:500;color:var(--text-primary)}
+  .pown{font-size:11px;color:var(--text-secondary)}
+  .mb{height:4px;background:var(--bg-secondary);border-radius:2px;margin-top:3px;width:60px}
+  .mf{height:100%;border-radius:2px}
+  .risk-foot{padding:10px 16px;background:var(--bg-secondary);border-top:0.5px solid var(--border-t);font-size:11px;color:var(--text-secondary);display:flex;align-items:center;gap:6px}
+  .risk-foot i{color:var(--amber);font-size:14px}
+
+  /* Placeholder */
+  .placeholder-page{padding:60px 0;text-align:center;color:var(--text-tertiary);font-size:13px;line-height:1.8}
+  .placeholder-page i{font-size:32px;display:block;margin-bottom:14px;opacity:.35}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="sidebar">
+    <div class="sidebar-logo">
+      <div class="name">Cadence</div>
+      <div class="sub">TR Leadership Brief</div>
+    </div>
+    <div class="nav-item active" onclick="showPage('overview',this)"><i class="ti ti-layout-dashboard"></i> Overview</div>
+    <div class="nav-item" onclick="showPage('goals',this)"><i class="ti ti-flag"></i> Goals & benchmarks</div>
+    <div class="nav-item" onclick="showPage('priorities',this)"><i class="ti ti-target"></i> Priorities</div>
+    <div class="nav-item" onclick="showPage('projects',this)"><i class="ti ti-folders"></i> Projects</div>
+    <div class="nav-group">Capture</div>
+    <div class="nav-item" onclick="showPage('meetings',this)"><i class="ti ti-notes"></i> Meetings</div>
+    <div class="nav-item" onclick="showPage('decisions',this)"><i class="ti ti-checkbox"></i> Decisions</div>
+    <div class="nav-group">Signals</div>
+    <div class="nav-item" onclick="showPage('insights',this)"><i class="ti ti-sparkles"></i> Insights</div>
+    <div class="nav-item" onclick="showPage('comms',this)"><i class="ti ti-mail"></i> Communications</div>
+    <div class="nav-bottom">
+      <div class="nav-item" onclick="showPage('weekly',this)"><i class="ti ti-calendar-week"></i> Weekly brief</div>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <!-- OVERVIEW -->
+    <div id="page-overview" class="page active">
+      <div class="page-header">
+        <div>
+          <h1>Daily overview</h1>
+          <div class="hdr-sub">Thursday, May 14, 2026 · 2026-05 Product Sprint</div>
+        </div>
+        <div class="asana-meta">
+          <div class="live-badge"><i class="ti ti-brand-asana"></i> Live from Asana</div>
+          <div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> Last updated today at 9:06 AM · 38 of 128 tasks complete</div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-label">Today's focus</div>
+        <div class="focus-card">
+          <p class="focus-text">The NFL data integration is at a critical inflection point today — Zach is launching data sync to prod, David is standing up maples, and Jon is pushing initial site updates, all due simultaneously — any one slipping will delay the NFL section going live this week.</p>
+          <div class="focus-meta"><i class="ti ti-sparkles"></i> AI-synthesized from 2026-05 Product Sprint · 90 open tasks</div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-label">Needs your attention</div>
+
+        <div class="attn-card">
+          <div class="attn-main" onclick="toggleDrawer('d1',this)">
+            <div class="attn-bar u-high"></div>
+            <div class="attn-body">
+              <div class="attn-title">NFL launch cluster — 8 tasks due today & tomorrow across 3 people</div>
+              <div class="attn-why">David, Zach, and Jon all have sequentially dependent NFL launch tasks due May 14–15. No single owner; coordination risk is real.</div>
+              <div class="attn-footer">
+                <div class="attn-action">Confirm all three are sequenced correctly for NFL go-live</div>
+                <div style="display:flex;align-items:center;gap:6px">
+                  <span class="src-tag"><i class="ti ti-brand-asana"></i> Asana</span>
+                  <span class="tag t-risk">Launch risk</span>
+                  <button class="toggle-btn" id="btn-d1"><i class="ti ti-list"></i> Tasks <i class="ti ti-chevron-down chevron"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="task-drawer hidden" id="d1">
+            <div class="task-row"><div class="task-name">Set up NFL on maples (train Zach)</div><div class="task-owner">David Hess</div><div class="task-due due-today">May 14</div></div>
+            <div class="task-row"><div class="task-name">Clean up messaging & minor bugs in NFL section</div><div class="task-owner">David Hess</div><div class="task-due due-today">May 14</div></div>
+            <div class="task-row"><div class="task-name">Update NFL team logos</div><div class="task-owner">Jon Mires</div><div class="task-due due-today">May 14</div></div>
+            <div class="task-row"><div class="task-name">NFL: data sync testing with id_mapping on maples</div><div class="task-owner">Zach Brownson</div><div class="task-due due-today">May 14</div></div>
+            <div class="task-row"><div class="task-name">NFL: data sync launch on prod + test</div><div class="task-owner">Zach Brownson</div><div class="task-due due-ok">May 15</div></div>
+            <div class="task-row"><div class="task-name">Set up NFL on prod</div><div class="task-owner">David Hess</div><div class="task-due due-ok">May 15</div></div>
+            <div class="task-row"><div class="task-name">Load initial market-based NFL preseason ratings</div><div class="task-owner">David Hess</div><div class="task-due due-ok">May 15</div></div>
+            <div class="task-row"><div class="task-name">Initial NFL launch related site updates</div><div class="task-owner">Jon Mires</div><div class="task-due due-ok">May 15</div></div>
+          </div>
+        </div>
+
+        <div class="attn-card">
+          <div class="attn-main" onclick="toggleDrawer('d2',this)">
+            <div class="attn-bar u-high"></div>
+            <div class="attn-body">
+              <div class="attn-title">14 tasks in "Added for review" — unassigned, undated, no owner</div>
+              <div class="attn-why">High-value technical items (Cloudflare bot management, ALB health check, SEO poisoning fix) are accumulating with no assignee or due date.</div>
+              <div class="attn-footer">
+                <div class="attn-action">Direct Brock to assign or close each item this week</div>
+                <div style="display:flex;align-items:center;gap:6px">
+                  <span class="src-tag"><i class="ti ti-brand-asana"></i> Asana</span>
+                  <span class="tag t-decision">Action needed</span>
+                  <button class="toggle-btn" id="btn-d2"><i class="ti ti-list"></i> Tasks <i class="ti ti-chevron-down chevron"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="task-drawer hidden" id="d2">
+            <div class="task-row"><div class="task-name">Move ALB health checks off PHP-FPM</div><div class="task-owner">Unassigned</div><div class="task-due due-ok">No date</div></div>
+            <div class="task-row"><div class="task-name">Put Cloudflare in front of the ALB with Bot Management</div><div class="task-owner">Unassigned</div><div class="task-due due-ok">No date</div></div>
+            <div class="task-row"><div class="task-name">Convert custom-trend-tool form from GET to POST</div><div class="task-owner">Unassigned</div><div class="task-due due-ok">No date</div></div>
+            <div class="task-row"><div class="task-name">Submit URL removal requests to Bing Webmaster Tools</div><div class="task-owner">Unassigned</div><div class="task-due due-ok">No date</div></div>
+            <div class="task-row"><div class="task-name">Right-size pm.max_children</div><div class="task-owner">Unassigned</div><div class="task-due due-ok">No date</div></div>
+            <div class="task-row"><div class="task-name">Aggressive edge caching for matchup pages</div><div class="task-owner">Unassigned</div><div class="task-due due-ok">No date</div></div>
+            <div class="task-row"><div class="task-name">Further APM/profiling on custom-trend-tool</div><div class="task-owner">Unassigned</div><div class="task-due due-ok">No date</div></div>
+            <div class="task-row"><div class="task-name">Data Sync: Add live game support to scheduler</div><div class="task-owner">Unassigned</div><div class="task-due due-ok">No date</div></div>
+            <div class="task-row"><div class="task-name">Tech improvements roadmap for 2026</div><div class="task-owner">Unassigned</div><div class="task-due due-ok">No date</div></div>
+            <div class="task-row"><div class="task-name">Update golf product logic to use first sportsbook from list</div><div class="task-owner">Unassigned</div><div class="task-due due-ok">No date</div></div>
+            <div class="task-row"><div class="task-name">Data Sync: Consume daily change log endpoint</div><div class="task-owner">Unassigned</div><div class="task-due due-ok">No date</div></div>
+            <div class="task-row"><div class="task-name">Add Rankings FAQ and Team Stat Definitions</div><div class="task-owner">David Hess</div><div class="task-due due-ok">No date</div></div>
+            <div class="task-row"><div class="task-name">Reporting: backfill search console data to BigQuery</div><div class="task-owner">Rahul Caprihan</div><div class="task-due due-ok">No date</div></div>
+            <div class="task-row"><div class="task-name">Improve basic (non-ADP) Majors & Masters pick% model</div><div class="task-owner">David Hess</div><div class="task-due due-ok">No date</div></div>
+          </div>
+        </div>
+
+        <div class="attn-card">
+          <div class="attn-main" onclick="toggleDrawer('d3',this)">
+            <div class="attn-bar u-med"></div>
+            <div class="attn-body">
+              <div class="attn-title">Trial subscription work — 3 tasks already overdue, implementation due tomorrow</div>
+              <div class="attn-why">Jon's spec, Stripe sandbox, and API upgrade were all due May 12. Bulk implementation is due May 15. The window is compressing fast.</div>
+              <div class="attn-footer">
+                <div class="attn-action">Check with Jon — does May 15 hold or does this slip to May 18 week?</div>
+                <div style="display:flex;align-items:center;gap:6px">
+                  <span class="src-tag"><i class="ti ti-brand-asana"></i> Asana</span>
+                  <span class="tag t-risk">Timeline risk</span>
+                  <button class="toggle-btn" id="btn-d3"><i class="ti ti-list"></i> Tasks <i class="ti ti-chevron-down chevron"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="task-drawer hidden" id="d3">
+            <div class="task-row"><div class="task-name">Finalize spec for trial subscriptions</div><div class="task-owner">Jon Mires</div><div class="task-due due-over">May 12</div></div>
+            <div class="task-row"><div class="task-name">Set up Stripe sandbox for dev work</div><div class="task-owner">Jon Mires</div><div class="task-due due-over">May 12</div></div>
+            <div class="task-row"><div class="task-name">Upgrade default Stripe API version in account</div><div class="task-owner">Jon Mires</div><div class="task-due due-over">May 12</div></div>
+            <div class="task-row"><div class="task-name">Implement bulk of trial subscription work</div><div class="task-owner">Jon Mires</div><div class="task-due due-ok">May 15</div></div>
+          </div>
+        </div>
+
+        <div class="attn-card">
+          <div class="attn-main" onclick="toggleDrawer('d4',this)">
+            <div class="attn-bar u-med"></div>
+            <div class="attn-body">
+              <div class="attn-title">Pool Hosting (World Cup) — Rahul carrying 6 epics alone through May 31</div>
+              <div class="attn-why">Landing page, picks, live scoring, payments, analytics, and prod hardening all owned by one person. 3 epics completed last week; 6 remain across the next 3 weeks.</div>
+              <div class="attn-footer">
+                <div class="attn-action">Validate Rahul's capacity and confirm World Cup launch date</div>
+                <div style="display:flex;align-items:center;gap:6px">
+                  <span class="src-tag"><i class="ti ti-brand-asana"></i> Asana</span>
+                  <span class="tag t-risk">Capacity risk</span>
+                  <button class="toggle-btn" id="btn-d4"><i class="ti ti-list"></i> Tasks <i class="ti ti-chevron-down chevron"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="task-drawer hidden" id="d4">
+            <div class="task-row"><div class="task-name">Pool Hosting — Landing page and early-adopter signup</div><div class="task-owner">Rahul Caprihan</div><div class="task-due due-today">May 11–17</div></div>
+            <div class="task-row"><div class="task-name">Pool Hosting — Participant makes picks (epic 6)</div><div class="task-owner">Rahul Caprihan</div><div class="task-due due-today">May 11–17</div></div>
+            <div class="task-row"><div class="task-name">Pool Hosting — Live Scoring during matches (epic 7)</div><div class="task-owner">Rahul Caprihan</div><div class="task-due due-today">May 11–17</div></div>
+            <div class="task-row"><div class="task-name">Pool Hosting — Admin tracks payments (epic 8)</div><div class="task-owner">Rahul Caprihan</div><div class="task-due due-ok">May 18–24</div></div>
+            <div class="task-row"><div class="task-name">Pool Hosting — Analytics & Reporting</div><div class="task-owner">Rahul Caprihan</div><div class="task-due due-ok">May 25–31</div></div>
+            <div class="task-row"><div class="task-name">Pool Hosting — Production Hardening (epic 9)</div><div class="task-owner">Rahul Caprihan</div><div class="task-due due-ok">May 25–31</div></div>
+            <div class="task-row"><div class="task-name">Pool Hosting — QA and deferred work</div><div class="task-owner">Rahul Caprihan</div><div class="task-due due-ok">May 18–24</div></div>
+          </div>
+        </div>
+
+        <div class="attn-card">
+          <div class="attn-main" onclick="toggleDrawer('d5',this)">
+            <div class="attn-bar u-low"></div>
+            <div class="attn-body">
+              <div class="attn-title">5 planning tasks unassigned — sprint meta-work is drifting</div>
+              <div class="attn-why">"Finalize name," "Finish planning roles," "Think through next 2–3 months," and others are unowned with no dates. Leadership-level decisions.</div>
+              <div class="attn-footer">
+                <div class="attn-action">Assign or timebox before they block Q3 planning</div>
+                <div style="display:flex;align-items:center;gap:6px">
+                  <span class="src-tag"><i class="ti ti-brand-asana"></i> Asana</span>
+                  <span class="tag t-decision">Action needed</span>
+                  <button class="toggle-btn" id="btn-d5"><i class="ti ti-list"></i> Tasks <i class="ti ti-chevron-down chevron"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="task-drawer hidden" id="d5">
+            <div class="task-row"><div class="task-name">Finalize name</div><div class="task-owner">Unassigned</div><div class="task-due due-ok">No date</div></div>
+            <div class="task-row"><div class="task-name">Finish planning out roles</div><div class="task-owner">Unassigned</div><div class="task-due due-ok">No date</div></div>
+            <div class="task-row"><div class="task-name">Think through next 2–3 months projects</div><div class="task-owner">Unassigned</div><div class="task-due due-ok">No date</div></div>
+            <div class="task-row"><div class="task-name">Update Product Priorities project</div><div class="task-owner">Unassigned</div><div class="task-due due-ok">No date</div></div>
+            <div class="task-row"><div class="task-name">Iterate project kickoff process / check out Notion</div><div class="task-owner">Unassigned</div><div class="task-due due-ok">No date</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-label">Priorities</div>
+        <div class="pri-grid">
+          <div class="pri-card"><span class="sp at-risk">At risk</span><div class="pri-name">NFL 2026 launch</div><div class="pri-why">NFL section, Pick'em & Survivor must go live before preseason opens.</div><div class="pri-owner"><i class="ti ti-user"></i> Tom Federico</div><div class="pb"><div class="pf" style="width:55%;background:var(--amber)"></div></div></div>
+          <div class="pri-card"><span class="sp on-track">On track</span><div class="pri-name">Purchase flow & trials</div><div class="pri-why">Trial subscriptions and purchase flow cleanup are the primary near-term revenue levers.</div><div class="pri-owner"><i class="ti ti-user"></i> Jon Mires</div><div class="pb"><div class="pf" style="width:45%;background:var(--green)"></div></div></div>
+          <div class="pri-card"><span class="sp at-risk">At risk</span><div class="pri-name">Pool hosting (World Cup)</div><div class="pri-why">New product line — must launch before tournament to capture the market window.</div><div class="pri-owner"><i class="ti ti-user"></i> Rahul Caprihan</div><div class="pb"><div class="pf" style="width:35%;background:var(--amber)"></div></div></div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-label">Projects</div>
+        <div class="proj-tbl">
+          <div class="pr hdr"><div>Project</div><div>Health</div><div>Owner</div><div>Progress</div><div>Linked to</div></div>
+          <div class="pr"><div><div class="pname">NFL data integration & launch</div></div><div><span class="sp at-risk" style="margin:0">At risk</span></div><div class="pown">David / Zach</div><div><div style="font-size:12px;color:var(--text-secondary)">60%</div><div class="mb"><div class="mf" style="width:60%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">NFL 2026 launch</div></div>
+          <div class="pr"><div><div class="pname">Pick'em & Survivor launch</div></div><div><span class="sp on-track" style="margin:0">On track</span></div><div class="pown">David Hess</div><div><div style="font-size:12px;color:var(--text-secondary)">30%</div><div class="mb"><div class="mf" style="width:30%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">NFL 2026 launch</div></div>
+          <div class="pr"><div><div class="pname">Trial subscriptions</div></div><div><span class="sp at-risk" style="margin:0">At risk</span></div><div class="pown">Jon Mires</div><div><div style="font-size:12px;color:var(--text-secondary)">25%</div><div class="mb"><div class="mf" style="width:25%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">Purchase flow & trials</div></div>
+          <div class="pr"><div><div class="pname">PHP 8.4 migration</div></div><div><span class="sp on-track" style="margin:0">On track</span></div><div class="pown">David Hess</div><div><div style="font-size:12px;color:var(--text-secondary)">20%</div><div class="mb"><div class="mf" style="width:20%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">Tech upgrades</div></div>
+          <div class="pr"><div><div class="pname">Pool hosting — World Cup</div></div><div><span class="sp at-risk" style="margin:0">At risk</span></div><div class="pown">Rahul Caprihan</div><div><div style="font-size:12px;color:var(--text-secondary)">20%</div><div class="mb"><div class="mf" style="width:20%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">Pool hosting (World Cup)</div></div>
+          <div class="pr"><div><div class="pname">AMI & Amazon Linux 2023</div></div><div><span class="sp on-track" style="margin:0">On track</span></div><div class="pown">Zach Brownson</div><div><div style="font-size:12px;color:var(--text-secondary)">40%</div><div class="mb"><div class="mf" style="width:40%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">Tech upgrades</div></div>
+          <div class="risk-foot"><i class="ti ti-alert-triangle"></i> 3 of 6 projects at risk — NFL launch, trial subscriptions, and pool hosting all showing timeline pressure</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GOALS & BENCHMARKS -->
+    <div id="page-goals" class="page">
+      <div class="page-header">
+        <div>
+          <h1>Goals & benchmarks</h1>
+          <div class="hdr-sub">May 2026 sprint · derived from 2026-05 Product Sprint</div>
+        </div>
+        <div class="asana-meta">
+          <div class="live-badge"><i class="ti ti-brand-asana"></i> Live from Asana</div>
+          <div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> Last updated today at 9:06 AM</div>
+        </div>
+      </div>
+
+      <!-- Sprint health summary -->
+      <div class="sec">
+        <div class="sec-label">Sprint health — May 2026</div>
+        <div class="sprint-summary">
+          <div class="summary-stat">
+            <div class="stat-val">38</div>
+            <div class="stat-label">Tasks completed</div>
+          </div>
+          <div class="summary-stat">
+            <div class="stat-val" style="color:var(--amber)">90</div>
+            <div class="stat-label">Tasks remaining</div>
+          </div>
+          <div class="summary-stat">
+            <div class="stat-val">30%</div>
+            <div class="stat-label">Sprint complete</div>
+          </div>
+          <div class="summary-stat">
+            <div class="stat-val" style="color:var(--red)">3</div>
+            <div class="stat-label">Overdue tasks</div>
+          </div>
+        </div>
+        <div style="background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:14px 16px">
+          <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-secondary);margin-bottom:6px">
+            <span>Overall sprint progress</span>
+            <span style="font-weight:500;color:var(--text-primary)">38 / 128 tasks</span>
+          </div>
+          <div style="height:8px;background:var(--bg-secondary);border-radius:4px;overflow:hidden">
+            <div style="height:100%;width:30%;background:var(--green);border-radius:4px"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product launch goals -->
+      <div class="sec">
+        <div class="sec-label">Product launch goals — May 2026</div>
+        <div class="goals-grid">
+
+          <div class="goal-card">
+            <div class="goal-header">
+              <div class="goal-name">NFL section live on prod</div>
+              <span class="tag t-risk">At risk</span>
+            </div>
+            <div class="goal-desc">Full NFL data sync, team logos, ratings, and site updates live before end of May 15. Coordination across David, Zach, and Jon required today.</div>
+            <div style="height:6px;background:var(--bg-secondary);border-radius:3px;margin-bottom:8px">
+              <div style="height:100%;width:60%;background:var(--amber);border-radius:3px"></div>
+            </div>
+            <div class="goal-meta">
+              <div class="goal-stat"><strong>6 of 10</strong> launch tasks done</div>
+              <div class="goal-stat">Target: <strong>May 15</strong></div>
+            </div>
+          </div>
+
+          <div class="goal-card">
+            <div class="goal-header">
+              <div class="goal-name">Trial subscriptions shipped</div>
+              <span class="tag t-risk">At risk</span>
+            </div>
+            <div class="goal-desc">Stripe integration, spec, and bulk implementation complete. Currently 3 prerequisite tasks overdue as of May 12.</div>
+            <div style="height:6px;background:var(--bg-secondary);border-radius:3px;margin-bottom:8px">
+              <div style="height:100%;width:25%;background:var(--amber);border-radius:3px"></div>
+            </div>
+            <div class="goal-meta">
+              <div class="goal-stat"><strong>0 of 4</strong> tasks complete</div>
+              <div class="goal-stat">Target: <strong>May 15</strong></div>
+            </div>
+          </div>
+
+          <div class="goal-card">
+            <div class="goal-header">
+              <div class="goal-name">Pool hosting live for World Cup</div>
+              <span class="tag t-risk">At risk</span>
+            </div>
+            <div class="goal-desc">All 9 epics complete and product hardened for production before World Cup. Rahul is sole owner — no backup identified.</div>
+            <div style="height:6px;background:var(--bg-secondary);border-radius:3px;margin-bottom:8px">
+              <div style="height:100%;width:33%;background:var(--amber);border-radius:3px"></div>
+            </div>
+            <div class="goal-meta">
+              <div class="goal-stat"><strong>3 of 9</strong> epics complete</div>
+              <div class="goal-stat">Target: <strong>May 31</strong></div>
+            </div>
+          </div>
+
+          <div class="goal-card">
+            <div class="goal-header">
+              <div class="goal-name">Pick'em & Survivor ready for preseason</div>
+              <span class="sp on-track" style="margin:0">On track</span>
+            </div>
+            <div class="goal-desc">Products set up on maples and prod, messaging cleaned, Survivor start date updated, and Circa configured before preseason opens.</div>
+            <div style="height:6px;background:var(--bg-secondary);border-radius:3px;margin-bottom:8px">
+              <div style="height:100%;width:30%;background:var(--green);border-radius:3px"></div>
+            </div>
+            <div class="goal-meta">
+              <div class="goal-stat"><strong>0 of 7</strong> launch tasks done</div>
+              <div class="goal-stat">Target: <strong>May 28</strong></div>
+            </div>
+          </div>
+
+          <div class="goal-card">
+            <div class="goal-header">
+              <div class="goal-name">PHP 8.4 migration complete</div>
+              <span class="sp on-track" style="margin:0">On track</span>
+            </div>
+            <div class="goal-desc">Dev and prod environments fully upgraded. WordPress plugin update unblocked once 8.4 is running in dev branch.</div>
+            <div style="height:6px;background:var(--bg-secondary);border-radius:3px;margin-bottom:8px">
+              <div style="height:100%;width:20%;background:var(--green);border-radius:3px"></div>
+            </div>
+            <div class="goal-meta">
+              <div class="goal-stat"><strong>0 of 3</strong> tasks done</div>
+              <div class="goal-stat">Target: <strong>May 21</strong></div>
+            </div>
+          </div>
+
+          <div class="goal-card">
+            <div class="goal-header">
+              <div class="goal-name">AMI & Amazon Linux 2023 rollout</div>
+              <span class="sp on-track" style="margin:0">On track</span>
+            </div>
+            <div class="goal-desc">New server AMI built, tested, and deployed to production. Zach leading with David support across May.</div>
+            <div style="height:6px;background:var(--bg-secondary);border-radius:3px;margin-bottom:8px">
+              <div style="height:100%;width:40%;background:var(--green);border-radius:3px"></div>
+            </div>
+            <div class="goal-meta">
+              <div class="goal-stat"><strong>1 of 4</strong> tasks done</div>
+              <div class="goal-stat">Target: <strong>May 29</strong></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- What shipped this week -->
+      <div class="sec">
+        <div class="sec-label">Shipped this week</div>
+        <div class="recent-card">
+          <div class="recent-row"><i class="ti ti-circle-check check-icon"></i><div class="recent-name">WNBA data checks, scripts, and site launch QA</div><div class="recent-who">David Hess</div><div class="recent-when">May 11</div></div>
+          <div class="recent-row"><i class="ti ti-circle-check check-icon"></i><div class="recent-name">Sportradar gold mapping (NFL)</div><div class="recent-who">Zach Brownson</div><div class="recent-when">May 11</div></div>
+          <div class="recent-row"><i class="ti ti-circle-check check-icon"></i><div class="recent-name">Pool Hosting — admin creates & participant joins contest (epics 4 & 5)</div><div class="recent-who">Rahul Caprihan</div><div class="recent-when">May 11</div></div>
+          <div class="recent-row"><i class="ti ti-circle-check check-icon"></i><div class="recent-name">Pool Hosting — authentication wrapup & staging env setup</div><div class="recent-who">Rahul Caprihan</div><div class="recent-when">May 11</div></div>
+          <div class="recent-row"><i class="ti ti-circle-check check-icon"></i><div class="recent-name">Sportradar NFL ID mapping week 2</div><div class="recent-who">David Hess</div><div class="recent-when">May 13</div></div>
+          <div class="recent-row"><i class="ti ti-circle-check check-icon"></i><div class="recent-name">Fix Pool Products Used admin page bug</div><div class="recent-who">David Hess</div><div class="recent-when">May 14</div></div>
+          <div class="recent-row"><i class="ti ti-circle-check check-icon"></i><div class="recent-name">Set up initial database records</div><div class="recent-who">David Hess</div><div class="recent-when">May 14</div></div>
+          <div class="recent-row"><i class="ti ti-circle-check check-icon"></i><div class="recent-name">AMI: current server inventory & analysis</div><div class="recent-who">Zach Brownson</div><div class="recent-when">May 12</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRIORITIES -->
+    <div id="page-priorities" class="page">
+      <div class="page-header"><div><h1>Priorities</h1><div class="hdr-sub">Strategic outcomes · updated from Overview</div></div></div>
+      <div class="pri-grid">
+        <div class="pri-card"><span class="sp at-risk">At risk</span><div class="pri-name">NFL 2026 launch</div><div class="pri-why">NFL section, Pick'em & Survivor must go live before preseason opens. Data integration is the current critical path.</div><div class="pri-owner"><i class="ti ti-user"></i> Tom Federico</div><div class="pb"><div class="pf" style="width:55%;background:var(--amber)"></div></div></div>
+        <div class="pri-card"><span class="sp on-track">On track</span><div class="pri-name">Purchase flow & trials</div><div class="pri-why">Trial subscriptions and purchase flow cleanup are the primary near-term revenue levers.</div><div class="pri-owner"><i class="ti ti-user"></i> Jon Mires</div><div class="pb"><div class="pf" style="width:45%;background:var(--green)"></div></div></div>
+        <div class="pri-card"><span class="sp at-risk">At risk</span><div class="pri-name">Pool hosting (World Cup)</div><div class="pri-why">New product line — must launch before tournament. Rahul is single-threaded across 6 epics through May 31.</div><div class="pri-owner"><i class="ti ti-user"></i> Rahul Caprihan</div><div class="pb"><div class="pf" style="width:35%;background:var(--amber)"></div></div></div>
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div id="page-projects" class="page">
+      <div class="page-header"><div><h1>Projects</h1><div class="hdr-sub">Active initiatives · 2026-05 Product Sprint</div></div><div class="asana-meta"><div class="live-badge"><i class="ti ti-brand-asana"></i> Live from Asana</div><div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> Last updated today at 9:06 AM</div></div></div>
+      <div class="proj-tbl">
+        <div class="pr hdr"><div>Project</div><div>Health</div><div>Owner</div><div>Progress</div><div>Linked to</div></div>
+        <div class="pr"><div><div class="pname">NFL data integration & launch</div></div><div><span class="sp at-risk" style="margin:0">At risk</span></div><div class="pown">David / Zach</div><div><div style="font-size:12px;color:var(--text-secondary)">60%</div><div class="mb"><div class="mf" style="width:60%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">NFL 2026 launch</div></div>
+        <div class="pr"><div><div class="pname">Pick'em & Survivor launch</div></div><div><span class="sp on-track" style="margin:0">On track</span></div><div class="pown">David Hess</div><div><div style="font-size:12px;color:var(--text-secondary)">30%</div><div class="mb"><div class="mf" style="width:30%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">NFL 2026 launch</div></div>
+        <div class="pr"><div><div class="pname">Trial subscriptions</div></div><div><span class="sp at-risk" style="margin:0">At risk</span></div><div class="pown">Jon Mires</div><div><div style="font-size:12px;color:var(--text-secondary)">25%</div><div class="mb"><div class="mf" style="width:25%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">Purchase flow & trials</div></div>
+        <div class="pr"><div><div class="pname">PHP 8.4 migration</div></div><div><span class="sp on-track" style="margin:0">On track</span></div><div class="pown">David Hess</div><div><div style="font-size:12px;color:var(--text-secondary)">20%</div><div class="mb"><div class="mf" style="width:20%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">Tech upgrades</div></div>
+        <div class="pr"><div><div class="pname">Pool hosting — World Cup</div></div><div><span class="sp at-risk" style="margin:0">At risk</span></div><div class="pown">Rahul Caprihan</div><div><div style="font-size:12px;color:var(--text-secondary)">20%</div><div class="mb"><div class="mf" style="width:20%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">Pool hosting (World Cup)</div></div>
+        <div class="pr"><div><div class="pname">AMI & Amazon Linux 2023</div></div><div><span class="sp on-track" style="margin:0">On track</span></div><div class="pown">Zach Brownson</div><div><div style="font-size:12px;color:var(--text-secondary)">40%</div><div class="mb"><div class="mf" style="width:40%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">Tech upgrades</div></div>
+        <div class="risk-foot"><i class="ti ti-alert-triangle"></i> 3 of 6 projects at risk — NFL launch, trial subscriptions, and pool hosting all showing timeline pressure</div>
+      </div>
+    </div>
+
+    <!-- PLACEHOLDER PAGES -->
+    <div id="page-meetings" class="page"><div class="page-header"><div><h1>Meetings</h1><div class="hdr-sub">AI-extracted notes, commitments, and risks</div></div></div><div class="placeholder-page"><i class="ti ti-notes"></i>Upload meeting notes to populate this section.<br>Notes will be parsed for decisions, risks, and commitments.</div></div>
+    <div id="page-decisions" class="page"><div class="page-header"><div><h1>Decisions</h1><div class="hdr-sub">Open queue and full decision log</div></div></div><div class="placeholder-page"><i class="ti ti-checkbox"></i>No open decisions logged yet.<br>Items flagged as decisions from meetings or attention items will appear here.</div></div>
+    <div id="page-insights" class="page"><div class="page-header"><div><h1>Insights</h1><div class="hdr-sub">AI-surfaced patterns, risks, and signals</div></div></div><div class="placeholder-page"><i class="ti ti-sparkles"></i>Insights will generate as more data sources are connected.<br>Upload meeting notes or add more Asana projects to begin.</div></div>
+    <div id="page-comms" class="page"><div class="page-header"><div><h1>Communications</h1><div class="hdr-sub">Key messages and threads needing executive awareness</div></div></div><div class="placeholder-page"><i class="ti ti-mail"></i>No communications flagged yet.<br>The Chief of Staff can flag threads here for executive visibility.</div></div>
+    <div id="page-weekly" class="page"><div class="page-header"><div><h1>Weekly brief</h1><div class="hdr-sub">Synthesized leadership summary</div></div></div><div class="placeholder-page"><i class="ti ti-calendar-week"></i>The weekly brief generates at end of week.<br>It will summarize what moved, what didn't, and where to focus next week.</div></div>
+
+  </div>
+</div>
+
+<script>
+function showPage(id,el){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  el.classList.add('active');
+}
+function toggleDrawer(id){
+  const drawer=document.getElementById(id);
+  const btn=document.getElementById('btn-'+id);
+  const isHidden=drawer.classList.contains('hidden');
+  drawer.classList.toggle('hidden',!isHidden);
+  btn.classList.toggle('open',isHidden);
+}
+</script>
+</body>
+</html>
