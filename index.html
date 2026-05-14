@@ -202,7 +202,7 @@
         <div class="sec-label">Today's focus</div>
         <div class="focus-card">
           <p class="focus-text">The NFL data integration reached a critical inflection point on May 14 — Zach launched data sync to prod, David set up maples, and Jon pushed initial site updates, all sequentially dependent — any slip delays the NFL section going live.</p>
-          <div class="focus-meta"><i class="ti ti-sparkles"></i> AI-synthesized from 2026-05 Product Sprint · 87 open tasks</div>
+          <div class="focus-meta"><i class="ti ti-sparkles"></i> AI-synthesized from 2026-05 Product Sprint + Q2 Ops & Marketing · 120 open tasks across 2 projects</div>
         </div>
       </div>
 
@@ -345,6 +345,35 @@
             <div class="task-row"><div class="task-name">Update Product Priorities project</div><div class="task-owner">Unassigned</div><div class="task-due due-ok">No date</div></div>
             <div class="task-row"><div class="task-name">Iterate project kickoff process / check out Notion</div><div class="task-owner">Unassigned</div><div class="task-due due-ok">No date</div></div>
           </div>
+
+        <div class="attn-card">
+          <div class="attn-main" onclick="toggleDrawer('d6',this)">
+            <div class="attn-bar u-high"></div>
+            <div class="attn-body">
+              <div class="attn-title">Brock — 6 Q2 Ops tasks overdue, 5 more due this week</div>
+              <div class="attn-why">Multiple Content & Email, Social & Community, and Ops tasks have passed their due dates with no completion recorded. These are Brock-owned tasks across the Q2 Ops & Marketing project.</div>
+              <div class="attn-footer">
+                <div class="attn-action">Review and reschedule or close overdue items this week</div>
+                <div style="display:flex;align-items:center;gap:6px">
+                  <span class="src-tag"><i class="ti ti-brand-asana"></i> Q2 Ops & Marketing</span>
+                  <span class="tag t-risk">Overdue</span>
+                  <button class="toggle-btn" id="btn-d6"><i class="ti ti-list"></i> Tasks <i class="ti ti-chevron-down chevron"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="task-drawer hidden" id="d6">
+            <div class="task-row"><div class="task-name">Build X/Twitter insights engine</div><div class="task-owner">Brock Bormann</div><div class="task-due due-over">May 9</div></div>
+            <div class="task-row"><div class="task-name">Audit & reduce underperforming article types</div><div class="task-owner">Brock Bormann</div><div class="task-due due-over">May 13</div></div>
+            <div class="task-row"><div class="task-name">Reset YouTube content strategy (Jason)</div><div class="task-owner">Jason Lisk</div><div class="task-due due-over">Apr 24</div></div>
+            <div class="task-row"><div class="task-name">Pre-define and schedule all sales emails</div><div class="task-owner">Brock Bormann</div><div class="task-due due-today">May 15</div></div>
+            <div class="task-row"><div class="task-name">Define full CRM subscriber lifecycle automation plan</div><div class="task-owner">Brock Bormann</div><div class="task-due due-today">May 15</div></div>
+            <div class="task-row"><div class="task-name">Align product offers / deals with marketing calendar</div><div class="task-owner">Brock Bormann</div><div class="task-due due-today">May 15</div></div>
+            <div class="task-row"><div class="task-name">Define tweet templates & automate X/Twitter posting</div><div class="task-owner">Brock Bormann</div><div class="task-due due-today">May 15</div></div>
+            <div class="task-row"><div class="task-name">Plan all articles through Dec 31</div><div class="task-owner">Jason Lisk</div><div class="task-due due-today">May 15</div></div>
+          </div>
+        </div>
+
         </div>
       </div>
 
@@ -387,7 +416,7 @@
 
       <!-- Sprint health summary -->
       <div class="sec">
-        <div class="sec-label">Sprint health — May 2026</div>
+        <div class="sec-label">Sprint health — May 2026 · Product Sprint</div>
         <div class="sprint-summary">
           <div class="summary-stat">
             <div class="stat-val">38</div>
@@ -516,6 +545,73 @@
       </div>
 
       <!-- What shipped this week -->
+      <div class="sec">
+        <div class="sec-label">Q2 Ops & Marketing — goals</div>
+        <div class="goals-grid">
+
+          <div class="goal-card">
+            <div class="goal-header">
+              <div class="goal-name">Content & email plan through Dec 31</div>
+              <span class="tag t-risk">At risk</span>
+            </div>
+            <div class="goal-desc">Sales emails, article plan, and CRM lifecycle automation all due May 15. Brock owns scheduling and automation; Jason owns article planning.</div>
+            <div style="height:6px;background:var(--bg-secondary);border-radius:3px;margin-bottom:8px">
+              <div style="height:100%;width:20%;background:var(--amber);border-radius:3px"></div>
+            </div>
+            <div class="goal-meta">
+              <div class="goal-stat"><strong>2 of 10</strong> tasks done</div>
+              <div class="goal-stat">Target: <strong>May 15 / Jun 30</strong></div>
+            </div>
+          </div>
+
+          <div class="goal-card">
+            <div class="goal-header">
+              <div class="goal-name">Social & Discord — bots, gating, X automation</div>
+              <span class="tag t-risk">At risk</span>
+            </div>
+            <div class="goal-desc">Discord bots, gating, and X/Twitter automation due May 15. Build X/Twitter insights engine was due May 9 and is overdue.</div>
+            <div style="height:6px;background:var(--bg-secondary);border-radius:3px;margin-bottom:8px">
+              <div style="height:100%;width:10%;background:var(--amber);border-radius:3px"></div>
+            </div>
+            <div class="goal-meta">
+              <div class="goal-stat"><strong>0 of 6</strong> tasks done</div>
+              <div class="goal-stat">Target: <strong>May 15 / Jun 30</strong></div>
+            </div>
+          </div>
+
+          <div class="goal-card">
+            <div class="goal-header">
+              <div class="goal-name">Ops & Growth — ads, B2B, partners, KPIs</div>
+              <span class="sp on-track" style="margin:0">On track</span>
+            </div>
+            <div class="goal-desc">Ad vendor bake-off, B2B licensing outreach, partner growth strategy, and marketing KPI reporting all due May 29.</div>
+            <div style="height:6px;background:var(--bg-secondary);border-radius:3px;margin-bottom:8px">
+              <div style="height:100%;width:5%;background:var(--green);border-radius:3px"></div>
+            </div>
+            <div class="goal-meta">
+              <div class="goal-stat"><strong>0 of 7</strong> tasks done</div>
+              <div class="goal-stat">Target: <strong>May 29</strong></div>
+            </div>
+          </div>
+
+          <div class="goal-card">
+            <div class="goal-header">
+              <div class="goal-name">Video & YouTube — strategy reset + production</div>
+              <span class="sp on-track" style="margin:0">On track</span>
+            </div>
+            <div class="goal-desc">YouTube strategy reset owned by Jason (overdue Apr 24 but in progress). Brock owns production cost reduction and content leverage through Jun 30.</div>
+            <div style="height:6px;background:var(--bg-secondary);border-radius:3px;margin-bottom:8px">
+              <div style="height:100%;width:15%;background:var(--green);border-radius:3px"></div>
+            </div>
+            <div class="goal-meta">
+              <div class="goal-stat"><strong>0 of 5</strong> tasks done</div>
+              <div class="goal-stat">Target: <strong>Jun 30</strong></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
       <div class="sec">
         <div class="sec-label">Shipped this week</div>
         <div class="recent-card">
@@ -849,7 +945,7 @@
     </div>
     <!-- PROJECTS -->
     <div id="page-projects" class="page">
-      <div class="page-header"><div><h1>Projects</h1><div class="hdr-sub">Active initiatives · 2026-05 Product Sprint</div></div><div class="asana-meta"><div class="live-badge"><i class="ti ti-brand-asana"></i> Live from Asana</div><div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> Last updated May 14, 2026 at 03:28 PM CT</div></div></div>
+      <div class="page-header"><div><h1>Projects</h1><div class="hdr-sub">Active initiatives · 2026-05 Product Sprint + Q2 Ops & Marketing</div></div><div class="asana-meta"><div class="live-badge"><i class="ti ti-brand-asana"></i> Live from Asana · 2 projects</div><div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> Last updated May 14, 2026 at 03:28 PM CT</div></div></div>
       <div class="proj-tbl">
         <div class="pr hdr"><div>Project</div><div>Health</div><div>Owner</div><div>Progress</div><div>Linked to</div></div>
         <div class="pr"><div><div class="pname">NFL data integration & launch</div></div><div><span class="sp at-risk" style="margin:0">At risk</span></div><div class="pown">David / Zach</div><div><div style="font-size:12px;color:var(--text-secondary)">60%</div><div class="mb"><div class="mf" style="width:60%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">NFL 2026 launch</div></div>
