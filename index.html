@@ -959,7 +959,117 @@
     </div>
 
     <!-- PLACEHOLDER PAGES -->
-    <div id="page-meetings" class="page"><div class="page-header"><div><h1>Meetings</h1><div class="hdr-sub">AI-extracted notes, commitments, and risks</div></div></div><div class="placeholder-page"><i class="ti ti-notes"></i>Upload meeting notes to populate this section.<br>Notes will be parsed for decisions, risks, and commitments.</div></div>
+    <div id="page-meetings" class="page">
+      <div class="page-header">
+        <div><h1>Meetings</h1><div class="hdr-sub">Week End Status & Future Planning · May 15, 2026</div></div>
+        <div class="asana-meta">
+          <div class="live-badge" style="background:#EEEDFE;color:#534AB7"><i class="ti ti-notes"></i> Notes uploaded</div>
+          <div class="last-updated"><i class="ti ti-clock" style="font-size:10px;vertical-align:-1px"></i> May 15, 2026 · Attendees: Tom, Zach, Jon, David, Rahul, Brock, Jason, Kenny</div>
+        </div>
+      </div>
+
+      <!-- Aligned decisions -->
+      <div class="sec">
+        <div class="sec-label" style="display:flex;align-items:center;gap:6px"><i class="ti ti-circle-check" style="font-size:13px;color:var(--green)"></i> Aligned in this meeting</div>
+        <div class="proj-tbl">
+          <div class="pr hdr"><div>Decision</div><div>Owner</div><div>Detail</div><div colspan="2">Status</div></div>
+          <div class="pr">
+            <div><div class="pname">Advance availability scheduling</div></div>
+            <div class="pown">All team</div>
+            <div style="font-size:11px;color:var(--text-secondary)">Team members provide available work hours in advance for upcoming projects to prevent scheduling surprises on critical launches</div>
+            <div colspan="2"><span class="sp on-track" style="margin:0">Aligned</span></div>
+          </div>
+          <div class="pr">
+            <div><div class="pname">Email automation → June · Discord gating → late June/July</div></div>
+            <div class="pown">Brock / Jon</div>
+            <div style="font-size:11px;color:var(--text-secondary)">Email automation prioritized for June sprint. Discord gating and verification targeted late June or July. Final implementation date set for August.</div>
+            <div colspan="2"><span class="sp on-track" style="margin:0">Aligned</span></div>
+          </div>
+          <div class="pr">
+            <div><div class="pname">Pool naming — restricted feedback process</div></div>
+            <div class="pown">Tom Federico</div>
+            <div style="font-size:11px;color:var(--text-secondary)">Team members prohibited from brainstorming additional names when candidate list is shared. Must avoid names already registered by other sites.</div>
+            <div colspan="2"><span class="sp on-track" style="margin:0">Aligned</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Next steps from meeting -->
+      <div class="sec">
+        <div class="sec-label" style="display:flex;align-items:center;gap:6px"><i class="ti ti-arrow-right" style="font-size:13px;color:var(--purple)"></i> Next steps committed in this meeting</div>
+        <div class="proj-tbl">
+          <div class="pr hdr"><div>Task</div><div>Owner</div><div>Context</div><div>Timing</div><div></div></div>
+          <div class="pr"><div><div class="pname">Generate preseason ratings + run prod scripts</div></div><div class="pown">David Hess</div><div style="font-size:11px;color:var(--text-secondary)">Ratings nearing completion pending prod script execution. PHP upgrade continuing with minor scope issue resolved.</div><div style="font-size:11px;color:var(--text-tertiary)">ASAP / today</div><div><span class="tag t-risk">In progress</span></div></div>
+          <div class="pr"><div><div class="pname">Finalize Stripe integration implementation</div></div><div class="pown">Jon Mires</div><div style="font-size:11px;color:var(--text-secondary)">Report audit resolved long-standing Stripe issues. Finalization next week. Jon travelling Thu/Fri — completing from Fresno.</div><div style="font-size:11px;color:var(--text-tertiary)">Next week</div><div><span class="tag t-risk">Delayed</span></div></div>
+          <div class="pr"><div><div class="pname">Meet with Jon on email automation strategy</div></div><div class="pown">Brock / Jon</div><div style="font-size:11px;color:var(--text-secondary)">Align on email automation and additional content automation features for June sprint.</div><div style="font-size:11px;color:var(--text-tertiary)">Early next week</div><div><span class="tag t-decision">Scheduled</span></div></div>
+          <div class="pr"><div><div class="pname">Publish schedule release content</div></div><div class="pown">Jason Lisk</div><div style="font-size:11px;color:var(--text-secondary)">Post schedule release info. Limited availability Monday due to recruiting trip.</div><div style="font-size:11px;color:var(--text-tertiary)">This week</div><div><span class="sp on-track" style="margin:0;font-size:10px">On track</span></div></div>
+          <div class="pr"><div><div class="pname">Share pool hosting staging link</div></div><div class="pown">Rahul Caprihan</div><div style="font-size:11px;color:var(--text-secondary)">Scoring logic 30% complete. Functional contest simulation expected next week. Staging link going out soon.</div><div style="font-size:11px;color:var(--text-tertiary)">This week</div><div><span class="sp on-track" style="margin:0;font-size:10px">On track</span></div></div>
+          <div class="pr"><div><div class="pname">Prepare pool hosting go-live checklist</div></div><div class="pown">Kenny Long</div><div style="font-size:11px;color:var(--text-secondary)">Develop checklist of requirements to verify before sharing the pool hosting site externally.</div><div style="font-size:11px;color:var(--text-tertiary)">TBD</div><div><span class="tag t-info">New</span></div></div>
+          <div class="pr"><div><div class="pname">Send pool naming options to team for feedback</div></div><div class="pown">Tom Federico</div><div style="font-size:11px;color:var(--text-secondary)">Avoid suggesting already-registered names. Restricted brainstorming process agreed.</div><div style="font-size:11px;color:var(--text-tertiary)">Early next week</div><div><span class="tag t-decision">Pending</span></div></div>
+          <div class="pr"><div><div class="pname">Test microphone and video setup</div></div><div class="pown">Jason Lisk</div><div style="font-size:11px;color:var(--text-secondary)">Current process efficient but microphone testing needs improvement. Manual update required after livestream to move video to featured spot.</div><div style="font-size:11px;color:var(--text-tertiary)">Before next recording</div><div><span class="tag t-info">FYI</span></div></div>
+          <div class="pr"><div><div class="pname">Provide upcoming availability to team</div></div><div class="pown">Tom Federico</div><div style="font-size:11px;color:var(--text-secondary)">Tom to provide available work hours in advance to unblock scheduling of critical project coordination.</div><div style="font-size:11px;color:var(--text-tertiary)">Ongoing</div><div><span class="tag t-decision">New protocol</span></div></div>
+        </div>
+      </div>
+
+      <!-- Key context from meeting -->
+      <div class="sec">
+        <div class="sec-label" style="display:flex;align-items:center;gap:6px"><i class="ti ti-bulb" style="font-size:13px;color:var(--amber)"></i> Key context & signals from this meeting</div>
+        <div class="attn-card">
+          <div class="attn-main" onclick="toggleDrawer('m1',this)">
+            <div class="attn-bar u-med"></div>
+            <div class="attn-body">
+              <div class="attn-title">Google search authority — research needed before implementation</div>
+              <div class="attn-why">Brock and Jason discussed adding a feature in articles allowing users to designate TR as a top Google source. Jon flagged that Google News inclusion is a prerequisite — need to research metadata requirements first.</div>
+              <div class="attn-footer">
+                <div class="attn-action">Assign metadata research task before any implementation work begins</div>
+                <div style="display:flex;align-items:center;gap:6px"><span class="tag t-decision">Action needed</span><button class="toggle-btn" id="btn-m1"><i class="ti ti-message"></i> Detail <i class="ti ti-chevron-down chevron"></i></button></div>
+              </div>
+            </div>
+          </div>
+          <div class="task-drawer hidden" id="m1">
+            <div class="task-row"><div class="task-name">Brock + Jason: implement feature to designate TR as top Google source within articles</div><div class="task-owner">Brock / Jason</div><div class="task-due due-ok">Discussed</div></div>
+            <div class="task-row"><div class="task-name">Jon: Google News inclusion is a prerequisite — need to research metadata requirements</div><div class="task-owner">Jon Mires</div><div class="task-due due-ok">Prerequisite</div></div>
+            <div class="task-row"><div class="task-name">No owner assigned to metadata research yet — needs a task in Asana</div><div class="task-owner" style="color:var(--text-tertiary)">Unassigned</div><div class="task-due due-ok">No date</div></div>
+          </div>
+        </div>
+        <div class="attn-card">
+          <div class="attn-main" onclick="toggleDrawer('m2',this)">
+            <div class="attn-bar u-low"></div>
+            <div class="attn-body">
+              <div class="attn-title">Content calendar — Jason using AI tools, recruiting trip limits Monday availability</div>
+              <div class="attn-why">Jason is using AI to develop the annual content calendar and will post schedule release content this week. Limited availability Monday due to a recruiting trip.</div>
+              <div class="attn-footer">
+                <div class="attn-action">Plan around Jason's Monday absence for any content-dependent work</div>
+                <div style="display:flex;align-items:center;gap:6px"><span class="tag t-info">FYI</span><button class="toggle-btn" id="btn-m2"><i class="ti ti-message"></i> Detail <i class="ti ti-chevron-down chevron"></i></button></div>
+              </div>
+            </div>
+          </div>
+          <div class="task-drawer hidden" id="m2">
+            <div class="task-row"><div class="task-name">Jason using AI tools to develop full content calendar for the year</div><div class="task-owner">Jason Lisk</div><div class="task-due due-ok">In progress</div></div>
+            <div class="task-row"><div class="task-name">Schedule release content to be posted this week</div><div class="task-owner">Jason Lisk</div><div class="task-due due-ok">This week</div></div>
+            <div class="task-row"><div class="task-name">Limited availability Monday — recruiting trip</div><div class="task-owner">Jason Lisk</div><div class="task-due due-ok">May 18</div></div>
+          </div>
+        </div>
+        <div class="attn-card">
+          <div class="attn-main" onclick="toggleDrawer('m3',this)">
+            <div class="attn-bar u-low"></div>
+            <div class="attn-body">
+              <div class="attn-title">Zach pivoting to 2 weeks full-time infrastructure testing after NFL tasks</div>
+              <div class="attn-why">Once NFL-related tasks are complete, Zach will dedicate the next two weeks entirely to technical upgrade testing (AMI, Amazon Linux 2023). Good signal for infrastructure work but means Zach is largely unavailable for product requests.</div>
+              <div class="attn-footer">
+                <div class="attn-action">Don't assign new product tasks to Zach until infrastructure window is complete</div>
+                <div style="display:flex;align-items:center;gap:6px"><span class="tag t-info">FYI</span><button class="toggle-btn" id="btn-m3"><i class="ti ti-message"></i> Detail <i class="ti ti-chevron-down chevron"></i></button></div>
+              </div>
+            </div>
+          </div>
+          <div class="task-drawer hidden" id="m3">
+            <div class="task-row"><div class="task-name">Zach: after NFL tasks complete, 2 full weeks on AMI and Amazon Linux 2023 testing</div><div class="task-owner">Zach Brownson</div><div class="task-due due-ok">Starts ~May 16</div></div>
+            <div class="task-row"><div class="task-name">Test candidate AMIs already developed</div><div class="task-owner">Zach Brownson</div><div class="task-due due-ok">In progress</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
     <div id="page-decisions" class="page">
       <div class="page-header">
         <div><h1>Decisions</h1><div class="hdr-sub">Open queue · organized by decision owner · sourced from Slack</div></div>
@@ -1078,9 +1188,73 @@
 
       </div>
 
+      <!-- Meeting-sourced decisions -->
+      <div class="sec">
+        <div style="height:1px;background:var(--border-t);margin-bottom:24px"></div>
+        <div class="sec-label" style="display:flex;align-items:center;gap:8px"><i class="ti ti-notes" style="font-size:13px"></i> From May 15 meeting — Tom & Brock</div>
+
+        <div style="background:var(--bg-primary);border:0.5px solid var(--border-t);border-left:3px solid var(--amber);border-radius:var(--radius-lg);padding:16px;margin-bottom:10px">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:12px">
+            <div style="font-size:13px;font-weight:500;color:var(--text-primary)">Pool naming — send options to team early next week</div>
+            <div style="display:flex;gap:6px;flex-shrink:0;align-items:center">
+              <span class="tag t-decision">Open</span>
+              <span class="src-tag"><i class="ti ti-notes"></i> May 15 meeting</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;margin-bottom:10px">Tom will send pool naming options to the broader team for feedback early next week. Process rule agreed: no brainstorming new names when the list is shared, and names already registered by other sites must be avoided. This has been a time-sink in the past.</div>
+          <div style="font-size:11px;background:var(--purple-bg);border-radius:var(--radius-md);padding:8px 10px;margin-bottom:10px;line-height:1.6;color:var(--text-secondary)"><strong style="color:var(--purple)"><i class="ti ti-sparkles" style="font-size:11px"></i> AI recommendation:</strong> When the list goes out, frame it explicitly as a vote not a brainstorm. Include a registration-check note on each name to prevent the team from spending time on unavailable options.</div>
+          <div style="font-size:11px;color:var(--text-tertiary);margin-bottom:10px">Waiting on: Tom to send list · Target: early week of May 18</div>
+          <div style="display:flex;gap:6px">
+            <button style="font-size:11px;padding:5px 12px;border-radius:var(--radius-md);background:var(--purple);color:white;border:none;cursor:pointer;font-family:var(--font)">Decide</button>
+            <button style="font-size:11px;padding:5px 12px;border-radius:var(--radius-md);border:0.5px solid var(--border-s);background:transparent;cursor:pointer;color:var(--text-secondary);font-family:var(--font)">Delegate</button>
+            <button style="font-size:11px;padding:5px 12px;border-radius:var(--radius-md);border:0.5px solid var(--border-s);background:transparent;cursor:pointer;color:var(--text-secondary);font-family:var(--font)">Defer</button>
+          </div>
+        </div>
+
+        <div style="background:var(--bg-primary);border:0.5px solid var(--border-t);border-left:3px solid var(--amber);border-radius:var(--radius-lg);padding:16px;margin-bottom:10px">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:12px">
+            <div style="font-size:13px;font-weight:500;color:var(--text-primary)">Email automation scope — confirm June sprint plan with Jon</div>
+            <div style="display:flex;gap:6px;flex-shrink:0;align-items:center">
+              <span class="tag t-decision">Open</span>
+              <span class="src-tag"><i class="ti ti-notes"></i> May 15 meeting</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;margin-bottom:10px">Brock and Jon agreed to meet early next week to define email automation strategy for June. Discord gating and verification pushed to late June/July with August as the final implementation date. The scope of what "email automation" covers in the June sprint needs to be locked before any work begins.</div>
+          <div style="font-size:11px;background:var(--purple-bg);border-radius:var(--radius-md);padding:8px 10px;margin-bottom:10px;line-height:1.6;color:var(--text-secondary)"><strong style="color:var(--purple)"><i class="ti ti-sparkles" style="font-size:11px"></i> AI recommendation:</strong> Schedule the Brock + Jon meeting before Thursday — Jon is travelling Thu/Fri. Nail down exactly what ships in June vs. what waits for the Discord implementation in August.</div>
+          <div style="font-size:11px;color:var(--text-tertiary);margin-bottom:10px">Waiting on: Brock + Jon meeting · Target: before May 21 (Jon travels Thu/Fri)</div>
+          <div style="display:flex;gap:6px">
+            <button style="font-size:11px;padding:5px 12px;border-radius:var(--radius-md);background:var(--purple);color:white;border:none;cursor:pointer;font-family:var(--font)">Decide</button>
+            <button style="font-size:11px;padding:5px 12px;border-radius:var(--radius-md);border:0.5px solid var(--border-s);background:transparent;cursor:pointer;color:var(--text-secondary);font-family:var(--font)">Delegate</button>
+            <button style="font-size:11px;padding:5px 12px;border-radius:var(--radius-md);border:0.5px solid var(--border-s);background:transparent;cursor:pointer;color:var(--text-secondary);font-family:var(--font)">Defer</button>
+          </div>
+        </div>
+
+        <div style="background:var(--bg-primary);border:0.5px solid var(--border-t);border-left:3px solid var(--green);border-radius:var(--radius-lg);padding:16px;margin-bottom:10px">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:12px">
+            <div style="font-size:13px;font-weight:500;color:var(--text-primary)">Google News metadata — assign research task before any implementation</div>
+            <div style="display:flex;gap:6px;flex-shrink:0;align-items:center">
+              <span class="tag t-info">New item</span>
+              <span class="src-tag"><i class="ti ti-notes"></i> May 15 meeting</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;margin-bottom:10px">Brock and Jason want to implement a feature allowing users to designate TR as a top Google source. Jon flagged Google News inclusion is a prerequisite. No one was assigned to research what metadata is required. This is unblocked work that could improve search authority before football season.</div>
+          <div style="font-size:11px;background:var(--purple-bg);border-radius:var(--radius-md);padding:8px 10px;margin-bottom:10px;line-height:1.6;color:var(--text-secondary)"><strong style="color:var(--purple)"><i class="ti ti-sparkles" style="font-size:11px"></i> AI recommendation:</strong> Assign the metadata research to Jason or Brock this week — it's a low-effort research task that unblocks a potentially high-value SEO/authority feature before football season traffic peaks.</div>
+          <div style="font-size:11px;color:var(--text-tertiary);margin-bottom:10px">Waiting on: owner assignment · No task in Asana yet</div>
+          <div style="display:flex;gap:6px">
+            <button style="font-size:11px;padding:5px 12px;border-radius:var(--radius-md);background:var(--purple);color:white;border:none;cursor:pointer;font-family:var(--font)">Decide</button>
+            <button style="font-size:11px;padding:5px 12px;border-radius:var(--radius-md);border:0.5px solid var(--border-s);background:transparent;cursor:pointer;color:var(--text-secondary);font-family:var(--font)">Delegate</button>
+            <button style="font-size:11px;padding:5px 12px;border-radius:var(--radius-md);border:0.5px solid var(--border-s);background:transparent;cursor:pointer;color:var(--text-secondary);font-family:var(--font)">Defer</button>
+          </div>
+        </div>
+
+      </div>
+
       <div class="sec">
         <div class="sec-label">Meeting notes</div>
-        <div class="placeholder-page" style="padding:30px 0"><i class="ti ti-notes"></i>No meeting notes uploaded yet.<br>Upload notes and decisions will be extracted and added to this queue automatically.</div>
+        <div style="background:var(--bg-secondary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:12px 16px;font-size:12px;color:var(--text-secondary);display:flex;align-items:center;gap:8px">
+          <i class="ti ti-circle-check" style="color:var(--green);font-size:15px"></i>
+          May 15 meeting notes uploaded and processed · <span style="color:var(--text-tertiary)">Week End Status & Future Planning</span>
+        </div>
       </div>
 
     </div>
