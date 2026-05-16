@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "description": "Cadence state file — stores persisted decisions, deferred items, and sync history. Upload this file to the same GitHub repo as index.html.",
+    "last_sync": "2026-05-15T21:51:00-05:00",
+    "last_weekly_brief": "2026-05-15",
+    "asana_projects": ["1214266155771815", "1214137063402957"],
+    "slack_channels": 19
+  },
+  "decisions": {
+    "resolved": [],
+    "delegated": [],
+    "deferred": []
+  },
+  "sync_log": [
+    { "date": "2026-05-15", "time": "09:51 PM CT", "source": "Asana + Slack + meeting notes", "notes": "NFL live, pool hosting staging shared, weekly brief generated" },
+    { "date": "2026-05-15", "time": "03:44 PM CT", "source": "Asana + Slack", "notes": "NFL bug active, division_id fix in progress" },
+    { "date": "2026-05-15", "time": "01:10 PM CT", "source": "Asana + Slack + meeting notes", "notes": "May 15 meeting notes uploaded and processed" },
+    { "date": "2026-05-14", "time": "03:34 PM CT", "source": "Asana + Slack", "notes": "David shipped 4 NFL data sync tasks, Q2 Ops added to all tabs" },
+    { "date": "2026-05-14", "time": "02:21 PM CT", "source": "Asana + Slack", "notes": "Initial full Slack pull across all 19 channels" }
+  ],
+  "notes": {
+    "weekly_brief_trigger": "Say 'sync Cadence weekly' on Fridays to include the weekly brief in the rebuild",
+    "full_rebuild": "Every sync is a full rebuild from scratch — both Asana projects + all 19 Slack channels",
+    "meeting_notes": "Upload meeting notes in the conversation and they will be folded into Meetings and Decisions tabs"
+  }
+}
