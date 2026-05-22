@@ -25,7 +25,7 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
 .app{display:flex;min-height:100vh}
 .sidebar{width:210px;flex-shrink:0;background:var(--bg-primary);border-right:0.5px solid var(--border-t);padding:20px 0;display:flex;flex-direction:column;gap:2px;position:sticky;top:0;height:100vh;overflow-y:auto}
 .sidebar-logo{padding:0 16px 16px;border-bottom:0.5px solid var(--border-t);margin-bottom:8px}
-.sidebar-logo .name{font-size:15px;font-weight:500;color:var(--text-primary);letter-spacing:-.3px}
+.sidebar-logo .name{font-size:15px;font-weight:500;letter-spacing:-.3px}
 .sidebar-logo .sub{font-size:11px;color:var(--text-secondary);margin-top:2px}
 .nav-item{display:flex;align-items:center;gap:8px;padding:7px 16px;font-size:13px;color:var(--text-secondary);cursor:pointer;user-select:none;transition:background .12s,color .12s}
 .nav-item:hover{background:var(--bg-secondary);color:var(--text-primary)}
@@ -45,15 +45,14 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
 .sec-label{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-tertiary);margin-bottom:10px;font-weight:500}
 .focus-card{background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:20px 22px;position:relative;overflow:hidden}
 .focus-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--purple)}
-.focus-text{font-size:15px;line-height:1.7;color:var(--text-primary);padding-left:14px}
+.focus-text{font-size:15px;line-height:1.7;padding-left:14px}
 .focus-meta{font-size:11px;color:var(--purple);margin-top:10px;padding-left:14px;display:flex;align-items:center;gap:5px;opacity:.8}
 .attn-card{background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);margin-bottom:8px;overflow:hidden}
-.attn-card:hover{border-color:var(--border-s)}
 .attn-main{display:flex;padding:14px 16px;cursor:pointer}
 .attn-bar{width:3px;flex-shrink:0;margin:-14px 13px -14px -16px;align-self:stretch}
 .u-high{background:var(--red)}.u-med{background:var(--amber)}.u-low{background:var(--green)}
 .attn-body{flex:1;min-width:0}
-.attn-title{font-size:13px;font-weight:500;color:var(--text-primary);margin-bottom:4px}
+.attn-title{font-size:13px;font-weight:500;margin-bottom:4px}
 .attn-main:hover .attn-title{color:var(--purple)}
 .attn-why{font-size:12px;color:var(--text-secondary);line-height:1.55;margin-bottom:8px}
 .attn-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
@@ -68,15 +67,14 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
 .t-info{background:var(--bg-info);color:var(--text-info)}
 .t-success{background:var(--bg-success);color:var(--text-success)}
 .src-tag{font-size:10px;color:var(--text-tertiary);display:flex;align-items:center;gap:3px}
-.new-badge{font-size:10px;background:var(--purple-bg);color:var(--purple);padding:2px 6px;border-radius:4px;font-weight:500;vertical-align:middle;margin-left:6px}
+.new-badge{font-size:10px;background:var(--purple-bg);color:var(--purple);padding:2px 6px;border-radius:4px;font-weight:500;vertical-align:middle;margin-left:4px}
 .task-drawer{border-top:0.5px solid var(--border-t);background:var(--bg-secondary);padding:10px 16px 12px 32px}
 .task-drawer.hidden{display:none}
 .task-row{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:0.5px solid var(--border-t)}
 .task-row:last-child{border-bottom:none}
-.task-name{font-size:12px;color:var(--text-primary);flex:1;line-height:1.4}
+.task-name{font-size:12px;flex:1;line-height:1.4}
 .task-owner{font-size:11px;color:var(--text-secondary);white-space:nowrap}
 .task-due{font-size:10px;padding:2px 7px;border-radius:4px;white-space:nowrap;font-weight:500}
-.due-today{background:var(--bg-warning);color:var(--text-warning)}
 .due-over{background:var(--bg-danger);color:var(--text-danger)}
 .due-ok{background:var(--bg-primary);color:var(--text-tertiary);border:0.5px solid var(--border-t)}
 .pri-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
@@ -84,32 +82,24 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
 .sp{font-size:10px;padding:2px 8px;border-radius:20px;font-weight:500;display:inline-block;margin-bottom:8px}
 .on-track{background:var(--bg-success);color:var(--text-success)}
 .at-risk{background:var(--bg-warning);color:var(--text-warning)}
-.blocked{background:var(--bg-danger);color:var(--text-danger)}
-.pri-name{font-size:13px;font-weight:500;color:var(--text-primary);margin-bottom:5px}
+.pri-name{font-size:13px;font-weight:500;margin-bottom:5px}
 .pri-why{font-size:11px;color:var(--text-secondary);line-height:1.55;margin-bottom:10px}
-.pri-owner{font-size:11px;color:var(--text-tertiary);display:flex;align-items:center;gap:4px}
 .pb{height:3px;background:var(--bg-secondary);border-radius:2px;margin-top:10px}
 .pf{height:100%;border-radius:2px}
 .proj-tbl{background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);overflow:hidden}
 .pr{display:grid;grid-template-columns:2fr 1fr 1fr 80px 1fr;padding:11px 16px;border-bottom:0.5px solid var(--border-t);align-items:center;font-size:12px;gap:8px}
 .pr:last-child{border-bottom:none}
 .pr.hdr{font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:var(--text-tertiary);background:var(--bg-secondary);padding:9px 16px;font-weight:500}
-.pname{font-size:12px;font-weight:500;color:var(--text-primary)}
+.pname{font-size:12px;font-weight:500}
 .pown{font-size:11px;color:var(--text-secondary)}
 .mb{height:4px;background:var(--bg-secondary);border-radius:2px;margin-top:3px;width:60px}
 .mf{height:100%;border-radius:2px}
 .risk-foot{padding:10px 16px;background:var(--bg-secondary);border-top:0.5px solid var(--border-t);font-size:11px;color:var(--text-secondary);display:flex;align-items:center;gap:6px}
 .risk-foot i{color:var(--amber);font-size:14px}
 .check-icon{color:var(--green);font-size:14px;flex-shrink:0}
-.recent-card{background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);overflow:hidden}
-.recent-row{display:flex;align-items:center;gap:10px;padding:9px 16px;border-bottom:0.5px solid var(--border-t);font-size:12px}
-.recent-row:last-child{border-bottom:none}
-.recent-name{flex:1;color:var(--text-primary);line-height:1.4}
-.recent-who{font-size:11px;color:var(--text-secondary);white-space:nowrap}
-.recent-when{font-size:10px;color:var(--text-tertiary);white-space:nowrap}
 .win-card{background:var(--bg-primary);border:0.5px solid var(--border-t);border-left:3px solid var(--green);border-radius:var(--radius-lg);padding:13px 16px;display:flex;align-items:flex-start;gap:12px;margin-bottom:8px}
 .dec-card{background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:16px;margin-bottom:10px}
-.dm-block{background:var(--purple-bg);border-radius:var(--radius-md);padding:11px 14px;margin:8px 0;font-size:12px;color:var(--text-secondary);line-height:1.6;border-left:3px solid var(--purple)}
+.dm-block{background:var(--purple-bg);border-radius:var(--radius-md);padding:10px 13px;margin:7px 0;font-size:12px;color:var(--text-secondary);line-height:1.6;border-left:3px solid var(--purple)}
 .dm-who{font-size:10px;font-weight:500;color:var(--purple);margin-bottom:3px}
 </style>
 </head>
@@ -138,17 +128,17 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
     <!-- OVERVIEW -->
     <div id="page-overview" class="page active">
       <div class="page-header">
-        <div><h1>Daily overview</h1><div class="hdr-sub">Friday, May 22, 2026 · Product Sprint + Q2 Ops &amp; Marketing</div></div>
+        <div><h1>Daily overview</h1><div class="hdr-sub">Friday, May 22, 2026 · Team call this afternoon · Product Sprint + Q2 Ops</div></div>
         <div class="asana-meta">
-          <div class="live-badge"><i class="ti ti-brand-asana"></i> Live · 3 projects + 19 channels + DMs</div>
-          <div class="last-updated">Synced May 22, 2026 · 81/157 sprint · 24/55 Q2 Ops</div>
+          <div class="live-badge"><i class="ti ti-brand-asana"></i> Live · 2 projects + all Slack + all DMs</div>
+          <div class="last-updated">Synced May 22, 2026 · 81/158 sprint · 24/55 Q2 Ops</div>
         </div>
       </div>
       <div class="sec">
         <div class="sec-label">Today's focus</div>
         <div class="focus-card">
-          <p class="focus-text">Pick'em &amp; Survivor launches Monday — PHP 8.4 finish is the only thing standing in the way. Trial subscription part 2 is a June sprint item with Jon back Monday. Across your DMs this week: Kenny is actively working pool hosting go-to-market and waiting on Tom for a few decisions; Rahul is ready to launch prod but needs pool hosting Slack alert channels set up; Jason is building the content calendar and NFL football sections but has a content calendar maintenance process gap to close; and you flagged to Tom the need for pool hosting channel access and the Zach/Rahul review timing.</p>
-          <div class="focus-meta"><i class="ti ti-sparkles"></i> AI-synthesized · Product Sprint + Q2 Ops + Big Board + 19 channels + all DMs</div>
+          <p class="focus-text">Two things must happen before Monday's Pick'em &amp; Survivor launch: PHP 8.4 finish and Circa package pricing configured. Brock updated the packages — David needs to wire up the pricing. Tom pushed the 1:1 this morning and is moving it to Thursdays. Pool hosting prod sync and Kenny's GTM doc need Tom's attention on Monday. Email automation scope is locked from the May 20 meeting: onboarding and free trial flows for June, internal-first. Brock has 5 planning deliverables; Jon's subscription definition is the first dependency.</p>
+          <div class="focus-meta"><i class="ti ti-sparkles"></i> AI-synthesized · Product Sprint + Q2 Ops + all Slack + all DMs + May 20 email automation meeting</div>
         </div>
       </div>
 
@@ -159,9 +149,12 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
           <div class="attn-main" onclick="toggleDrawer('d1',this)">
             <div class="attn-bar u-high"></div>
             <div class="attn-body">
-              <div class="attn-title">PHP 8.4 finish — must close before Monday's Pick'em &amp; Survivor launch</div>
-              <div class="attn-why">David started PHP 8.4 on May 18 and the finish task is 2 days overdue. All 8 Pick'em &amp; Survivor tasks begin Monday May 25. David is the only person who can close both.</div>
-              <div class="attn-footer"><div class="attn-action">Confirm status with David today — must be done by Sunday</div><div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-asana"></i> Product Sprint</span><span class="tag t-blocker">Critical path</span></div></div>
+              <div class="attn-title">Circa package pricing + PHP 8.4 — both must be done before Monday's launch</div>
+              <div class="attn-why">Brock updated the Circa packages to reflect the updated pricing. David needs to configure them in the product before Pick'em &amp; Survivor goes live May 25. PHP 8.4 finish is also still open and overdue since May 20. David is the single owner of both items.</div>
+              <div class="attn-footer">
+                <div class="attn-action">Message David today — confirm PHP 8.4 status and flag that Circa pricing is ready to be wired up</div>
+                <div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-asana"></i> Product Sprint</span><span class="tag t-blocker">Both needed before Monday</span></div>
+              </div>
             </div>
           </div>
         </div>
@@ -170,20 +163,17 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
           <div class="attn-main" onclick="toggleDrawer('d2',this)">
             <div class="attn-bar u-high"></div>
             <div class="attn-body">
-              <div class="attn-title">Kenny is waiting on Tom's review of the pool hosting GTM doc + admins email draft <span class="new-badge">DM</span></div>
-              <div class="attn-why">Kenny shared a GTM plan doc with Tom today and is expecting feedback. He also has an email draft for recruiting initial pool admins — you reviewed it and it's good, suggested adding benefit bullets. You told Kenny you'd flag the GTM doc with Tom tomorrow morning as a priority since most of what's on Tom's plate isn't as time-sensitive. Tom is in Knoxville today.</div>
+              <div class="attn-title">Tom's 1:1 pushed this morning — moving to non-morning Thursdays <span class="new-badge">NEW</span></div>
+              <div class="attn-why">Tom messaged this morning that he needed to run to the new house and suggested rescheduling to non-morning going forward. You proposed Thursdays. The recurring Wednesday 1:1 needs to be rebooked once Tom confirms a time.</div>
               <div class="attn-footer">
-                <div class="attn-action">Flag with Tom on Monday morning call — Kenny's GTM doc + admin email need his feedback to unblock go-to-market</div>
-                <div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> Brock–Kenny DM</span><span class="tag t-risk">Tom review pending</span><button class="toggle-btn" id="btn-d2"><i class="ti ti-message"></i> DM context <i class="ti ti-chevron-down chevron"></i></button></div>
+                <div class="attn-action">Confirm Thursday time with Tom Monday, rebook the recurring calendar event</div>
+                <div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> Brock–Tom DM</span><span class="tag t-decision">Reschedule needed</span><button class="toggle-btn" id="btn-d2"><i class="ti ti-message"></i> DM <i class="ti ti-chevron-down chevron"></i></button></div>
               </div>
             </div>
           </div>
           <div class="task-drawer hidden" id="d2">
-            <div class="dm-block"><div class="dm-who">Brock → Kenny · May 21, 3:16pm</div>"As I have been following along in the pool hosting channel, I wanted to see is there is anything you are waiting on from Tom or anything I should bring to him tomorrow morning (we have a standing ops call) to make sure it is prioritized?"</div>
-            <div class="dm-block"><div class="dm-who">Kenny → Brock · May 21, 3:50pm</div>"This is the one he's currently blocking... There's [the admins email] which he isn't really blocking but maybe you can FYI for him in case he cares to review. Lastly, I plan to share a document later today with some provisional NFL go-to-market plans, and will want his review on it and some answers to questions."</div>
-            <div class="dm-block"><div class="dm-who">Brock → Kenny · May 21, 4:08pm</div>"On the second [email draft] — as a second set of eyes, I reviewed it yesterday and it looks good. Tom will probably have thoughts on wordsmithing... The one thing I would consider is adding 1-2 sentences or 2-3 bullets after the first paragraph to highlight the benefits — 'easier way to run survivor pools,' 'less commissioner overhead,' 'simpler invite + pick management.'... I'll flag the go-to-market doc tomorrow so it is prioritized once you send it over."</div>
-            <div class="dm-block"><div class="dm-who">Kenny → Brock · May 21, 4:19pm</div>"Good call on the email draft — I'll incorporate something like that. Also, if you have feedback on the survey to collect referrals from TR team and care to review, I'm open to that! Wasn't supposed to be a big deal, but Rahul and Tom clearly have thoughts."</div>
-            <div class="dm-block"><div class="dm-who">Brock → Kenny · May 21, 4:29–4:31pm</div>Reviewed the survey, deferred to Tom since he's planning to review. Flagged timing pressure — "the biggest thing right now is timing... not all of the things being reviewed right now have to be 100% optimal."</div>
+            <div class="dm-block"><div class="dm-who">Tom → Brock · May 22, 10:01am</div>"i need to run over to the new house for a bit — likely will need to push off our chat (though we should probably also reschedule it for non-morning going forward)"</div>
+            <div class="dm-block"><div class="dm-who">Brock → Tom · May 22, 10:21am</div>"Just let me know when you are ready. And yeah, I think we should schedule it for Thursdays during the time you expect to be working moving forward."</div>
           </div>
         </div>
 
@@ -191,19 +181,24 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
           <div class="attn-main" onclick="toggleDrawer('d3',this)">
             <div class="attn-bar u-med"></div>
             <div class="attn-body">
-              <div class="attn-title">Pool hosting Slack alert channels not yet created — Rahul ready to launch prod this week <span class="new-badge">DM</span></div>
-              <div class="attn-why">Rahul proposed 3 new pool hosting Slack channels: #pool-hosting-logs, #pool-hosting-alerts, #pool-hosting-staging. He needs someone to create them since he doesn't have that permission. You and Rahul agreed to run the plan by Tom first. Rahul wants these live before prod launch. He's launching prod this week.</div>
+              <div class="attn-title">Email automation: Brock has 5 deliverables from the May 20 meeting. Jon has 2. <span class="new-badge">NEW</span></div>
+              <div class="attn-why">The May 20 meeting locked scope on onboarding and free trial flows for June. Brock committed to a process plan, flow definitions, examples, the strategy doc, and Customer.io pricing research. Jon needs to define subscription structures (a dependency for Brock's flow work) and review product videos. These are pre-work for the June sprint, not June sprint tasks themselves.</div>
               <div class="attn-footer">
-                <div class="attn-action">Create the 3 pool hosting Slack channels (or confirm with Tom) — Rahul needs them before prod launch</div>
-                <div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> Brock–Rahul DM</span><span class="tag t-risk">Blocking prod launch setup</span><button class="toggle-btn" id="btn-d3"><i class="ti ti-message"></i> DM context <i class="ti ti-chevron-down chevron"></i></button></div>
+                <div class="attn-action">Complete Brock's deliverables before June sprint kicks off — Jon's subscription definition unlocks Brock's flow design</div>
+                <div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-notes"></i> May 20 meeting</span><span class="tag t-decision">7 open items</span><button class="toggle-btn" id="btn-d3"><i class="ti ti-list"></i> Items <i class="ti ti-chevron-down chevron"></i></button></div>
               </div>
             </div>
           </div>
           <div class="task-drawer hidden" id="d3">
-            <div class="dm-block"><div class="dm-who">Rahul → Brock</div>Proposed 3 channels: #pool-hosting-logs (informational, mutable — stage deploys, prod deploy successes, match results), #pool-hosting-alerts (prod-only, never muted — Sentry errors, CloudWatch alarms, prod deploy failures), #pool-hosting-staging (staging errors/alarms, mutable).</div>
-            <div class="dm-block"><div class="dm-who">Brock → Rahul</div>"Who would need access to these channels? Just you to start? We have not really discussed how all of that fits into our other work. And that would be a conversation to have with Tom before I create the actual channels."</div>
-            <div class="dm-block"><div class="dm-who">Rahul → Brock</div>"It would be any dev working on pool-hosting. So just Kenny and I for now... I'll run the plan by Kenny too to see if he has suggestions/edits — then we can create the channels."</div>
-            <div class="dm-block"><div class="dm-who">Rahul → Brock</div>"I'm launching prod this week so want to get some alerting live — even if we change it later."</div>
+            <div style="font-size:10px;color:var(--text-warning);font-weight:500;padding:6px 0 4px">Brock deliverables</div>
+            <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Detail process plan: define onboarding, autorenewal, and lapse prevention workflows. Share updated plan + design docs.</div><div class="task-owner">Brock Bormann</div></div>
+            <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Define flows: create plan for free trial and onboarding experience</div><div class="task-owner">Brock Bormann</div></div>
+            <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Compile examples: gather concrete examples for onboarding and free trial processes</div><div class="task-owner">Brock Bormann</div></div>
+            <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Refine and share internal email workflow priorities document with the team</div><div class="task-owner">Brock Bormann</div></div>
+            <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Research Customer.io pricing: clarify whether 330K user DB counts as "active profiles" — cost-prohibitive if so</div><div class="task-owner">Brock Bormann</div></div>
+            <div style="font-size:10px;color:var(--text-tertiary);font-weight:500;padding:10px 0 4px">Jon deliverables (dependency for Brock's flow work)</div>
+            <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Define subscription structures for free trial — must align with upcoming product release</div><div class="task-owner">Jon Mires</div></div>
+            <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Review customer product videos to identify relevant features and trigger points</div><div class="task-owner">Jon Mires</div></div>
           </div>
         </div>
 
@@ -211,18 +206,13 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
           <div class="attn-main" onclick="toggleDrawer('d4',this)">
             <div class="attn-bar u-med"></div>
             <div class="attn-body">
-              <div class="attn-title">Jason has a content calendar maintenance gap — daily update habit not established <span class="new-badge">DM</span></div>
-              <div class="attn-why">Jason built the content calendar in Asana (with Claude) and has NFL, golf, and evergreen articles tracked. But he hasn't been closing out completed items — he flagged he wanted to wait until you'd both reviewed the structure. You emphasized that daily 5-10 min updates are the most important part of the process and the habit needs to be established now before football season.</div>
+              <div class="attn-title">Pool hosting prod sync + Kenny's GTM doc — both need Tom's attention Monday</div>
+              <div class="attn-why">Tom/Rahul/Kenny sync has never been rescheduled since the May 12 cancellation. June 11 = 20 days. Kenny also has a pool hosting GTM doc awaiting Tom's review and answers to open questions. You committed to flagging it Monday.</div>
               <div class="attn-footer">
-                <div class="attn-action">Confirm with Jason on Monday — daily update process established, habit in place before football season ramps</div>
-                <div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> Brock–Jason DM</span><span class="tag t-info">Process gap</span><button class="toggle-btn" id="btn-d4"><i class="ti ti-message"></i> DM context <i class="ti ti-chevron-down chevron"></i></button></div>
+                <div class="attn-action">Raise both on Monday's team call — schedule the prod sync and get Tom to review Kenny's GTM doc</div>
+                <div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> Brock–Kenny DM</span><span class="tag t-risk">20 days to June 11</span></div>
               </div>
             </div>
-          </div>
-          <div class="task-drawer hidden" id="d4">
-            <div class="dm-block"><div class="dm-who">Jason → Brock</div>"While not fully done, I have a Content Calendar with the sections we discussed, it has Golf articles, weekly NFL articles, and Evergreen for Pick'em and Survivor currently added with due dates... Built mostly with Claude."</div>
-            <div class="dm-block"><div class="dm-who">Jason → Brock</div>"I haven't closed things yet because I wanted to make sure you had seen all of it and we had talked about structures and changes."</div>
-            <div class="dm-block"><div class="dm-who">Brock → Jason</div>"Regardless of what process we use for the content calendar this summer and into the fall, the most important part of the process is that you are updating it on a daily basis (should only take 5-10 min most days), but that includes marking the status of things as they move from drafted to published, and then closing them out. Claude could also do that for you if you are still using it as a way to manage your day."</div>
           </div>
         </div>
 
@@ -230,9 +220,12 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
           <div class="attn-main" onclick="toggleDrawer('d5',this)">
             <div class="attn-bar u-med"></div>
             <div class="attn-body">
-              <div class="attn-title">Team Call Agenda — awaiting Tom's review before sharing with team <span class="new-badge">DM</span></div>
-              <div class="attn-why">You shared the updated Team Call Agenda with Tom on May 18. Tom confirmed you can lead Monday calls immediately but you held off sharing with the full team pending his review of the agenda. This needs to land before Monday's call.</div>
-              <div class="attn-footer"><div class="attn-action">Follow up with Tom today — has he reviewed? Share with team before Monday</div><div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> Brock–Tom DM</span><span class="tag t-decision">Pending review</span></div></div>
+              <div class="attn-title">Trial subscription part 2 + email automation sequencing — these two June threads are linked</div>
+              <div class="attn-why">Jon's subscription structure definition (from May 20 meeting) is a dependency for Brock's onboarding flow design. Trial sub part 2 (the implementation, ~25h) also needs to ship before the onboarding email sequence can be tested end-to-end. When Jon returns Monday, both need formal June weeks assigned with this dependency made explicit.</div>
+              <div class="attn-footer">
+                <div class="attn-action">Sequence with Jon Monday: subscription definition first → Brock's flow design → implementation</div>
+                <div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-asana"></i> Product Sprint</span><span class="tag t-risk">Linked threads</span></div>
+              </div>
             </div>
           </div>
         </div>
@@ -241,9 +234,12 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
           <div class="attn-main" onclick="toggleDrawer('d6',this)">
             <div class="attn-bar u-low"></div>
             <div class="attn-body">
-              <div class="attn-title">B2B: $75K Athletic EPL proposal sent Thursday — Yahoo/Everett likely a dead end <span class="new-badge">DM</span></div>
-              <div class="attn-why">Tom sent the proposal to Mike Hume at The Athletic on May 21 (cc'd you). You suggested multi-year partnership framing which Tom incorporated. Yahoo/Everett has gone silent since early February — Tom considering moving on.</div>
-              <div class="attn-footer"><div class="attn-action">Monitor Athletic response. Confirm Yahoo decision with Tom next week if no response.</div><div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> Brock–Tom DM</span><span class="tag t-info">B2B</span></div></div>
+              <div class="attn-title">A/B desktop rollout — PR #413 now 29 days idle. Revenue declining.</div>
+              <div class="attn-why">Desktop +24% rev/visitor confirmed. Affiliate revenue down $800–1K/month from Better Collective and Better Pool losses. 29 days idle with a confirmed revenue gain unused. Raise with Tom Monday.</div>
+              <div class="attn-footer">
+                <div class="attn-action">Raise with Tom Monday — approve PR #413 or formally close it</div>
+                <div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> #ab-testing</span><span class="tag t-risk">29 days</span></div>
+              </div>
             </div>
           </div>
         </div>
@@ -252,9 +248,12 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
           <div class="attn-main" onclick="toggleDrawer('d7',this)">
             <div class="attn-bar u-low"></div>
             <div class="attn-body">
-              <div class="attn-title">WordPress acting up today — Brock and Jason both having issues with featured article updates <span class="new-badge">DM</span></div>
-              <div class="attn-why">You flagged to Jason that WordPress was "being really finicky" when updating featured articles. Jason hadn't been in WordPress yet (working on Circa data with Claude). You fixed the Byron Nelson article separately. Resolved when you closed Claude + ChatGPT — likely a resource conflict.</div>
-              <div class="attn-footer"><div class="attn-action">Monitor — resolved but watch if it recurs</div><div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> Brock–Jason DM</span><span class="tag t-success">Resolved ✓</span></div></div>
+              <div class="attn-title">B2B: $75K Athletic EPL proposal sent Thursday — Yahoo/Everett likely a dead end</div>
+              <div class="attn-why">Tom sent the proposal to The Athletic May 21 (cc'd Brock). You suggested multi-year partnership framing which Tom incorporated. Yahoo/Everett has been unresponsive since February — Tom is leaning toward moving on.</div>
+              <div class="attn-footer">
+                <div class="attn-action">Monitor Athletic response. Confirm Yahoo decision with Tom when you reconnect.</div>
+                <div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> Brock–Tom DM</span><span class="tag t-info">B2B</span></div>
+              </div>
             </div>
           </div>
         </div>
@@ -263,10 +262,10 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
       <div class="sec">
         <div class="sec-label">Priorities</div>
         <div class="pri-grid">
-          <div class="pri-card"><span class="sp on-track">On track</span><div class="pri-name">NFL 2026 launch</div><div class="pri-why">NFL complete ✓. PHP 8.4 must close before Pick'em &amp; Survivor Monday. Jason building NFL content sections now.</div><div class="pri-owner"><i class="ti ti-user"></i> David / Jason</div><div class="pb"><div class="pf" style="width:90%;background:var(--green)"></div></div></div>
-          <div class="pri-card"><span class="sp at-risk">At risk</span><div class="pri-name">Purchase flow &amp; trials</div><div class="pri-why">4 of 5 done ✓. Part 2 (~25h) open. Jon back Monday — likely June sprint.</div><div class="pri-owner"><i class="ti ti-user"></i> Jon Mires</div><div class="pb"><div class="pf" style="width:60%;background:var(--amber)"></div></div></div>
-          <div class="pri-card"><span class="sp on-track">On track</span><div class="pri-name">Pool hosting (World Cup)</div><div class="pri-why">Rahul ready to launch prod. Kenny working GTM. Alert channels + Tom sync needed. June 11 = 20 days.</div><div class="pri-owner"><i class="ti ti-user"></i> Rahul / Kenny</div><div class="pb"><div class="pf" style="width:95%;background:var(--green)"></div></div></div>
-          <div class="pri-card"><span class="sp on-track">On track</span><div class="pri-name">Q2 Ops &amp; Marketing</div><div class="pri-why">44% complete. Content calendar built in Asana. Jason working NFL + Circa sections. Daily update habit needs establishing.</div><div class="pri-owner"><i class="ti ti-user"></i> Brock / Jason</div><div class="pb"><div class="pf" style="width:44%;background:var(--green)"></div></div></div>
+          <div class="pri-card"><span class="sp on-track">On track</span><div class="pri-name">NFL 2026 launch</div><div class="pri-why">NFL complete ✓. PHP 8.4 finish + Circa pricing must be done before Pick'em &amp; Survivor (Monday).</div><div class="pri-owner"><i class="ti ti-user"></i> David Hess</div><div class="pb"><div class="pf" style="width:92%;background:var(--green)"></div></div></div>
+          <div class="pri-card"><span class="sp at-risk">At risk</span><div class="pri-name">Purchase flow &amp; trials</div><div class="pri-why">4 of 5 done ✓. Part 2 (~25h) open. Jon's subscription definition is the first June dependency for Brock's email automation flows.</div><div class="pri-owner"><i class="ti ti-user"></i> Jon Mires</div><div class="pb"><div class="pf" style="width:60%;background:var(--amber)"></div></div></div>
+          <div class="pri-card"><span class="sp on-track">On track</span><div class="pri-name">Pool hosting (World Cup)</div><div class="pri-why">Work complete. GTM doc with Tom. Prod sync needed next week. June 11 = 20 days.</div><div class="pri-owner"><i class="ti ti-user"></i> Rahul / Kenny</div><div class="pb"><div class="pf" style="width:95%;background:var(--green)"></div></div></div>
+          <div class="pri-card"><span class="sp on-track">On track</span><div class="pri-name">Q2 Ops &amp; Marketing</div><div class="pri-why">44% complete. Email automation scope locked. Onboarding + free trial flows for June. Brock has 5 planning deliverables to start.</div><div class="pri-owner"><i class="ti ti-user"></i> Brock / Jason</div><div class="pb"><div class="pf" style="width:44%;background:var(--green)"></div></div></div>
         </div>
       </div>
 
@@ -275,14 +274,15 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
         <div class="proj-tbl">
           <div class="pr hdr"><div>Project</div><div>Health</div><div>Owner</div><div>Progress</div><div>Notes</div></div>
           <div class="pr"><div><div class="pname">NFL launch — all phases</div></div><div><span class="sp on-track" style="margin:0">Complete ✓</span></div><div class="pown">David / Jon</div><div><div style="font-size:12px">100%</div><div class="mb"><div class="mf" style="width:100%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">NFL 2026</div></div>
-          <div class="pr"><div><div class="pname">Pick'em &amp; Survivor launch</div></div><div><span class="sp at-risk" style="margin:0">Starts Monday</span></div><div class="pown">David Hess</div><div><div style="font-size:12px">5%</div><div class="mb"><div class="mf" style="width:5%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">May 25–28</div></div>
+          <div class="pr"><div><div class="pname">Pick'em &amp; Survivor launch</div></div><div><span class="sp at-risk" style="margin:0">Starts Monday</span></div><div class="pown">David Hess</div><div><div style="font-size:12px">5%</div><div class="mb"><div class="mf" style="width:5%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">PHP 8.4 + Circa pricing</div></div>
           <div class="pr"><div><div class="pname">Trial subscriptions</div></div><div><span class="sp at-risk" style="margin:0">At risk</span></div><div class="pown">Jon Mires</div><div><div style="font-size:12px">60%</div><div class="mb"><div class="mf" style="width:60%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">Likely June</div></div>
           <div class="pr"><div><div class="pname">PHP 8.4 migration</div></div><div><span class="sp at-risk" style="margin:0">Must close today</span></div><div class="pown">David Hess</div><div><div style="font-size:12px">55%</div><div class="mb"><div class="mf" style="width:55%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">Blocks Monday</div></div>
           <div class="pr"><div><div class="pname">Pool hosting — World Cup</div></div><div><span class="sp on-track" style="margin:0">Nearly done ✓</span></div><div class="pown">Rahul / Kenny</div><div><div style="font-size:12px">95%</div><div class="mb"><div class="mf" style="width:95%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">June 11</div></div>
           <div class="pr"><div><div class="pname">AMI &amp; Amazon Linux 2023</div></div><div><span class="sp on-track" style="margin:0">On track</span></div><div class="pown">Zach Brownson</div><div><div style="font-size:12px">80%</div><div class="mb"><div class="mf" style="width:80%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">Tech upgrades</div></div>
           <div class="pr"><div><div class="pname">Q2 Ops &amp; Marketing</div></div><div><span class="sp on-track" style="margin:0">On track</span></div><div class="pown">Brock / Jason</div><div><div style="font-size:12px">44%</div><div class="mb"><div class="mf" style="width:44%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">Q2 Ops</div></div>
+          <div class="pr"><div><div class="pname">Email automation — June sprint</div></div><div><span class="sp on-track" style="margin:0">Scoping</span></div><div class="pown">Brock / Jon</div><div><div style="font-size:12px">Pre-work</div><div class="mb"><div class="mf" style="width:10%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">Onboarding + free trial</div></div>
           <div class="pr"><div><div class="pname">Reporting automation (Claude MCP)</div></div><div><span class="sp on-track" style="margin:0">Active</span></div><div class="pown">Rahul / Brock</div><div><div style="font-size:12px">25%</div><div class="mb"><div class="mf" style="width:25%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">Ops &amp; reporting</div></div>
-          <div class="risk-foot"><i class="ti ti-alert-triangle"></i> PHP 8.4 finish blocks Monday · Trial sub part 2 likely June · Pool hosting alert channels need creating before prod launch</div>
+          <div class="risk-foot"><i class="ti ti-alert-triangle"></i> PHP 8.4 + Circa pricing block Monday · Trial sub part 2 and email automation are linked for June · Pool hosting: 20 days</div>
         </div>
       </div>
     </div>
@@ -292,23 +292,23 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
         <div><h1>Goals &amp; benchmarks</h1><div class="hdr-sub">May 2026 · Product Sprint + Q2 Ops</div></div>
         <div class="asana-meta">
           <div class="live-badge"><i class="ti ti-brand-asana"></i> Live · 2 projects</div>
-          <div class="last-updated">Synced May 22 · 81/157 sprint · 24/55 Q2 Ops</div>
+          <div class="last-updated">Synced May 22 · 81/158 sprint · 24/55 Q2 Ops</div>
         </div>
       </div>
       <div class="sec">
         <div class="sec-label">Sprint health</div>
         <div style="background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:16px 20px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-bottom:10px">
-          <div style="padding:0 12px;border-right:0.5px solid var(--border-t)"><div style="font-size:22px;font-weight:500;color:var(--green);letter-spacing:-.5px">81</div><div style="font-size:10px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.07em;margin-top:2px">Sprint completed</div></div>
-          <div style="padding:0 12px;border-right:0.5px solid var(--border-t)"><div style="font-size:22px;font-weight:500;color:var(--amber);letter-spacing:-.5px">76</div><div style="font-size:10px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.07em;margin-top:2px">Remaining</div></div>
-          <div style="padding:0 12px;border-right:0.5px solid var(--border-t)"><div style="font-size:22px;font-weight:500;letter-spacing:-.5px">52%</div><div style="font-size:10px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.07em;margin-top:2px">Sprint done</div></div>
+          <div style="padding:0 12px;border-right:0.5px solid var(--border-t)"><div style="font-size:22px;font-weight:500;color:var(--green);letter-spacing:-.5px">81</div><div style="font-size:10px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.07em;margin-top:2px">Completed</div></div>
+          <div style="padding:0 12px;border-right:0.5px solid var(--border-t)"><div style="font-size:22px;font-weight:500;color:var(--amber);letter-spacing:-.5px">77</div><div style="font-size:10px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.07em;margin-top:2px">Remaining</div></div>
+          <div style="padding:0 12px;border-right:0.5px solid var(--border-t)"><div style="font-size:22px;font-weight:500;letter-spacing:-.5px">51%</div><div style="font-size:10px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.07em;margin-top:2px">Sprint done</div></div>
           <div style="padding:0 12px;text-align:right"><div style="font-size:22px;font-weight:500;color:var(--green);letter-spacing:-.5px">24</div><div style="font-size:10px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.07em;margin-top:2px">Q2 Ops complete</div></div>
         </div>
         <div style="background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:14px 16px;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-secondary);margin-bottom:6px"><span>Product Sprint · 81 of 157</span><span style="font-weight:500">52%</span></div>
-          <div style="height:8px;background:var(--bg-secondary);border-radius:4px"><div style="height:100%;width:52%;background:var(--green);border-radius:4px"></div></div>
+          <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-secondary);margin-bottom:6px"><span>Product Sprint · 81 of 158</span><span style="font-weight:500">51%</span></div>
+          <div style="height:8px;background:var(--bg-secondary);border-radius:4px"><div style="height:100%;width:51%;background:var(--green);border-radius:4px"></div></div>
         </div>
         <div style="background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:14px 16px">
-          <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-secondary);margin-bottom:6px"><span>Q2 Ops &amp; Marketing · 24 of 55 (+22 this week)</span><span style="font-weight:500">44%</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-secondary);margin-bottom:6px"><span>Q2 Ops &amp; Marketing · 24 of 55</span><span style="font-weight:500">44%</span></div>
           <div style="height:8px;background:var(--bg-secondary);border-radius:4px"><div style="height:100%;width:44%;background:var(--green);border-radius:4px"></div></div>
         </div>
       </div>
@@ -321,71 +321,82 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
             <div style="padding:14px 16px;cursor:pointer" onclick="toggleDrawer('g1',this)">
               <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-size:13px;font-weight:500">NFL launch — all phases</div><span class="sp on-track" style="margin:0">Complete ✓</span></div>
               <div style="height:5px;background:var(--bg-secondary);border-radius:3px;margin:8px 0 4px"><div style="height:100%;width:100%;background:var(--green);border-radius:3px"></div></div>
-              <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-secondary)"><span>Data sync, ratings, site, homepage, messaging, MLB one-sided ML fix — all done</span><button class="toggle-btn" id="btn-g1" style="font-size:10px"><i class="ti ti-list"></i> Completed <i class="ti ti-chevron-down chevron"></i></button></div>
+              <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-secondary)"><span>Data sync, ratings, site, homepage, MLB moneyline fix — all done</span><button class="toggle-btn" id="btn-g1" style="font-size:10px"><i class="ti ti-list"></i> Completed <i class="ti ti-chevron-down chevron"></i></button></div>
             </div>
             <div class="task-drawer hidden" id="g1">
-              <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">NFL data sync, ratings, site updates, homepage tiles</div><div class="task-owner">David / Zach / Jon</div><div class="task-due due-ok">May 15–16</div></div>
-              <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">Golf datasync CPU fix</div><div class="task-owner">Zach</div><div class="task-due due-ok">May 17</div></div>
-              <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">CloudWatch long-running query alerting (lambda)</div><div class="task-owner">Zach</div><div class="task-due due-ok">May 19</div></div>
-              <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">MLB one-sided moneyline prediction fix (23 files)</div><div class="task-owner">David</div><div class="task-due due-ok">May 21</div></div>
-              <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">World Cup pool demo review &amp; feedback</div><div class="task-owner">David</div><div class="task-due due-ok">May 21</div></div>
+              <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">NFL data sync, ratings, site updates, homepage tiles</div><div class="task-owner">David / Zach / Jon</div><div class="task-due due-ok">May 15–16 ✓</div></div>
+              <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">Golf datasync CPU fix + CloudWatch alerting live</div><div class="task-owner">Zach</div><div class="task-due due-ok">May 17–19 ✓</div></div>
+              <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">MLB moneyline triage &amp; logic update (23 files)</div><div class="task-owner">David</div><div class="task-due due-ok">May 22 ✓</div></div>
             </div>
           </div>
 
           <div class="proj-tbl" style="border-radius:var(--radius-lg)">
             <div style="padding:14px 16px;cursor:pointer" onclick="toggleDrawer('g2',this)">
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-size:13px;font-weight:500">Pick'em &amp; Survivor — launches Monday</div><span class="tag t-blocker">PHP 8.4 must close first</span></div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-size:13px;font-weight:500">Pick'em &amp; Survivor — launches Monday</div><span class="tag t-blocker">2 pre-conditions open</span></div>
               <div style="height:5px;background:var(--bg-secondary);border-radius:3px;margin:8px 0 4px"><div style="height:100%;width:5%;background:var(--amber);border-radius:3px"></div></div>
-              <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-secondary)"><span>0 of 8 tasks done · all cluster May 25–28 · 3 days away</span><button class="toggle-btn" id="btn-g2" style="font-size:10px"><i class="ti ti-list"></i> Tasks <i class="ti ti-chevron-down chevron"></i></button></div>
+              <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-secondary)"><span>0 of 8 tasks done · PHP 8.4 + Circa pricing must be done before May 25</span><button class="toggle-btn" id="btn-g2" style="font-size:10px"><i class="ti ti-list"></i> Tasks <i class="ti ti-chevron-down chevron"></i></button></div>
             </div>
             <div class="task-drawer hidden" id="g2">
-              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Update Survivor start date</div><div class="task-owner">David Hess</div><div class="task-due due-ok">May 26</div></div>
-              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Set up Survivor &amp; Circa on maples + prod (hidden)</div><div class="task-owner">David Hess</div><div class="task-due due-ok">May 26</div></div>
+              <div style="font-size:10px;color:var(--text-warning);font-weight:500;padding:6px 0 4px">Pre-conditions (must complete before Monday)</div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--red);font-size:13px;flex-shrink:0"></i><div class="task-name">Finish PHP 8.4 upgrade — overdue since May 20</div><div class="task-owner">David Hess</div><div class="task-due due-over">Overdue</div></div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--amber);font-size:13px;flex-shrink:0"></i><div class="task-name">Configure Circa package pricing — Brock updated packages, David needs to wire up</div><div class="task-owner">David Hess</div><div class="task-due due-ok">Before May 25</div></div>
+              <div style="font-size:10px;color:var(--text-tertiary);font-weight:500;padding:10px 0 4px">Launch week (May 25–28)</div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Update Survivor start date + set up Survivor &amp; Circa on maples + prod (hidden)</div><div class="task-owner">David Hess</div><div class="task-due due-ok">May 26</div></div>
               <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">QA &amp; messaging cleanup — Survivor &amp; Circa</div><div class="task-owner">David Hess</div><div class="task-due due-ok">May 26</div></div>
               <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Work with Jason on Survivor adjustments + unhide on prod</div><div class="task-owner">David Hess</div><div class="task-due due-ok">May 27</div></div>
-              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Update Pick'em to handle NCF not fully set up yet</div><div class="task-owner">David Hess</div><div class="task-due due-ok">May 27</div></div>
-              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Set up Pick'em on maples + prod + QA</div><div class="task-owner">David Hess</div><div class="task-due due-ok">May 28</div></div>
-              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Rollover WordPress content groups</div><div class="task-owner">Jon Mires</div><div class="task-due due-ok">May 26</div></div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Update Pick'em to handle NCF + set up Pick'em on maples + prod + QA</div><div class="task-owner">David Hess</div><div class="task-due due-ok">May 27–28</div></div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Rollover WordPress content groups for pick'em and survivor</div><div class="task-owner">Jon Mires</div><div class="task-due due-ok">May 26</div></div>
             </div>
           </div>
 
           <div class="proj-tbl" style="border-radius:var(--radius-lg)">
             <div style="padding:14px 16px;cursor:pointer" onclick="toggleDrawer('g3',this)">
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-size:13px;font-weight:500">PHP 8.4 migration</div><span class="tag t-blocker">Close before Monday</span></div>
-              <div style="height:5px;background:var(--bg-secondary);border-radius:3px;margin:8px 0 4px"><div style="height:100%;width:55%;background:var(--red);border-radius:3px"></div></div>
-              <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-secondary)"><span>Start done ✓ · Finish overdue since May 20 · WP plugin done ✓</span><button class="toggle-btn" id="btn-g3" style="font-size:10px"><i class="ti ti-list"></i> Tasks <i class="ti ti-chevron-down chevron"></i></button></div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-size:13px;font-weight:500">Trial subscriptions shipped</div><span class="tag t-risk">Part 2 open · linked to email automation</span></div>
+              <div style="height:5px;background:var(--bg-secondary);border-radius:3px;margin:8px 0 4px"><div style="height:100%;width:60%;background:var(--amber);border-radius:3px"></div></div>
+              <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-secondary)"><span>4 of 5 done ✓ · Part 2 (~25h) open · Jon's subscription definition needed for onboarding flows</span><button class="toggle-btn" id="btn-g3" style="font-size:10px"><i class="ti ti-list"></i> Tasks <i class="ti ti-chevron-down chevron"></i></button></div>
             </div>
             <div class="task-drawer hidden" id="g3">
-              <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">Start PHP 8.4 upgrade (renamed: "Finish code updates to allow PHP 8.4 upgrade")</div><div class="task-owner">David Hess</div><div class="task-due due-ok">Done May 18</div></div>
-              <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">Update WordPress plugin WP Offload Media Lite</div><div class="task-owner">Jon Mires</div><div class="task-due due-ok">Done May 20</div></div>
-              <div class="task-row"><i class="ti ti-circle" style="color:var(--red);font-size:13px;flex-shrink:0"></i><div class="task-name">Finish code updates to allow PHP 8.4 upgrade — must close before Monday</div><div class="task-owner">David Hess</div><div class="task-due due-over">Was May 20</div></div>
+              <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">Spec · Stripe sandbox · Stripe API upgrade · Part 1</div><div class="task-owner">Jon Mires</div><div class="task-due due-ok">May 20 ✓</div></div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--red);font-size:13px;flex-shrink:0"></i><div class="task-name">Implement trial subscription (part 2) — ~25h remaining</div><div class="task-owner">Jon Mires</div><div class="task-due due-over">Was May 20 · assign June week</div></div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Define subscription structures — May 20 commitment, dependency for Brock's email automation flows</div><div class="task-owner">Jon Mires</div><div class="task-due due-ok">June sprint · first</div></div>
             </div>
           </div>
 
           <div class="proj-tbl" style="border-radius:var(--radius-lg)">
             <div style="padding:14px 16px;cursor:pointer" onclick="toggleDrawer('g4',this)">
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-size:13px;font-weight:500">Trial subscriptions shipped</div><span class="tag t-risk">Part 2 open · likely June</span></div>
-              <div style="height:5px;background:var(--bg-secondary);border-radius:3px;margin:8px 0 4px"><div style="height:100%;width:60%;background:var(--amber);border-radius:3px"></div></div>
-              <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-secondary)"><span>4 of 5 done ✓ · Part 2 (~25h) still open · Jon back Monday</span><button class="toggle-btn" id="btn-g4" style="font-size:10px"><i class="ti ti-list"></i> Tasks <i class="ti ti-chevron-down chevron"></i></button></div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-size:13px;font-weight:500">Pool hosting live for World Cup</div><span class="sp on-track" style="margin:0">Nearly complete ✓</span></div>
+              <div style="height:5px;background:var(--bg-secondary);border-radius:3px;margin:8px 0 4px"><div style="height:100%;width:95%;background:var(--green);border-radius:3px"></div></div>
+              <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-secondary)"><span>Work complete. GTM doc with Tom. Prod sync needed next week. June 11 = 20 days.</span><button class="toggle-btn" id="btn-g4" style="font-size:10px"><i class="ti ti-list"></i> Status <i class="ti ti-chevron-down chevron"></i></button></div>
             </div>
             <div class="task-drawer hidden" id="g4">
-              <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">Finalize spec · Set up Stripe sandbox · Upgrade Stripe API · Implement part 1</div><div class="task-owner">Jon Mires</div><div class="task-due due-ok">May 20 ✓</div></div>
-              <div class="task-row"><i class="ti ti-circle" style="color:var(--red);font-size:13px;flex-shrink:0"></i><div class="task-name">Implement trial subscription (part 2) — ~25h remaining</div><div class="task-owner">Jon Mires</div><div class="task-due due-over">Was May 20 · Jon back Monday</div></div>
+              <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">All major epics complete · David reviewed demo May 21</div><div class="task-owner">Rahul / David</div><div class="task-due due-ok">May 18–21 ✓</div></div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--amber);font-size:13px;flex-shrink:0"></i><div class="task-name">Live Scoring pt2, QA deferred work, Contest Simulation QA pt2</div><div class="task-owner">Rahul</div><div class="task-due due-ok">May 18–24</div></div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Analytics &amp; Reporting, Production Hardening</div><div class="task-owner">Rahul</div><div class="task-due due-ok">May 25–31</div></div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Tom + Rahul + Kenny prod sync — schedule week of May 25</div><div class="task-owner">Tom</div><div class="task-due due-ok">Next week</div></div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Kenny GTM doc — Tom review + answers to open questions</div><div class="task-owner">Tom / Kenny</div><div class="task-due due-ok">Monday</div></div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Name finalization — survey circulating, Scott Douglass review pending</div><div class="task-owner">Tom / team</div><div class="task-due due-ok">This week</div></div>
             </div>
           </div>
 
           <div class="proj-tbl" style="border-radius:var(--radius-lg)">
             <div style="padding:14px 16px;cursor:pointer" onclick="toggleDrawer('g5',this)">
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-size:13px;font-weight:500">Pool hosting live for World Cup</div><span class="sp on-track" style="margin:0">Nearly complete ✓</span></div>
-              <div style="height:5px;background:var(--bg-secondary);border-radius:3px;margin:8px 0 4px"><div style="height:100%;width:95%;background:var(--green);border-radius:3px"></div></div>
-              <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-secondary)"><span>Work complete per Rahul. David gave feedback May 21. Name process active. June 11 = 20 days.</span><button class="toggle-btn" id="btn-g5" style="font-size:10px"><i class="ti ti-list"></i> Status <i class="ti ti-chevron-down chevron"></i></button></div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-size:13px;font-weight:500">Email automation — June sprint</div><span class="sp on-track" style="margin:0">Scope locked ✓</span></div>
+              <div style="height:5px;background:var(--bg-secondary);border-radius:3px;margin:8px 0 4px"><div style="height:100%;width:10%;background:var(--green);border-radius:3px"></div></div>
+              <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-secondary)"><span>Onboarding + free trial flows. Internal-first. Brock has 5 pre-work deliverables. Jon's subscription definition is first.</span><button class="toggle-btn" id="btn-g5" style="font-size:10px"><i class="ti ti-list"></i> Detail <i class="ti ti-chevron-down chevron"></i></button></div>
             </div>
             <div class="task-drawer hidden" id="g5">
-              <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">All major epics complete (landing page, picks, live scoring pt1, payments, QA, staging)</div><div class="task-owner">Rahul</div><div class="task-due due-ok">May 18</div></div>
-              <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">Checkout World Cup game demo, provide feedback, review updates, discuss</div><div class="task-owner">David Hess</div><div class="task-due due-ok">May 21</div></div>
-              <div class="task-row"><i class="ti ti-circle" style="color:var(--amber);font-size:13px;flex-shrink:0"></i><div class="task-name">Live Scoring part 2, QA deferred work, Contest Simulation QA part 2</div><div class="task-owner">Rahul</div><div class="task-due due-ok">May 18–24</div></div>
-              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Analytics &amp; Reporting, Production Hardening</div><div class="task-owner">Rahul</div><div class="task-due due-ok">May 25–31</div></div>
-              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Name finalization — survey circulating, Scott Douglass review pending</div><div class="task-owner">Tom / team</div><div class="task-due due-ok">This week</div></div>
+              <div style="font-size:10px;color:var(--text-success);font-weight:500;padding:6px 0 4px">Aligned in May 20 meeting</div>
+              <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">Scope: Onboarding + free trial flows for June. Internal-first (Stripe events before third-party tools).</div><div class="task-owner">Tom / Brock / Jon</div><div class="task-due due-ok">May 20 ✓</div></div>
+              <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">Approach: behavior-driven triggers (pick'em user vs. survivor user gets different messaging)</div><div class="task-owner">Tom / Brock / Jon</div><div class="task-due due-ok">May 20 ✓</div></div>
+              <div style="font-size:10px;color:var(--text-tertiary);font-weight:500;padding:10px 0 4px">Brock pre-work deliverables</div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Detail process plan: onboarding, autorenewal, lapse prevention workflows</div><div class="task-owner">Brock</div><div class="task-due due-ok">Before June sprint</div></div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Define flows: free trial and onboarding experience plan</div><div class="task-owner">Brock</div><div class="task-due due-ok">Before June sprint</div></div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Compile examples for onboarding and free trial processes</div><div class="task-owner">Brock</div><div class="task-due due-ok">Before June sprint</div></div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Refine and share email workflow priorities document</div><div class="task-owner">Brock</div><div class="task-due due-ok">Before June sprint</div></div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Research Customer.io pricing: does 330K user DB count as "active profiles"?</div><div class="task-owner">Brock</div><div class="task-due due-ok">Before June sprint</div></div>
+              <div style="font-size:10px;color:var(--text-tertiary);font-weight:500;padding:10px 0 4px">Jon deliverables (dependency for Brock's flows)</div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Define subscription structures for free trial — must align with upcoming product release</div><div class="task-owner">Jon</div><div class="task-due due-ok">June sprint · first</div></div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Review customer product videos for feature insights and trigger points</div><div class="task-owner">Jon</div><div class="task-due due-ok">June sprint</div></div>
             </div>
           </div>
 
@@ -398,7 +409,7 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
             <div class="task-drawer hidden" id="g6">
               <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">AMI building/smoke-testing</div><div class="task-owner">Zach</div><div class="task-due due-ok">May 21 ✓</div></div>
               <div class="task-row"><i class="ti ti-circle-check" style="color:var(--green);font-size:13px;flex-shrink:0"></i><div class="task-name">CloudWatch long-running query alerting (lambda)</div><div class="task-owner">Zach</div><div class="task-due due-ok">May 19 ✓</div></div>
-              <div class="task-row"><i class="ti ti-circle" style="color:var(--amber);font-size:13px;flex-shrink:0"></i><div class="task-name">AMI — test maples</div><div class="task-owner">Zach</div><div class="task-due due-ok">May 22 (today)</div></div>
+              <div class="task-row"><i class="ti ti-circle" style="color:var(--amber);font-size:13px;flex-shrink:0"></i><div class="task-name">AMI — test maples</div><div class="task-owner">Zach</div><div class="task-due due-ok">May 22 today</div></div>
               <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">AMI — standup test munin</div><div class="task-owner">Zach</div><div class="task-due due-ok">May 27</div></div>
               <div class="task-row"><i class="ti ti-circle" style="color:var(--text-tertiary);font-size:13px;flex-shrink:0"></i><div class="task-name">Help with AMI testing/fixes + Amazon Linux 2023 dev rollout</div><div class="task-owner">David</div><div class="task-due due-ok">May 22–29</div></div>
             </div>
@@ -406,64 +417,34 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
 
         </div>
       </div>
-
-      <div class="sec">
-        <div class="sec-label">Shipped this week</div>
-        <div class="recent-card">
-          <div class="recent-row"><i class="ti ti-circle-check check-icon"></i><div class="recent-name">Jon: Trial sub spec, Stripe sandbox, Stripe API upgrade, part 1 — 4 tasks in one day</div><div class="recent-who">Jon Mires</div><div class="recent-when">May 20</div></div>
-          <div class="recent-row"><i class="ti ti-circle-check check-icon"></i><div class="recent-name">Zach: CloudWatch lambda for long-running query detection — live dev + prod</div><div class="recent-who">Zach Brownson</div><div class="recent-when">May 19</div></div>
-          <div class="recent-row"><i class="ti ti-circle-check check-icon"></i><div class="recent-name">Zach: AMI building/smoke-testing complete</div><div class="recent-who">Zach Brownson</div><div class="recent-when">May 21</div></div>
-          <div class="recent-row"><i class="ti ti-circle-check check-icon"></i><div class="recent-name">David: PHP 8.4 start, MLB deadlocked fix, dev DB storage, app layer updates, one-sided ML fix</div><div class="recent-who">David Hess</div><div class="recent-when">May 18–21</div></div>
-          <div class="recent-row"><i class="ti ti-circle-check check-icon"></i><div class="recent-name">David: World Cup pool demo review + feedback</div><div class="recent-who">David Hess</div><div class="recent-when">May 21</div></div>
-          <div class="recent-row"><i class="ti ti-circle-check check-icon"></i><div class="recent-name">Q2 Ops: +22 tasks — email plan, sales emails, CRM plan, content calendar, article audit, social</div><div class="recent-who">Brock / Jason</div><div class="recent-when">Week of May 18</div></div>
-          <div class="recent-row"><i class="ti ti-circle-check check-icon"></i><div class="recent-name">Brock: Rahul + Kenny fully set up in Google Workspace, TR accounts, credit card access</div><div class="recent-who">Brock Bormann</div><div class="recent-when">May 19</div></div>
-        </div>
-      </div>
     </div>
     <!-- PRIORITIES -->
     <div id="page-priorities" class="page">
       <div class="page-header">
         <div><h1>Priorities</h1><div class="hdr-sub">May 2026 Sprint + Q2 Ops · three-tier view</div></div>
-        <div class="asana-meta">
-          <div class="live-badge"><i class="ti ti-brand-asana"></i> Live · 3 projects</div>
-          <div class="last-updated">Synced May 22, 2026</div>
-        </div>
+        <div class="asana-meta"><div class="live-badge"><i class="ti ti-brand-asana"></i> Live</div><div class="last-updated">Synced May 22, 2026</div></div>
       </div>
       <div class="sec">
         <div class="sec-label">Tier 1 — Strategic outcomes</div>
         <div class="pri-grid">
-          <div class="pri-card"><span class="sp on-track">On track</span><div class="pri-name">NFL 2026 launch</div><div class="pri-why">NFL + homepage complete ✓. PHP 8.4 must close before Pick'em &amp; Survivor (Monday).</div><div class="pri-owner"><i class="ti ti-user"></i> David Hess</div><div class="pb"><div class="pf" style="width:90%;background:var(--green)"></div></div></div>
-          <div class="pri-card"><span class="sp at-risk">At risk</span><div class="pri-name">Purchase flow &amp; trials</div><div class="pri-why">4 of 5 done ✓. Part 2 (~25h) open. Jon back Monday — likely June.</div><div class="pri-owner"><i class="ti ti-user"></i> Jon Mires</div><div class="pb"><div class="pf" style="width:60%;background:var(--amber)"></div></div></div>
-          <div class="pri-card"><span class="sp on-track">On track</span><div class="pri-name">Pool hosting (World Cup)</div><div class="pri-why">Work complete. Name in progress. June 11 = 20 days. Tom/Rahul/Kenny sync still needed.</div><div class="pri-owner"><i class="ti ti-user"></i> Rahul Caprihan</div><div class="pb"><div class="pf" style="width:95%;background:var(--green)"></div></div></div>
-          <div class="pri-card"><span class="sp on-track">On track</span><div class="pri-name">Q2 Ops &amp; Marketing</div><div class="pri-why">44% complete. Brock leading Monday calls. Team agenda pending share with team.</div><div class="pri-owner"><i class="ti ti-user"></i> Brock Bormann</div><div class="pb"><div class="pf" style="width:44%;background:var(--green)"></div></div></div>
-        </div>
-      </div>
-      <div class="sec">
-        <div class="sec-label">Tier 2 — Active initiatives</div>
-        <div class="proj-tbl">
-          <div class="pr hdr"><div>Initiative</div><div>Health</div><div>Owner</div><div>Progress</div><div>Notes</div></div>
-          <div class="pr"><div><div class="pname">NFL launch — all phases</div><div style="font-size:10px;color:var(--text-tertiary)">Complete including MLB one-sided ML fix May 21</div></div><div><span class="sp on-track" style="margin:0">Complete ✓</span></div><div class="pown">David / Jon</div><div><div style="font-size:12px">100%</div><div class="mb"><div class="mf" style="width:100%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">NFL 2026</div></div>
-          <div class="pr"><div><div class="pname">Pick'em &amp; Survivor initial launch</div><div style="font-size:10px;color:var(--text-tertiary)">8 tasks all May 25–28 — starts Monday · PHP 8.4 must close first</div></div><div><span class="sp at-risk" style="margin:0">Starts Monday</span></div><div class="pown">David Hess</div><div><div style="font-size:12px">5%</div><div class="mb"><div class="mf" style="width:5%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">NFL 2026</div></div>
-          <div class="pr"><div><div class="pname">Trial subscriptions</div><div style="font-size:10px;color:var(--text-tertiary)">4 done ✓ · Part 2 (~25h) open · Jon back Monday · likely June sprint</div></div><div><span class="sp at-risk" style="margin:0">At risk</span></div><div class="pown">Jon Mires</div><div><div style="font-size:12px">60%</div><div class="mb"><div class="mf" style="width:60%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">Purchase &amp; trials</div></div>
-          <div class="pr"><div><div class="pname">Pool hosting — World Cup</div><div style="font-size:10px;color:var(--text-tertiary)">Core work done. David gave feedback May 21. Name selection active.</div></div><div><span class="sp on-track" style="margin:0">Nearly done</span></div><div class="pown">Rahul Caprihan</div><div><div style="font-size:12px">95%</div><div class="mb"><div class="mf" style="width:95%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">Pool hosting</div></div>
-          <div class="pr"><div><div class="pname">PHP 8.4 migration</div><div style="font-size:10px;color:var(--text-tertiary)">Start done ✓ · Finish overdue · Must close before Monday</div></div><div><span class="sp at-risk" style="margin:0">Must close today</span></div><div class="pown">David Hess</div><div><div style="font-size:12px">55%</div><div class="mb"><div class="mf" style="width:55%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">Blocks Monday</div></div>
-          <div class="pr"><div><div class="pname">AMI &amp; Amazon Linux 2023</div><div style="font-size:10px;color:var(--text-tertiary)">Smoke-test done ✓ · CloudWatch live ✓ · Maples test today · Standup test May 27</div></div><div><span class="sp on-track" style="margin:0">On track</span></div><div class="pown">Zach Brownson</div><div><div style="font-size:12px">80%</div><div class="mb"><div class="mf" style="width:80%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">Tech upgrades</div></div>
-          <div class="pr"><div><div class="pname">Q2 Ops &amp; Marketing</div><div style="font-size:10px;color:var(--text-tertiary)">+22 tasks this week · Brock leading Monday calls starting May 18</div></div><div><span class="sp on-track" style="margin:0">Strong week</span></div><div class="pown">Brock / Jason</div><div><div style="font-size:12px">44%</div><div class="mb"><div class="mf" style="width:44%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">Q2 Ops</div></div>
-          <div class="pr"><div><div class="pname">Reporting automation (Claude MCP)</div><div style="font-size:10px;color:var(--text-tertiary)">Live and shared with org · Schema refinement week 2</div></div><div><span class="sp on-track" style="margin:0">Active</span></div><div class="pown">Rahul / Brock</div><div><div style="font-size:12px">25%</div><div class="mb"><div class="mf" style="width:25%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">Ops &amp; reporting</div></div>
-          <div class="risk-foot"><i class="ti ti-alert-triangle"></i> PHP 8.4 finish is the only blocker for Monday's launch · Trial sub part 2 likely June · NFL complete ✓</div>
+          <div class="pri-card"><span class="sp on-track">On track</span><div class="pri-name">NFL 2026 launch</div><div class="pri-why">NFL complete ✓. PHP 8.4 finish + Circa pricing both needed before Pick'em &amp; Survivor (Monday).</div><div class="pri-owner"><i class="ti ti-user"></i> David Hess</div><div class="pb"><div class="pf" style="width:92%;background:var(--green)"></div></div></div>
+          <div class="pri-card"><span class="sp at-risk">At risk</span><div class="pri-name">Purchase flow &amp; trials</div><div class="pri-why">4 of 5 done ✓. Part 2 open. Jon's subscription definition is the first June dependency for email automation.</div><div class="pri-owner"><i class="ti ti-user"></i> Jon Mires</div><div class="pb"><div class="pf" style="width:60%;background:var(--amber)"></div></div></div>
+          <div class="pri-card"><span class="sp on-track">On track</span><div class="pri-name">Pool hosting (World Cup)</div><div class="pri-why">Work complete. GTM doc with Tom. Prod sync + name needed next week. June 11 = 20 days.</div><div class="pri-owner"><i class="ti ti-user"></i> Rahul / Kenny</div><div class="pb"><div class="pf" style="width:95%;background:var(--green)"></div></div></div>
+          <div class="pri-card"><span class="sp on-track">On track</span><div class="pri-name">Q2 Ops &amp; Marketing</div><div class="pri-why">44% complete. Email automation scope locked. Brock has 5 planning deliverables to start.</div><div class="pri-owner"><i class="ti ti-user"></i> Brock / Jason</div><div class="pb"><div class="pf" style="width:44%;background:var(--green)"></div></div></div>
         </div>
       </div>
       <div class="sec">
         <div class="sec-label">Owner workload</div>
         <div class="proj-tbl">
           <div class="pr hdr"><div>Person</div><div>Tasks</div><div>Focus</div><div>Load</div><div>Availability</div></div>
-          <div class="pr"><div class="pname">David Hess</div><div><span style="font-size:13px;font-weight:500;color:var(--red)">~15</span></div><div class="pown">PHP 8.4 finish (TODAY), AMI maples test, Pick'em &amp; Survivor week starts Monday</div><div><span class="sp at-risk" style="margin:0">Critical</span></div><div style="font-size:10px;color:var(--text-tertiary)">Available</div></div>
-          <div class="pr"><div class="pname">Brock Bormann</div><div><span style="font-size:13px;font-weight:500;color:var(--green)">~10</span></div><div class="pown">Q2 Ops exec, MCP schema with Rahul, Monday call prep</div><div><span class="sp on-track" style="margin:0">On track</span></div><div style="font-size:10px;color:var(--text-tertiary)">Available</div></div>
-          <div class="pr"><div class="pname">Jon Mires</div><div><span style="font-size:13px;font-weight:500;color:var(--amber)">~5</span></div><div class="pown">Trial sub part 2 (~25h, back Monday), WP content rollover (May 26)</div><div><span class="sp on-track" style="margin:0">Back Monday</span></div><div style="font-size:10px;color:var(--red)">Out today</div></div>
-          <div class="pr"><div class="pname">Rahul Caprihan</div><div><span style="font-size:13px;font-weight:500;color:var(--green)">~6</span></div><div class="pown">Live scoring pt2, QA pt2, analytics, production hardening, MCP schema</div><div><span class="sp on-track" style="margin:0">Finishing</span></div><div style="font-size:10px;color:var(--text-tertiary)">Available</div></div>
-          <div class="pr"><div class="pname">Zach Brownson</div><div><span style="font-size:13px;font-weight:500;color:var(--green)">3</span></div><div class="pown">AMI maples test today, standup test May 27, Amazon Linux prep</div><div><span class="sp on-track" style="margin:0">Focused</span></div><div style="font-size:10px;color:var(--text-tertiary)">Infra-only</div></div>
-          <div class="pr"><div class="pname">Jason Lisk</div><div><span style="font-size:13px;font-weight:500;color:var(--green)">~5</span></div><div class="pown">Survivor pick popularity accuracy, work with David on Survivor May 27</div><div><span class="sp on-track" style="margin:0">On track</span></div><div style="font-size:10px;color:var(--text-tertiary)">Available</div></div>
-          <div class="pr"><div class="pname">Tom Federico</div><div><span style="font-size:13px;font-weight:500;color:var(--green)">~5</span></div><div class="pown">June sprint planning (today), pool naming finalization</div><div><span class="sp on-track" style="margin:0">On track</span></div><div style="font-size:10px;color:var(--red)">Knoxville today</div></div>
+          <div class="pr"><div class="pname">David Hess</div><div><span style="font-size:13px;font-weight:500;color:var(--red)">~14</span></div><div class="pown">PHP 8.4 finish + Circa pricing (today), Pick'em &amp; Survivor May 25–28</div><div><span class="sp at-risk" style="margin:0">Critical</span></div><div style="font-size:10px;color:var(--text-tertiary)">Available</div></div>
+          <div class="pr"><div class="pname">Brock Bormann</div><div><span style="font-size:13px;font-weight:500;color:var(--green)">~12</span></div><div class="pown">Q2 Ops, 5 email automation planning deliverables, ad vendor bake-off (May 29)</div><div><span class="sp on-track" style="margin:0">On track</span></div><div style="font-size:10px;color:var(--text-tertiary)">Available</div></div>
+          <div class="pr"><div class="pname">Jon Mires</div><div><span style="font-size:13px;font-weight:500;color:var(--amber)">~5</span></div><div class="pown">Trial sub part 2 + subscription definition, content rollover (May 26)</div><div><span class="sp on-track" style="margin:0">Back Monday</span></div><div style="font-size:10px;color:var(--red)">Out today</div></div>
+          <div class="pr"><div class="pname">Rahul Caprihan</div><div><span style="font-size:13px;font-weight:500;color:var(--green)">~6</span></div><div class="pown">Live scoring pt2, QA, analytics, hardening, MCP schema</div><div><span class="sp on-track" style="margin:0">Finishing</span></div><div style="font-size:10px;color:var(--text-tertiary)">Available</div></div>
+          <div class="pr"><div class="pname">Zach Brownson</div><div><span style="font-size:13px;font-weight:500;color:var(--green)">3</span></div><div class="pown">AMI maples test today, standup test May 27</div><div><span class="sp on-track" style="margin:0">Focused</span></div><div style="font-size:10px;color:var(--text-tertiary)">Infra-only</div></div>
+          <div class="pr"><div class="pname">Jason Lisk</div><div><span style="font-size:13px;font-weight:500;color:var(--green)">~5</span></div><div class="pown">NFL article sections, Circa data, Survivor adjustments (May 27)</div><div><span class="sp on-track" style="margin:0">On track</span></div><div style="font-size:10px;color:var(--text-tertiary)">Available</div></div>
+          <div class="pr"><div class="pname">Tom Federico</div><div><span style="font-size:13px;font-weight:500;color:var(--green)">~5</span></div><div class="pown">1:1 reschedule to Thursdays, pool naming, GTM doc review, prod sync</div><div><span class="sp on-track" style="margin:0">On track</span></div><div style="font-size:10px;color:var(--red)">Knoxville today</div></div>
+          <div class="pr"><div class="pname">Kenny Long</div><div><span style="font-size:13px;font-weight:500;color:var(--green)">~3</span></div><div class="pown">GTM doc awaiting Tom review, go-live checklist</div><div><span class="sp on-track" style="margin:0">Waiting on Tom</span></div><div style="font-size:10px;color:var(--text-tertiary)">Available</div></div>
         </div>
       </div>
     </div>
@@ -472,79 +453,85 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
     <div id="page-projects" class="page">
       <div class="page-header">
         <div><h1>Projects</h1><div class="hdr-sub">Active initiatives · Product Sprint + Q2 Ops</div></div>
-        <div class="asana-meta">
-          <div class="live-badge"><i class="ti ti-brand-asana"></i> Live · 3 projects</div>
-          <div class="last-updated">Synced May 22, 2026</div>
-        </div>
+        <div class="asana-meta"><div class="live-badge"><i class="ti ti-brand-asana"></i> Live</div><div class="last-updated">Synced May 22, 2026</div></div>
       </div>
       <div class="proj-tbl">
         <div class="pr hdr"><div>Project</div><div>Health</div><div>Owner</div><div>Progress</div><div>Notes</div></div>
         <div class="pr"><div><div class="pname">NFL launch — all phases</div></div><div><span class="sp on-track" style="margin:0">Complete ✓</span></div><div class="pown">David / Jon</div><div><div style="font-size:12px">100%</div><div class="mb"><div class="mf" style="width:100%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">NFL 2026</div></div>
-        <div class="pr"><div><div class="pname">Pick'em &amp; Survivor launch</div></div><div><span class="sp at-risk" style="margin:0">Starts Monday</span></div><div class="pown">David Hess</div><div><div style="font-size:12px">5%</div><div class="mb"><div class="mf" style="width:5%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">May 25–28</div></div>
-        <div class="pr"><div><div class="pname">Trial subscriptions</div></div><div><span class="sp at-risk" style="margin:0">At risk</span></div><div class="pown">Jon Mires</div><div><div style="font-size:12px">60%</div><div class="mb"><div class="mf" style="width:60%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">Likely June sprint</div></div>
+        <div class="pr"><div><div class="pname">Pick'em &amp; Survivor launch</div></div><div><span class="sp at-risk" style="margin:0">Starts Monday</span></div><div class="pown">David Hess</div><div><div style="font-size:12px">5%</div><div class="mb"><div class="mf" style="width:5%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">PHP 8.4 + Circa pricing</div></div>
+        <div class="pr"><div><div class="pname">Trial subscriptions</div></div><div><span class="sp at-risk" style="margin:0">At risk</span></div><div class="pown">Jon Mires</div><div><div style="font-size:12px">60%</div><div class="mb"><div class="mf" style="width:60%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">Likely June</div></div>
         <div class="pr"><div><div class="pname">PHP 8.4 migration</div></div><div><span class="sp at-risk" style="margin:0">Must close today</span></div><div class="pown">David Hess</div><div><div style="font-size:12px">55%</div><div class="mb"><div class="mf" style="width:55%;background:var(--amber)"></div></div></div><div style="font-size:10px;color:var(--purple)">Blocks Monday</div></div>
-        <div class="pr"><div><div class="pname">Pool hosting — World Cup</div></div><div><span class="sp on-track" style="margin:0">Nearly done ✓</span></div><div class="pown">Rahul Caprihan</div><div><div style="font-size:12px">95%</div><div class="mb"><div class="mf" style="width:95%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">June 11</div></div>
+        <div class="pr"><div><div class="pname">Pool hosting — World Cup</div></div><div><span class="sp on-track" style="margin:0">Nearly done ✓</span></div><div class="pown">Rahul / Kenny</div><div><div style="font-size:12px">95%</div><div class="mb"><div class="mf" style="width:95%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">June 11</div></div>
         <div class="pr"><div><div class="pname">AMI &amp; Amazon Linux 2023</div></div><div><span class="sp on-track" style="margin:0">On track</span></div><div class="pown">Zach Brownson</div><div><div style="font-size:12px">80%</div><div class="mb"><div class="mf" style="width:80%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">Tech upgrades</div></div>
         <div class="pr"><div><div class="pname">Q2 Ops &amp; Marketing</div></div><div><span class="sp on-track" style="margin:0">On track</span></div><div class="pown">Brock / Jason</div><div><div style="font-size:12px">44%</div><div class="mb"><div class="mf" style="width:44%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">Q2 Ops</div></div>
+        <div class="pr"><div><div class="pname">Email automation — June sprint</div></div><div><span class="sp on-track" style="margin:0">Scoping</span></div><div class="pown">Brock / Jon</div><div><div style="font-size:12px">Pre-work</div><div class="mb"><div class="mf" style="width:10%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">Onboarding + free trial</div></div>
         <div class="pr"><div><div class="pname">Reporting automation (Claude MCP)</div></div><div><span class="sp on-track" style="margin:0">Active</span></div><div class="pown">Rahul / Brock</div><div><div style="font-size:12px">25%</div><div class="mb"><div class="mf" style="width:25%;background:var(--green)"></div></div></div><div style="font-size:10px;color:var(--purple)">Ops &amp; reporting</div></div>
-        <div class="risk-foot"><i class="ti ti-alert-triangle"></i> PHP 8.4 finish blocks Monday · Trial sub part 2 likely June · NFL complete ✓ · Q2 Ops 44% ✓</div>
+        <div class="risk-foot"><i class="ti ti-alert-triangle"></i> PHP 8.4 + Circa pricing block Monday · Trial sub part 2 and email automation are linked for June</div>
       </div>
     </div>
     <!-- MEETINGS -->
     <div id="page-meetings" class="page">
       <div class="page-header">
-        <div><h1>Meetings</h1><div class="hdr-sub">Team Metrics Review · May 18 afternoon + Week End Status · May 15</div></div>
-        <div class="asana-meta">
-          <div class="live-badge" style="background:var(--purple-bg);color:var(--purple)"><i class="ti ti-notes"></i> 2 sets of notes</div>
-          <div class="last-updated">May 18 afternoon CT + May 15</div>
-        </div>
+        <div><h1>Meetings</h1><div class="hdr-sub">Email Automation · May 20 + Team Metrics Review · May 18 afternoon + Week End Status · May 15</div></div>
+        <div class="asana-meta"><div class="live-badge" style="background:var(--purple-bg);color:var(--purple)"><i class="ti ti-notes"></i> 3 sets of notes</div></div>
       </div>
 
       <div class="sec">
-        <div class="sec-label">May 18 afternoon meeting — decisions &amp; next steps</div>
-        <div class="proj-tbl">
-          <div class="pr hdr"><div>Item</div><div>Owner</div><div>Status</div><div colspan="2">Notes</div></div>
-          <div class="pr"><div><div class="pname">CloudWatch alerting for long-running SQL queries</div></div><div class="pown">Zach</div><div><span class="t-success tag">Done May 19 ✓</span></div><div colspan="2" style="font-size:11px;color:var(--text-secondary)">Lambda deployed dev + prod · Alarms active</div></div>
-          <div class="pr"><div><div class="pname">Cloudflare implementation — deferred</div></div><div class="pown">Tom / David</div><div><span class="tag t-decision">Deferred</span></div><div colspan="2" style="font-size:11px;color:var(--text-secondary)">DNS routing trade-offs identified · Tabled for further assessment</div></div>
-          <div class="pr"><div><div class="pname">Define incident response process</div></div><div class="pown">David / Zach / Brock</div><div><span class="tag t-info">June sprint</span></div><div colspan="2" style="font-size:11px;color:var(--text-secondary)">Proactive + reactive plan · Logging, early detection, escalation</div></div>
-          <div class="pr"><div><div class="pname">Add Rahul to AWS alerts + merge permissions</div></div><div class="pown">David</div><div><span class="t-success tag">Done May 20 ✓</span></div><div colspan="2" style="font-size:11px;color:var(--text-secondary)">Rahul now has AWS alert emails and can merge/push in all repos</div></div>
-          <div class="pr"><div><div class="pname">Sync email automation — Brock + Jon</div></div><div class="pown">Brock / Jon</div><div><span class="tag t-risk">Status unclear</span></div><div colspan="2" style="font-size:11px;color:var(--text-secondary)">Jon travelled Thu/Fri — unclear if Mon–Wed sync happened</div></div>
-          <div class="pr"><div><div class="pname">June sprint planning — finalize system</div></div><div class="pown">Tom</div><div><span class="tag t-decision">Thu/Fri (this week)</span></div><div colspan="2" style="font-size:11px;color:var(--text-secondary)">Tom remote in Knoxville · Outcome not yet in Asana</div></div>
-          <div class="pr"><div><div class="pname">Update reporting (affiliate revenue + subscription metrics)</div></div><div class="pown">Rahul</div><div><span class="tag t-info">In progress</span></div><div colspan="2" style="font-size:11px;color:var(--text-secondary)">Claude MCP week 2 underway · Brock needs access alignment</div></div>
-        </div>
-      </div>
-
-      <div class="sec">
-        <div class="sec-label">May 15 meeting — aligned decisions (carry-forward)</div>
+        <div class="sec-label">May 20 meeting — Email Automation Discussion (Brock, Jon, Tom)</div>
         <div class="proj-tbl">
           <div class="pr hdr"><div>Decision</div><div>Owner</div><div colspan="3">Status</div></div>
-          <div class="pr"><div><div class="pname">Email automation → June · Discord gating → late June/July</div></div><div class="pown">Brock / Jon</div><div colspan="3"><span class="sp on-track" style="margin:0">Aligned ✓</span></div></div>
-          <div class="pr"><div><div class="pname">Pool naming — restricted feedback process</div></div><div class="pown">Tom</div><div colspan="3"><span class="sp on-track" style="margin:0">In progress</span></div></div>
-          <div class="pr"><div><div class="pname">Advance availability scheduling protocol</div></div><div class="pown">All team</div><div colspan="3"><span class="sp on-track" style="margin:0">Aligned ✓</span></div></div>
+          <div class="pr"><div><div class="pname">Prioritize onboarding + free trial email flows for June</div><div style="font-size:10px;color:var(--text-tertiary);margin-top:2px">Foundational for retention and backlog for future product dev</div></div><div class="pown">Brock / Jon</div><div colspan="3"><span class="sp on-track" style="margin:0">Aligned ✓</span></div></div>
+          <div class="pr"><div><div class="pname">Internal-first: build on Stripe events before adopting third-party tools</div><div style="font-size:10px;color:var(--text-tertiary);margin-top:2px">Tom: data infrastructure must be defined internally first regardless of tool choice</div></div><div class="pown">Tom / Jon</div><div colspan="3"><span class="sp on-track" style="margin:0">Aligned ✓</span></div></div>
+          <div class="pr"><div><div class="pname">Customer.io: evaluate but don't commit — Brock to research pricing (330K user DB concern)</div><div style="font-size:10px;color:var(--text-tertiary);margin-top:2px">$100/mo = 5K profiles; team has 10K+ active customers, 330K in full DB</div></div><div class="pown">Brock Bormann</div><div colspan="3"><span class="tag t-decision">Pending research</span></div></div>
         </div>
       </div>
 
       <div class="sec">
-        <div class="sec-label">Key context from May 18 meeting</div>
+        <div class="sec-label">May 20 meeting — next steps</div>
+        <div class="proj-tbl">
+          <div class="pr hdr"><div>Task</div><div>Owner</div><div colspan="3">Notes</div></div>
+          <div class="pr"><div><div class="pname">Detail process plan: onboarding, autorenewal, lapse prevention</div></div><div class="pown">Brock Bormann</div><div colspan="3" style="font-size:11px;color:var(--text-secondary)">Share updated plan + design docs with the team</div></div>
+          <div class="pr"><div><div class="pname">Define free trial and onboarding experience flows</div></div><div class="pown">Brock Bormann</div><div colspan="3" style="font-size:11px;color:var(--text-secondary)">Flowcharts and concrete workflow definitions</div></div>
+          <div class="pr"><div><div class="pname">Compile concrete examples for onboarding and free trial</div></div><div class="pown">Brock Bormann</div><div colspan="3" style="font-size:11px;color:var(--text-secondary)">Real-world examples to inform flow design</div></div>
+          <div class="pr"><div><div class="pname">Refine and share internal email workflow priorities document</div></div><div class="pown">Brock Bormann</div><div colspan="3" style="font-size:11px;color:var(--text-secondary)">Consolidate strategy doc, share with team</div></div>
+          <div class="pr"><div><div class="pname">Research Customer.io profile/object definitions and pricing</div></div><div class="pown">Brock Bormann</div><div colspan="3" style="font-size:11px;color:var(--text-secondary)">Clarify whether 330K user DB counts as "active profiles" — cost-prohibitive if yes</div></div>
+          <div class="pr"><div><div class="pname">Define subscription structures for free trial</div></div><div class="pown">Jon Mires</div><div colspan="3" style="font-size:11px;color:var(--text-secondary)">Must align with upcoming product release — dependency for Brock's flow design</div></div>
+          <div class="pr"><div><div class="pname">Review customer product videos for feature insights and trigger points</div></div><div class="pown">Jon Mires</div><div colspan="3" style="font-size:11px;color:var(--text-secondary)">Jon reviewing while travelling</div></div>
+          <div class="pr"><div><div class="pname">Define summer project priorities — clarify dev goals and resource allocation</div></div><div class="pown">Tom / Brock / Jon</div><div colspan="3" style="font-size:11px;color:var(--text-secondary)">To be resolved in June sprint planning</div></div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-label">Key context — May 20 meeting</div>
         <div class="attn-card">
           <div class="attn-main" onclick="toggleDrawer('m1',this)">
             <div class="attn-bar u-low"></div>
             <div class="attn-body">
-              <div class="attn-title">Revenue decline ~$800–1K/mo traced to affiliate partner losses, not product</div>
-              <div class="attn-why">Better Collective and Better Pool separated as partners in late July. The decline is primarily affiliate loss, partially offset by users shifting to recurring subscriptions. Brock's ad revenue vendor bake-off is May 29. Rahul adding affiliate metrics to reporting this week.</div>
-              <div class="attn-footer"><div class="attn-action">Track via Rahul's updated reporting once affiliate metrics added</div><div><span class="tag t-info">Revenue context</span></div></div>
+              <div class="attn-title">Behavior-driven approach locked. Long-term: Amazon SES. Near-term: Stripe events.</div>
+              <div class="attn-why">Brock's observation that Claude eliminated the content bottleneck — the only remaining constraint is technical integration — was a key unlock for the discussion. Tom wants top-of-funnel focus (daily MLB betting emails) as potentially higher-return than backend retention. Group agreed to build behavior-driven flows now as a foundation for the future.</div>
+              <div class="attn-footer"><div class="attn-action">Brock's 5 planning deliverables are the pre-work — complete before June sprint kicks off</div><div><span class="tag t-info">Context</span><button class="toggle-btn" id="btn-m1"><i class="ti ti-list"></i> Detail <i class="ti ti-chevron-down chevron"></i></button></div></div>
             </div>
+          </div>
+          <div class="task-drawer hidden" id="m1">
+            <div class="task-row"><div class="task-name">Behavior-driven triggers: pick'em user gets data grid tips; survivor user gets second-chance pool info. Generic emails don't work.</div><div class="task-owner">Agreed</div></div>
+            <div class="task-row"><div class="task-name">Onboarding scope: immediate post-purchase experience + free trial lifecycle + non-converting trial re-engagement</div><div class="task-owner">Agreed</div></div>
+            <div class="task-row"><div class="task-name">Tom concern: vendor lock-in, pricing unpredictability, feature limitations from third-party tools. Build data infrastructure internally first.</div><div class="task-owner">Tom Federico</div></div>
+            <div class="task-row"><div class="task-name">Jon: long-term goal is Amazon SES for ownership and flexibility. Current AWeber + Super Tool setup has limitations.</div><div class="task-owner">Jon Mires</div></div>
+            <div class="task-row"><div class="task-name">Brock: Claude eliminated content bottleneck — only constraint now is technical integration.</div><div class="task-owner">Brock Bormann</div></div>
+            <div class="task-row"><div class="task-name">Tom: top-of-funnel focus (daily MLB betting results emails) may offer higher revenue return than backend retention optimization.</div><div class="task-owner">Tom Federico</div></div>
+            <div class="task-row"><div class="task-name">Dynamic site vision: homepage adapts to user's preferred teams, sports, pool products — Brock and Jon agreed this is a proven engagement driver.</div><div class="task-owner">Brock / Jon</div></div>
           </div>
         </div>
-        <div class="attn-card">
-          <div class="attn-main" onclick="toggleDrawer('m2',this)">
-            <div class="attn-bar u-low"></div>
-            <div class="attn-body">
-              <div class="attn-title">Claude MCP live and shared with org — Rahul and Brock aligning on schema</div>
-              <div class="attn-why">Successfully configured with Matt's help. Shared with the org. Rahul and Brock meeting this week to align on schema and skill definitions for non-technical ad hoc query support.</div>
-              <div class="attn-footer"><div class="attn-action">Brock to complete MCP schema alignment meeting with Rahul this week</div><div><span class="tag t-success">Active ✓</span></div></div>
-            </div>
-          </div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-label">May 18 afternoon meeting — decisions &amp; status</div>
+        <div class="proj-tbl">
+          <div class="pr hdr"><div>Item</div><div>Owner</div><div>Status</div><div colspan="2">Notes</div></div>
+          <div class="pr"><div><div class="pname">CloudWatch alerting for long-running SQL queries</div></div><div class="pown">Zach</div><div><span class="t-success tag">Done May 19 ✓</span></div><div colspan="2" style="font-size:11px;color:var(--text-secondary)">Lambda live on dev + prod</div></div>
+          <div class="pr"><div><div class="pname">Cloudflare implementation — deferred</div></div><div class="pown">Tom / David</div><div><span class="tag t-decision">Deferred</span></div><div colspan="2" style="font-size:11px;color:var(--text-secondary)">DNS routing trade-offs · tabled</div></div>
+          <div class="pr"><div><div class="pname">Define incident response process</div></div><div class="pown">David / Zach / Brock</div><div><span class="tag t-info">June sprint</span></div><div colspan="2" style="font-size:11px;color:var(--text-secondary)">Scoping for June</div></div>
+          <div class="pr"><div><div class="pname">Revenue decline ~$800–1K/mo — affiliate partner losses</div></div><div class="pown">Brock / Rahul</div><div><span class="tag t-info">Tracking</span></div><div colspan="2" style="font-size:11px;color:var(--text-secondary)">Brock ad vendor bake-off May 29 · Rahul adding affiliate metrics to reporting</div></div>
         </div>
       </div>
     </div>
@@ -552,23 +539,19 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
     <!-- DECISIONS -->
     <div id="page-decisions" class="page">
       <div class="page-header">
-        <div><h1>Decisions</h1><div class="hdr-sub">Open queue · organized by owner</div></div>
-        <div class="asana-meta">
-          <div class="live-badge" style="background:#E8F0FE;color:#1a56db"><i class="ti ti-brand-slack"></i> Slack + meeting notes + DMs</div>
-          <div class="last-updated">Synced May 22, 2026</div>
-        </div>
+        <div><h1>Decisions</h1><div class="hdr-sub">Open queue</div></div>
+        <div class="asana-meta"><div class="live-badge" style="background:#E8F0FE;color:#1a56db"><i class="ti ti-brand-slack"></i> Slack + meetings + DMs</div><div class="last-updated">Synced May 22, 2026</div></div>
       </div>
-
       <div class="sec">
         <div class="sec-label">Decisions for Tom &amp; Brock — 3 open</div>
 
         <div class="dec-card" style="border-left:3px solid var(--red)">
           <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:12px">
-            <div style="font-size:13px;font-weight:500">Pool hosting launch — stealth approach, domain, first users. Rahul ready.</div>
+            <div style="font-size:13px;font-weight:500">Pool hosting launch — stealth approach, domain, first users. Rahul ready. June 11 = 20 days.</div>
             <div style="display:flex;gap:6px;flex-shrink:0"><span class="tag t-decision">Open</span><a href="https://teamrankings.slack.com/archives/C09D42KFX5G/p1778637375070259" target="_blank" style="font-size:10px;color:#1a56db;display:flex;align-items:center;gap:3px;text-decoration:none"><i class="ti ti-brand-slack" style="font-size:12px"></i> #pool-hosting ↗</a></div>
           </div>
-          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;margin-bottom:10px">Tom's position (stealth, separate domain, no obvious TR link) stands. Work complete, David gave feedback. Tom/Rahul/Kenny prod sync still hasn't happened. June 11 = 20 days. World Cup pools are already being organized by users on ESPN.</div>
-          <div style="font-size:11px;background:var(--purple-bg);border-radius:var(--radius-md);padding:8px 10px;margin-bottom:10px;line-height:1.6;color:var(--text-secondary)"><strong style="color:var(--purple)"><i class="ti ti-sparkles" style="font-size:11px"></i> AI recommendation:</strong> Approve stealth approach now and schedule the prod sync for week of May 25 — the window to invite friendlies before World Cup opens is shrinking fast.</div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;margin-bottom:10px">Tom's stealth position stands. Work complete. Kenny working GTM. Prod sync + GTM review both needed Monday. Name survey active. 20 days to World Cup.</div>
+          <div style="font-size:11px;background:var(--purple-bg);border-radius:var(--radius-md);padding:8px 10px;margin-bottom:10px;line-height:1.6;color:var(--text-secondary)"><strong style="color:var(--purple)"><i class="ti ti-sparkles" style="font-size:11px"></i> AI recommendation:</strong> Approve stealth approach and schedule the prod sync Monday. 20 days is not enough runway to delay this further.</div>
           <div style="font-size:11px;color:var(--text-tertiary);margin-bottom:10px">Open since: May 12 · June 11 = 20 days</div>
           <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
             <a href="https://teamrankings.slack.com/archives/C09D42KFX5G/p1778637375070259" target="_blank" style="font-size:12px;font-weight:500;color:white;background:var(--purple);padding:6px 14px;border-radius:var(--radius-md);text-decoration:none;display:flex;align-items:center;gap:6px"><i class="ti ti-brand-slack" style="font-size:13px"></i> Take me there →</a>
@@ -578,11 +561,11 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
 
         <div class="dec-card" style="border-left:3px solid var(--amber)">
           <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:12px">
-            <div style="font-size:13px;font-weight:500">Select-package A/B test — approve desktop-only rollout (PR #413). Now 29 days open.</div>
+            <div style="font-size:13px;font-weight:500">Select-package A/B test — approve desktop-only rollout (PR #413). 29 days open.</div>
             <div style="display:flex;gap:6px;flex-shrink:0"><span class="tag t-decision">Open</span><a href="https://teamrankings.slack.com/archives/C0AET66RQ4T/p1776929374901039" target="_blank" style="font-size:10px;color:#1a56db;display:flex;align-items:center;gap:3px;text-decoration:none"><i class="ti ti-brand-slack" style="font-size:12px"></i> #ab-testing ↗</a></div>
           </div>
-          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;margin-bottom:10px">Desktop confirmed win (+24% rev/visitor, Mac +75%). PR #413 ready. Affiliate revenue down $800–1K/month. 29 days idle with a confirmed revenue gain unused.</div>
-          <div style="font-size:11px;background:var(--purple-bg);border-radius:var(--radius-md);padding:8px 10px;margin-bottom:10px;line-height:1.6;color:var(--text-secondary)"><strong style="color:var(--purple)"><i class="ti ti-sparkles" style="font-size:11px"></i> AI recommendation:</strong> With affiliate revenue down, this is the worst time to leave a confirmed desktop revenue win idle. Approve PR #413 today.</div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;margin-bottom:10px">Desktop confirmed win (+24% rev/visitor). PR #413 ready. Affiliate revenue down $800–1K/month. 29 days idle.</div>
+          <div style="font-size:11px;background:var(--purple-bg);border-radius:var(--radius-md);padding:8px 10px;margin-bottom:10px;line-height:1.6;color:var(--text-secondary)"><strong style="color:var(--purple)"><i class="ti ti-sparkles" style="font-size:11px"></i> AI recommendation:</strong> Revenue declining from partner losses. This has been idle for a month. Approve PR #413 Monday.</div>
           <div style="font-size:11px;color:var(--text-tertiary);margin-bottom:10px">Waiting on: Tom · Open since: April 23 (29 days)</div>
           <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
             <a href="https://teamrankings.slack.com/archives/C0AET66RQ4T/p1776929374901039" target="_blank" style="font-size:12px;font-weight:500;color:white;background:var(--purple);padding:6px 14px;border-radius:var(--radius-md);text-decoration:none;display:flex;align-items:center;gap:6px"><i class="ti ti-brand-slack" style="font-size:13px"></i> Take me there →</a>
@@ -592,74 +575,74 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
 
         <div class="dec-card" style="border-left:3px solid var(--green)">
           <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:12px">
-            <div style="font-size:13px;font-weight:500">Google News metadata research — still no owner, no Asana task</div>
-            <div style="display:flex;gap:6px;flex-shrink:0"><span class="tag t-info">Carry-forward</span></div>
+            <div style="font-size:13px;font-weight:500">Customer.io pricing — does 330K user DB count as "active profiles"? Cost-prohibitive if yes.</div>
+            <div style="display:flex;gap:6px;flex-shrink:0"><span class="tag t-info">Research needed</span></div>
           </div>
-          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;margin-bottom:10px">Discussed in both May 15 and May 18 meetings. Google News inclusion is a prerequisite for the search authority feature. No Asana task. High SEO value before football season.</div>
-          <div style="font-size:11px;color:var(--text-tertiary);margin-bottom:10px">2 meetings discussed · still no owner or task</div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;margin-bottom:10px">$100/mo tier = 5K profiles. Team has 10K+ customers, 330K in full database. If the full DB counts, it's cost-prohibitive. Brock committed to investigating before any platform commitment.</div>
+          <div style="font-size:11px;color:var(--text-tertiary);margin-bottom:10px">Waiting on: Brock's research · From May 20 email automation meeting</div>
           <div style="display:flex;gap:6px"><button onclick="markDecision(this,'delegated')" style="font-size:11px;padding:5px 12px;border-radius:var(--radius-md);border:0.5px solid var(--border-s);background:transparent;cursor:pointer;color:var(--text-secondary);font-family:var(--font)">Delegate</button><button onclick="markDecision(this,'deferred')" style="font-size:11px;padding:5px 12px;border-radius:var(--radius-md);border:0.5px solid var(--border-s);background:transparent;cursor:pointer;color:var(--text-secondary);font-family:var(--font)">Defer</button></div>
         </div>
       </div>
 
       <div class="sec">
         <div style="height:1px;background:var(--border-t);margin-bottom:24px"></div>
-        <div class="sec-label">Resolved &amp; deferred — awareness only</div>
-        <div style="background:var(--bg-secondary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:14px 16px;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px"><div style="font-size:12px;font-weight:500">Cloudflare — deferred intentionally in May 18 afternoon meeting</div><span class="tag" style="background:var(--bg-primary);color:var(--text-tertiary);border:0.5px solid var(--border-t)">Tabled</span></div>
-          <div style="font-size:11px;color:var(--text-secondary)">DNS routing and deployment trade-offs identified. Agreed to evaluate further before implementing.</div>
+        <div class="sec-label">Resolved &amp; deferred</div>
+        <div style="background:var(--bg-secondary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:13px 16px;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px"><div style="font-size:12px;font-weight:500">Email automation scope — RESOLVED ✓ · Onboarding + free trial flows for June. Internal-first.</div><span class="tag t-success">May 20 ✓</span></div>
+          <div style="font-size:11px;color:var(--text-secondary)">Behavior-driven triggers. Long-term: Amazon SES. Near-term: Stripe events. Brock's content bottleneck eliminated.</div>
         </div>
-        <div style="background:var(--bg-secondary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:14px 16px;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px"><div style="font-size:12px;font-weight:500">BigQuery long-term cost — evaluation needed before summer</div><span class="tag t-info">Active discussion</span></div>
-          <div style="font-size:11px;color:var(--text-secondary)">Dev DB bumped +300GB this week. Brock raised in #dev-ops: full cost analysis needed — S3 offloading, snapshot reduction as options. David to include in June sprint planning.</div>
+        <div style="background:var(--bg-secondary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:13px 16px;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px"><div style="font-size:12px;font-weight:500">Yahoo / The Athletic B2B — monitoring</div><span class="tag t-info">Active</span></div>
+          <div style="font-size:11px;color:var(--text-secondary)">$75K EPL proposal sent to The Athletic May 21. Yahoo/Everett silent since Feb — Tom leaning toward moving on.</div>
         </div>
-        <div style="background:var(--bg-secondary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:14px 16px;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px"><div style="font-size:12px;font-weight:500">Golf CPU + NFL data sync — RESOLVED ✓</div><span class="tag t-success">Complete</span></div>
-          <div style="font-size:11px;color:var(--text-secondary)">Golf fix deployed May 17. CloudWatch alerting added May 19. NFL live May 15–16. All complete.</div>
+        <div style="background:var(--bg-secondary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:13px 16px;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px"><div style="font-size:12px;font-weight:500">BigQuery long-term cost — evaluation before summer</div><span class="tag t-info">Ongoing</span></div>
+          <div style="font-size:11px;color:var(--text-secondary)">Dev DB bumped +300GB. S3 offloading and snapshot reduction being evaluated. David to include in June sprint planning.</div>
         </div>
-        <div style="background:var(--bg-secondary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:14px 16px;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px"><div style="font-size:12px;font-weight:500">Yahoo/The Athletic B2B — monitoring</div><span class="tag t-info">Active</span></div>
-          <div style="font-size:11px;color:var(--text-secondary)">Athletic: $75K EPL proposal sent May 21, awaiting response. Yahoo/Everett: no response to last 2 outreaches since Feb — Tom considering moving on if no reply.</div>
+        <div style="background:var(--bg-secondary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:13px 16px;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px"><div style="font-size:12px;font-weight:500">Golf CPU + NFL + MLB moneyline — RESOLVED ✓</div><span class="tag t-success">Complete</span></div>
+          <div style="font-size:11px;color:var(--text-secondary)">Golf fix May 17. CloudWatch live May 19. NFL live May 15–16. MLB moneyline fix May 22. All complete.</div>
+        </div>
+        <div style="background:var(--bg-secondary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:13px 16px;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px"><div style="font-size:12px;font-weight:500">Cloudflare — deferred intentionally</div><span class="tag" style="background:var(--bg-primary);color:var(--text-tertiary);border:0.5px solid var(--border-t)">Tabled</span></div>
+          <div style="font-size:11px;color:var(--text-secondary)">DNS routing trade-offs identified. Agreed to evaluate further before implementing.</div>
         </div>
       </div>
     </div>
     <!-- INSIGHTS -->
     <div id="page-insights" class="page">
       <div class="page-header">
-        <div><h1>Insights</h1><div class="hdr-sub">AI-surfaced patterns, risks &amp; signals · week of May 18–22, 2026</div></div>
-        <div class="asana-meta">
-          <div class="live-badge" style="background:var(--purple-bg);color:var(--purple)"><i class="ti ti-sparkles"></i> AI-synthesized</div>
-          <div class="last-updated">Synced May 22, 2026</div>
-        </div>
+        <div><h1>Insights</h1><div class="hdr-sub">AI-surfaced patterns, risks &amp; signals · week of May 18–22</div></div>
+        <div class="asana-meta"><div class="live-badge" style="background:var(--purple-bg);color:var(--purple)"><i class="ti ti-sparkles"></i> AI-synthesized</div><div class="last-updated">Synced May 22, 2026</div></div>
       </div>
 
       <div class="sec">
-        <div class="sec-label">Best week of the sprint</div>
+        <div class="sec-label">This week's standouts</div>
         <div style="background:var(--bg-primary);border:0.5px solid var(--border-t);border-left:3px solid var(--green);border-radius:var(--radius-lg);padding:14px 16px;margin-bottom:8px">
-          <div style="font-size:13px;font-weight:500;margin-bottom:5px">+46 combined tasks completed this week across both projects — highest single-week output of the sprint</div>
-          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6">Product Sprint: 56 → 81 (+25). Q2 Ops: 2 → 24 (+22). Rahul's weekend execution, Jon's Wednesday sprint on trial subs, Brock's Q2 Ops push, and Zach's CloudWatch + AMI completions all converged in the same week.</div>
+          <div style="font-size:13px;font-weight:500;margin-bottom:5px">47 tasks completed — highest single-week output of the sprint</div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6">Product Sprint: 56 → 81 (+25). Q2 Ops: 2 → 24 (+22). Rahul's pool hosting weekend push, Jon's trial sub sprint, Brock's Q2 Ops execution, Zach's infrastructure work, and David's production fixes all converged in one week.</div>
         </div>
         <div style="background:var(--bg-primary);border:0.5px solid var(--border-t);border-left:3px solid var(--green);border-radius:var(--radius-lg);padding:14px 16px;margin-bottom:8px">
-          <div style="font-size:13px;font-weight:500;margin-bottom:5px">Brock's operating role is now more formally defined — Monday calls, priority surfacing, Rahul/Kenny ops support</div>
-          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6">Per DMs this week: Tom confirmed Brock can lead Monday calls and make changes to the agenda structure. Brock also set up Rahul and Kenny in Google Workspace, got Rahul AWS access and credit card, and is now coordinating directly on pool hosting ops. The chief of staff role is operationally active.</div>
+          <div style="font-size:13px;font-weight:500;margin-bottom:5px">Email automation scope locked after months of discussion — one 36-minute meeting resolved it</div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6">The May 20 meeting aligned on onboarding and free trial flows for June, internal-first approach, and behavior-driven triggers. The key unlock: Brock noted that Claude eliminated the content bottleneck — the only remaining constraint is technical integration, which Jon owns.</div>
         </div>
       </div>
 
       <div class="sec">
         <div class="sec-label">Risks to watch</div>
-
         <div class="attn-card">
           <div class="attn-main" onclick="toggleDrawer('i1',this)">
             <div class="attn-bar u-high"></div>
             <div class="attn-body">
-              <div class="attn-title">PHP 8.4 finish is the single point of failure for Monday's Pick'em &amp; Survivor launch</div>
-              <div class="attn-why">David is the only person who can close PHP 8.4 and also run the entire Pick'em &amp; Survivor launch week. If PHP 8.4 finishes today or tomorrow, David has a clean runway. If it slips into Monday, his launch week gets compressed at the worst possible moment — launch day for a product we've seen cause unexpected bugs in every prior launch.</div>
-              <div class="attn-footer"><div class="attn-action">Get a status from David today — this is the weekend's only blocker</div><div><span class="tag t-blocker">Critical path</span></div></div>
+              <div class="attn-title">PHP 8.4 + Circa pricing — two pre-conditions for Monday's launch, both open</div>
+              <div class="attn-why">David needs to close PHP 8.4 and configure Circa pricing before the Pick'em &amp; Survivor launch tasks begin May 25. Every prior launch (WNBA, NFL) hit unexpected bugs on launch day. No pre-launch QA checklist exists for Pick'em &amp; Survivor.</div>
+              <div class="attn-footer"><div class="attn-action">Message David today — confirm PHP 8.4 status and flag Circa pricing is ready to wire up. Build pre-launch checklist.</div><div><span class="tag t-blocker">Both needed Monday</span></div></div>
             </div>
           </div>
           <div class="task-drawer hidden" id="i1">
-            <div class="task-row"><div class="task-name">Finish code updates to allow PHP 8.4 upgrade</div><div class="task-owner">David Hess</div><div class="task-due due-over">Was May 20 — 2 days overdue</div></div>
-            <div class="task-row"><div class="task-name">Pick'em &amp; Survivor: 8 tasks all cluster May 25–28</div><div class="task-owner">David Hess</div><div class="task-due due-ok">Monday</div></div>
-            <div class="task-row"><div class="task-name">Historical pattern: WNBA had scripts-not-running; NFL had 3 bugs on launch day</div><div class="task-owner">—</div><div class="task-due due-ok">Context</div></div>
+            <div class="task-row"><div class="task-name">PHP 8.4 finish — overdue since May 20</div><div class="task-owner">David Hess</div><div class="task-due due-over">Overdue</div></div>
+            <div class="task-row"><div class="task-name">Circa package pricing — Brock updated packages, David needs to configure in product</div><div class="task-owner">David Hess</div><div class="task-due due-ok">Before May 25</div></div>
+            <div class="task-row"><div class="task-name">Pick'em &amp; Survivor: 8 tasks all May 25–28. WNBA + NFL both had bugs on launch day.</div><div class="task-owner">David Hess</div><div class="task-due due-ok">Monday</div></div>
           </div>
         </div>
 
@@ -667,14 +650,15 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
           <div class="attn-main" onclick="toggleDrawer('i2',this)">
             <div class="attn-bar u-med"></div>
             <div class="attn-body">
-              <div class="attn-title">Trial subscription part 2 needs a formal June sprint decision — ~25h open with no assigned week</div>
-              <div class="attn-why">Jon cleared 4 tasks Wednesday before travel. Part 2 (~25h) is open and overdue with no new due date set. June sprint planning happened Thursday/Friday but its outcome isn't reflected in Asana yet. Jon is back Monday. Without a formal week assigned, this task will drift.</div>
-              <div class="attn-footer"><div class="attn-action">Confirm with Jon Monday — assign a specific week in Asana based on June sprint planning outcome</div><div><span class="tag t-risk">Needs assignment</span></div></div>
+              <div class="attn-title">Trial subscription part 2 and email automation are interdependent — needs explicit sequencing</div>
+              <div class="attn-why">Jon's subscription structure definition (May 20 commitment) must come before Brock can design the onboarding flows. Trial sub part 2 implementation also needs to ship before the onboarding email sequence can be tested end-to-end. These two June threads need to be assigned in the right order when Jon returns Monday.</div>
+              <div class="attn-footer"><div class="attn-action">When Jon returns Monday: subscription definition first → Brock's flow design → part 2 implementation</div><div><span class="tag t-risk">Dependency risk</span></div></div>
             </div>
           </div>
           <div class="task-drawer hidden" id="i2">
-            <div class="task-row"><div class="task-name">Implement trial subscription (part 2) — ~25h remaining</div><div class="task-owner">Jon Mires</div><div class="task-due due-over">Was May 20 · No new date set</div></div>
-            <div class="task-row"><div class="task-name">June sprint planning happened Thu/Fri — outcome not yet in Asana</div><div class="task-owner">Tom Federico</div><div class="task-due due-ok">May 21–22</div></div>
+            <div class="task-row"><div class="task-name">Jon: Define subscription structures for free trial (May 20 commitment)</div><div class="task-owner">Jon Mires</div><div class="task-due due-ok">June sprint · first</div></div>
+            <div class="task-row"><div class="task-name">Brock: Design onboarding + free trial flows (depends on Jon's subscription definition)</div><div class="task-owner">Brock Bormann</div><div class="task-due due-ok">June sprint · second</div></div>
+            <div class="task-row"><div class="task-name">Jon: Implement trial subscription part 2 ~25h (needed before end-to-end test)</div><div class="task-owner">Jon Mires</div><div class="task-due due-ok">June sprint · parallel</div></div>
           </div>
         </div>
 
@@ -682,105 +666,55 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
           <div class="attn-main" onclick="toggleDrawer('i3',this)">
             <div class="attn-bar u-med"></div>
             <div class="attn-body">
-              <div class="attn-title">Pool hosting prod launch needs a scheduled sync — June 11 is 20 days away</div>
-              <div class="attn-why">Tom/Rahul/Kenny prod sync still hasn't happened (cancelled May 12, never rescheduled). Work is complete, David gave feedback, name process is active. But the first users can't be invited until the prod instance is live, domain is confirmed, and go-live checklist is reviewed. 20 days to World Cup.</div>
-              <div class="attn-footer"><div class="attn-action">Schedule the Tom + Rahul + Kenny sync for week of May 25 — the first priority of the new sprint</div><div><span class="tag t-risk">20 days to deadline</span></div></div>
+              <div class="attn-title">Pool hosting: 20 days to World Cup, no prod instance, no name, no first users yet</div>
+              <div class="attn-why">Rahul confirmed work complete. Kenny working GTM. But the Tom/Rahul/Kenny sync has never happened. Name isn't finalized. Competitors are already taking sign-ups. Every day without a prod instance is a day that can't be used to find and fix issues before June 11.</div>
+              <div class="attn-footer"><div class="attn-action">Make the prod sync the first item on Monday's team call</div><div><span class="tag t-risk">20 days</span></div></div>
             </div>
-          </div>
-          <div class="task-drawer hidden" id="i3">
-            <div class="task-row"><div class="task-name">Tom + Rahul + Kenny sync — never rescheduled after May 12 cancellation</div><div class="task-owner">Tom Federico</div><div class="task-due due-over">Cancelled May 12</div></div>
-            <div class="task-row"><div class="task-name">World Cup starts — hard deadline</div><div class="task-owner">—</div><div class="task-due due-ok">June 11 (20 days)</div></div>
           </div>
         </div>
       </div>
 
       <div class="sec">
-        <div class="sec-label">Patterns &amp; signals from DMs</div>
-
-        <div class="attn-card">
-          <div class="attn-main" onclick="toggleDrawer('i4',this)">
-            <div class="attn-bar u-low"></div>
-            <div class="attn-body">
-              <div class="attn-title">Tom is shifting toward a "founder mode" product focus — Brock's role as operational coordinator is becoming more critical</div>
-              <div class="attn-why">In DMs this week, Tom confirmed wanting to move away from broader team weighing in on product decisions outside set feedback points. He wants to speed up product development. This creates a gap on day-to-day operational coordination that Brock is now actively filling — Monday calls, priority surfacing, ops setup for Rahul and Kenny, B2B coordination. The role is expanding in practice faster than it's been formally defined.</div>
-              <div class="attn-footer"><div class="attn-action">Consider formalizing the ops coordination role and what falls under it vs. what needs Tom's input</div><div><span class="tag t-info">Operating model signal</span><button class="toggle-btn" id="btn-i4"><i class="ti ti-message"></i> DM context <i class="ti ti-chevron-down chevron"></i></button></div></div>
-            </div>
-          </div>
-          <div class="task-drawer hidden" id="i4">
-            <div class="dm-block"><div class="dm-who">Tom → Brock · May 19, 1:38pm</div>"yeah, that's fine, I can add you. Just don't want anybody else spending time thinking about or weighing in on everything we're discussing outside of set points where we ask the broader team for feedback... Just need to move away from that model if we want to speed up product dev."</div>
-            <div class="dm-block"><div class="dm-who">Brock → Tom · May 14, 1:41pm</div>"I think we've come a long way in building autonomy within the team, so I expect people to be less surprised or concerned by this now than they would have been a year ago. I haven't been directly connected to all of the workflows others are involved in though, so I'm not fully sure how involved you are across everything at this point."</div>
-            <div class="dm-block"><div class="dm-who">Tom → Brock · May 18, 11:42am</div>"I was almost completely referring to the Friday calls with that comment, I'm fine with whatever changes you want to make to the Monday call structure, and you can start leading those today."</div>
-          </div>
-        </div>
-
-        <div class="attn-card">
-          <div class="attn-main" onclick="toggleDrawer('i5',this)">
-            <div class="attn-bar u-low"></div>
-            <div class="attn-body">
-              <div class="attn-title">Zach and Rahul 6-month performance conversations are still unstarted — timing is June scoping phase</div>
-              <div class="attn-why">Brock asked Tom about the performance conversations in a May 19 DM. Tom confirmed he hasn't started and is targeting the June scoping phase — after seeing NFL launch outcomes and pool hosting sprint results. This matters for Brock's ability to effectively support their work.</div>
-              <div class="attn-footer"><div class="attn-action">Revisit after June sprint planning is set — loop back with Tom before taking on more direct coordination of their work</div><div><span class="tag t-info">Timing signal</span></div></div>
-            </div>
-          </div>
-          <div class="task-drawer hidden" id="i5">
-            <div class="dm-block"><div class="dm-who">Brock → Tom · May 19, 11:54am</div>"The only thing I wanted to chat about to sync on was the status of Zach and Rahul 6 month conversations. Specifically are those still happening? And where do you stand with what has been shared with them as I transition into supporting their work..."</div>
-            <div class="dm-block"><div class="dm-who">Tom → Brock · May 19, 12:07pm</div>"probably makes the most sense at this point to target doing them after the May sprint. I am curious to sync up with David again re: his experience with Zach launching NFL, and also see where Rahul ends up with the World Cup pool hosting sprint, and can target doing them during the 'scoping' phase for June."</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="sec">
-        <div class="sec-label">Looking ahead — June sprint priorities</div>
+        <div class="sec-label">Looking ahead — June sprint inputs</div>
         <div style="background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:16px">
           <div style="display:flex;flex-direction:column;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start"><i class="ti ti-point-filled" style="color:var(--purple);font-size:12px;margin-top:3px;flex-shrink:0"></i><div style="font-size:12px;color:var(--text-secondary);line-height:1.6"><strong style="color:var(--text-primary)">Trial subscription part 2 (~25h)</strong> — Jon back Monday, needs a formal week assigned in Asana based on June sprint planning outcome.</div></div>
-            <div style="display:flex;gap:10px;align-items:flex-start"><i class="ti ti-point-filled" style="color:var(--purple);font-size:12px;margin-top:3px;flex-shrink:0"></i><div style="font-size:12px;color:var(--text-secondary);line-height:1.6"><strong style="color:var(--text-primary)">Email automation</strong> — Brock + Jon scope meeting status unclear. Should be locked in June sprint planning output.</div></div>
-            <div style="display:flex;gap:10px;align-items:flex-start"><i class="ti ti-point-filled" style="color:var(--purple);font-size:12px;margin-top:3px;flex-shrink:0"></i><div style="font-size:12px;color:var(--text-secondary);line-height:1.6"><strong style="color:var(--text-primary)">Incident response process</strong> — committed in May 18 meeting. David, Zach, Brock. Needs a task and owner in Asana for June.</div></div>
-            <div style="display:flex;gap:10px;align-items:flex-start"><i class="ti ti-point-filled" style="color:var(--purple);font-size:12px;margin-top:3px;flex-shrink:0"></i><div style="font-size:12px;color:var(--text-secondary);line-height:1.6"><strong style="color:var(--text-primary)">Zach/Rahul 6-month reviews</strong> — Tom is targeting June scoping phase. Brock should align with Tom on what's been communicated before deepening direct support of their work.</div></div>
-            <div style="display:flex;gap:10px;align-items:flex-start"><i class="ti ti-point-filled" style="color:var(--purple);font-size:12px;margin-top:3px;flex-shrink:0"></i><div style="font-size:12px;color:var(--text-secondary);line-height:1.6"><strong style="color:var(--text-primary)">BigQuery cost evaluation</strong> — David to include in June sprint planning per #dev-ops discussion.</div></div>
-            <div style="display:flex;gap:10px;align-items:flex-start"><i class="ti ti-point-filled" style="color:var(--amber);font-size:12px;margin-top:3px;flex-shrink:0"></i><div style="font-size:12px;color:var(--text-secondary);line-height:1.6"><strong style="color:var(--text-primary)">ADDED FOR REVIEW triage</strong> — Tom committed May 11, now 11 days past. 14+ unassigned items. Should fold into June sprint planning output.</div></div>
+            <div style="display:flex;gap:10px;align-items:flex-start"><i class="ti ti-point-filled" style="color:var(--purple);font-size:12px;margin-top:3px;flex-shrink:0"></i><div style="font-size:12px;color:var(--text-secondary);line-height:1.6"><strong style="color:var(--text-primary)">Email automation pre-work (Brock)</strong> — 5 deliverables: process plan, flow definitions, examples, strategy doc, Customer.io pricing research. These must be done before the June sprint kicks off.</div></div>
+            <div style="display:flex;gap:10px;align-items:flex-start"><i class="ti ti-point-filled" style="color:var(--purple);font-size:12px;margin-top:3px;flex-shrink:0"></i><div style="font-size:12px;color:var(--text-secondary);line-height:1.6"><strong style="color:var(--text-primary)">Trial subscription part 2 (~25h) + Jon's subscription definition</strong> — Jon back Monday. Assign formal June weeks. Subscription definition first; it unblocks Brock's flow design.</div></div>
+            <div style="display:flex;gap:10px;align-items:flex-start"><i class="ti ti-point-filled" style="color:var(--purple);font-size:12px;margin-top:3px;flex-shrink:0"></i><div style="font-size:12px;color:var(--text-secondary);line-height:1.6"><strong style="color:var(--text-primary)">Zach &amp; Rahul 6-month reviews</strong> — Tom targeting June scoping phase. Brock should align before deepening direct support of their work.</div></div>
+            <div style="display:flex;gap:10px;align-items:flex-start"><i class="ti ti-point-filled" style="color:var(--purple);font-size:12px;margin-top:3px;flex-shrink:0"></i><div style="font-size:12px;color:var(--text-secondary);line-height:1.6"><strong style="color:var(--text-primary)">Incident response process</strong> — David, Zach, Brock. Committed in May 18 meeting. Needs an Asana task and owner for June.</div></div>
+            <div style="display:flex;gap:10px;align-items:flex-start"><i class="ti ti-point-filled" style="color:var(--amber);font-size:12px;margin-top:3px;flex-shrink:0"></i><div style="font-size:12px;color:var(--text-secondary);line-height:1.6"><strong style="color:var(--text-primary)">ADDED FOR REVIEW triage</strong> — Tom committed May 11, now 11 days past. 14+ unassigned items. Should fold into June sprint planning.</div></div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- COMMUNICATIONS -->
-    <!-- COMMUNICATIONS -->
     <div id="page-comms" class="page">
       <div class="page-header">
-        <div><h1>Communications</h1><div class="hdr-sub">Key threads from Slack + all DMs · <span class="new-badge" style="margin-left:0">NEW</span> = updated since last sync</div></div>
-        <div class="asana-meta">
-          <div class="live-badge" style="background:#E8F0FE;color:#1a56db"><i class="ti ti-brand-slack"></i> Live · 19 channels + all DMs</div>
-          <div class="last-updated">Synced May 22, 2026</div>
-        </div>
-      </div>
-      <div style="background:var(--bg-secondary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:10px 14px;margin-bottom:24px;display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-secondary)">
-        <i class="ti ti-arrow-right" style="color:var(--purple);font-size:14px;flex-shrink:0"></i>
-        Threads requiring decisions are in the <a onclick="showPage('decisions', document.querySelector('.nav-item:nth-child(6)'))" style="color:var(--purple);font-weight:500;cursor:pointer;text-decoration:none;margin:0 2px">Decisions tab</a>. Everything here is for awareness.
+        <div><h1>Communications</h1><div class="hdr-sub">All Slack + all DMs · filtered to what matters</div></div>
+        <div class="asana-meta"><div class="live-badge" style="background:#E8F0FE;color:#1a56db"><i class="ti ti-brand-slack"></i> All channels + all DMs</div><div class="last-updated">Synced May 22, 2026</div></div>
       </div>
 
       <div class="sec">
-        <div class="sec-label" style="display:flex;align-items:center;gap:6px"><i class="ti ti-lock" style="font-size:12px;color:var(--purple)"></i> Your DMs — all threads this week</div>
+        <div class="sec-label" style="display:flex;align-items:center;gap:6px"><i class="ti ti-lock" style="font-size:12px;color:var(--purple)"></i> DMs — signals this week</div>
 
         <div class="attn-card">
           <div class="attn-main" onclick="toggleDrawer('dm1',this)">
             <div class="attn-bar u-high" style="background:var(--purple)"></div>
             <div class="attn-body">
-              <div class="attn-title">DM with Kenny Long — pool hosting GTM + admin email + survey, all need Tom review <span class="new-badge">NEW</span></div>
-              <div class="attn-why">Kenny is actively working pool hosting go-to-market. Three items: (1) a GTM doc he shared with Tom today awaiting feedback, (2) an admin invite email draft you reviewed and said was good with suggested benefit bullets added, (3) a survey for collecting referrals from the TR team — Rahul and Tom both have thoughts. You told Kenny you'd flag the GTM doc as a priority on your Monday call with Tom.</div>
+              <div class="attn-title">Tom — 1:1 pushed this morning, moving to Thursdays. Athletic proposal sent. Yahoo dead end. <span class="new-badge">NEW</span></div>
+              <div class="attn-why">Tom pushed the 1:1 this morning (new house). Suggested non-morning; you proposed Thursdays. Also: Tom sent $75K Athletic EPL proposal May 21 (cc'd you, you improved framing). Yahoo/Everett unresponsive since February — Tom leaning toward moving on.</div>
               <div class="attn-footer">
-                <div class="attn-action">Flag with Tom Monday: Kenny's GTM doc is the priority — has answers to questions needed to unblock go-to-market</div>
-                <div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> Brock–Kenny DM · May 21</span><button class="toggle-btn" id="btn-dm1"><i class="ti ti-message"></i> Thread <i class="ti ti-chevron-down chevron"></i></button></div>
+                <div class="attn-action">Rebook 1:1 for Thursdays Monday. Monitor Athletic. Confirm Yahoo decision next week.</div>
+                <div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> Brock–Tom DM</span><button class="toggle-btn" id="btn-dm1"><i class="ti ti-message"></i> Thread <i class="ti ti-chevron-down chevron"></i></button></div>
               </div>
             </div>
           </div>
           <div class="task-drawer hidden" id="dm1">
-            <div class="dm-block"><div class="dm-who">Brock → Kenny · May 19, 1:19pm</div>"Hey Kenny, I wanted to make sure you were added to our TR Workspace so it is easier for others on the team to connect with you if needed."</div>
-            <div class="dm-block"><div class="dm-who">Brock → Kenny · May 21, 3:16pm</div>"As I have been following along in the pool hosting channel, I wanted to see is there is anything you are waiting on from Tom or anything I should bring to him tomorrow morning (we have a standing ops call) to make sure it is prioritized?"</div>
-            <div class="dm-block"><div class="dm-who">Kenny → Brock · May 21, 3:50pm</div>Three items: (1) Tom is blocking on a pool hosting thread he may get to today, (2) admins email draft — "Rahul and Tom clearly have thoughts" on the survey, (3) "provisional NFL go-to-market plans" doc being shared today, needs Tom review + answers to questions in the doc.</div>
-            <div class="dm-block"><div class="dm-who">Brock → Kenny · May 21, 4:08pm</div>Reviewed the admin email draft. "It looks good... add 1-2 sentences or 2-3 bullets to highlight the benefits — 'easier way to run survivor pools,' 'less commissioner overhead,' 'simpler invite + pick management'... I'll flag the go-to-market doc tomorrow so it is prioritized once you send it over — most of what else is on his plate right now isn't as time-sensitive."</div>
-            <div class="dm-block"><div class="dm-who">Brock → Kenny · May 21, 4:29–4:31pm</div>On the survey: deferred to Tom since he's planning to review. "The biggest thing right now is timing — and at some point we just need to get things moving forward to the next stage. And not all of the things being reviewed right now have to be 100% optimal. So that is part of what I can discuss with him tomorrow."</div>
-            <div class="dm-block"><div class="dm-who">Kenny → Brock · May 21, 4:35pm</div>"Appreciate that context, will do."</div>
+            <div class="dm-block"><div class="dm-who">Tom → Brock · May 22, 10:01am</div>"i need to run over to the new house for a bit — likely will need to push off our chat (though we should probably also reschedule it for non-morning going forward)"</div>
+            <div class="dm-block"><div class="dm-who">Brock → Tom · May 22, 10:21am</div>"Just let me know when you are ready. And yeah, I think we should schedule it for Thursdays during the time you expect to be working moving forward."</div>
+            <div class="dm-block"><div class="dm-who">May 21 — The Athletic B2B</div>Tom sent $75K white-label EPL proposal to Mike Hume (cc'd Brock). Brock suggested multi-year partnership framing. Tom incorporated it and sent. Tom: "Way more excited now just to build this stuff ourselves."</div>
+            <div class="dm-block"><div class="dm-who">May 21 — Yahoo</div>No response since early February. Tom: "if they don't go for that... probably time to move on."</div>
           </div>
         </div>
 
@@ -788,22 +722,13 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
           <div class="attn-main" onclick="toggleDrawer('dm2',this)">
             <div class="attn-bar u-med" style="background:var(--purple)"></div>
             <div class="attn-body">
-              <div class="attn-title">DM with Rahul — pool hosting Slack alert channels need creating + alert protocol setup <span class="new-badge">NEW</span></div>
-              <div class="attn-why">Rahul proposed three new Slack channels for pool hosting alerting (#pool-hosting-logs, #pool-hosting-alerts, #pool-hosting-staging). He can't create channels himself. You said to run it by Tom first. You also got Rahul onboarded to AWS alerts (David) and Pingdom alerts (Jon) this week. Rahul wants channels live before prod launch this week.</div>
+              <div class="attn-title">Kenny — GTM doc with Tom, admin email reviewed, timing pressure flagged</div>
+              <div class="attn-why">Kenny shared a pool hosting GTM doc with Tom and needs his review + answers to open questions. You reviewed the admin invite email (looks good, suggested benefit bullets). You flagged to Kenny: not everything needs to be perfect to keep moving forward.</div>
               <div class="attn-footer">
-                <div class="attn-action">Create the 3 pool hosting Slack channels — Rahul is launching prod this week and needs alerting live</div>
-                <div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> Brock–Rahul DM · May 18–22</span><button class="toggle-btn" id="btn-dm2"><i class="ti ti-message"></i> Thread <i class="ti ti-chevron-down chevron"></i></button></div>
+                <div class="attn-action">Flag Kenny's GTM doc as a priority on Monday's team call</div>
+                <div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> Brock–Kenny DM</span></div>
               </div>
             </div>
-          </div>
-          <div class="task-drawer hidden" id="dm2">
-            <div class="dm-block"><div class="dm-who">Brock → Rahul</div>Added Rahul to Pingdom alerts + confirmed David added him to AWS alert emails. "Quick follow-up — you were added to AWS alerts by David, so you will get those via email. And Jon added you to pingdom alerts."</div>
-            <div class="dm-block"><div class="dm-who">Rahul → Brock</div>Proposed 3 pool hosting Slack channels: #pool-hosting-logs (mutable — deploys, match results), #pool-hosting-alerts (prod-only, never muted — Sentry errors, CloudWatch alarms, prod deploy failures), #pool-hosting-staging (staging errors, mutable).</div>
-            <div class="dm-block"><div class="dm-who">Brock → Rahul</div>"Who would need access to these channels? Just you to start? We have not really discussed how all of that fits into our other work. And that would be a conversation to have with Tom before I create the actual channels."</div>
-            <div class="dm-block"><div class="dm-who">Rahul → Brock</div>"It would be any dev working on pool-hosting. So just Kenny and I for now... I'll run the plan by Kenny too to see if he has suggestions/edits — then we can create the channels."</div>
-            <div class="dm-block"><div class="dm-who">Rahul → Brock (on prod launch)</div>"I'm launching prod this week so want to get some alerting live — even if we change it later."</div>
-            <div class="dm-block"><div class="dm-who">Brock → Rahul · May 22</div>"As I have been following along in the pool hosting channel, I wanted to see is there is anything you are waiting on from Tom or anything I should bring to him tomorrow morning to make sure it is prioritized?"</div>
-            <div class="dm-block"><div class="dm-who">Rahul → Brock · May 22</div>"Nothing from me. But can you ping Kenny? He's doing some GTM stuff... and I think was waiting for feedback from Tom."</div>
           </div>
         </div>
 
@@ -811,171 +736,63 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
           <div class="attn-main" onclick="toggleDrawer('dm3',this)">
             <div class="attn-bar u-low" style="background:var(--purple)"></div>
             <div class="attn-body">
-              <div class="attn-title">DM with Jason — content calendar built, NFL football sections active, daily habit gap <span class="new-badge">NEW</span></div>
-              <div class="attn-why">Jason built the content calendar in Asana mostly using Claude — has golf, NFL, and evergreen (Pick'em &amp; Survivor) sections with due dates. He's now working on NFL featured article updates and Circa data with Claude. He hasn't been closing out completed items yet. You set the expectation clearly that daily 5-10 min updates are the critical process. Jason also asked about timing for the NFL Week 1 Survivor article (you aligned on publishing now vs. waiting for product launch).</div>
+              <div class="attn-title">Rahul — not blocked on product. Pointed to Kenny for GTM coordination.</div>
+              <div class="attn-why">When you checked in, Rahul confirmed deliverables are clear and he's not blocked. Alert protocols (AWS + Pingdom) and pool hosting Slack alert channels aligned this week.</div>
               <div class="attn-footer">
-                <div class="attn-action">Check in with Jason early next week — daily calendar update habit established?</div>
-                <div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> Brock–Jason DM · May 19–22</span><button class="toggle-btn" id="btn-dm3"><i class="ti ti-message"></i> Thread <i class="ti ti-chevron-down chevron"></i></button></div>
+                <div class="attn-action">No blocker — focus is prod sync and Kenny's GTM work</div>
+                <div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> Brock–Rahul DM</span></div>
               </div>
             </div>
-          </div>
-          <div class="task-drawer hidden" id="dm3">
-            <div class="dm-block"><div class="dm-who">Jason → Brock · May 19</div>"While not fully done, I have a Content Calendar with the sections we discussed, it has Golf articles, weekly NFL articles, and Evergreen for Pick'em and Survivor currently added with due dates... Built mostly with Claude, it did duplicate across weeks without having to use the duplicate/close previous recurring process."</div>
-            <div class="dm-block"><div class="dm-who">Jason → Brock · May 19</div>"Last year, we posted the Week 1 Survivor article on 8/1. We haven't launched the product yet, but should I just put my 'NFL Week 1 Survivor schedule is out' as an early section in this year's article and go ahead and publish it now?"</div>
-            <div class="dm-block"><div class="dm-who">Brock + Jason aligned</div>Publish now — doesn't need to wait for product launch.</div>
-            <div class="dm-block"><div class="dm-who">Jason → Brock · May 22</div>"I haven't closed things yet because I wanted to make sure you had seen all of it and we had talked about structures and changes."</div>
-            <div class="dm-block"><div class="dm-who">Brock → Jason · May 22</div>"Regardless of what process we use for the content calendar this summer and into the fall, the most important part of the process is that you are updating it on a daily basis (should only take 5-10 min most days)... Claude could also do that for you if you are still using it as a way to manage your day."</div>
-            <div class="dm-block"><div class="dm-who">Brock → Jason · May 22 (re: WordPress)</div>WordPress being finicky with featured article updates — resolved when Claude + ChatGPT were closed. Jason was working on Circa data in Claude, hadn't been in WordPress yet.</div>
-          </div>
-        </div>
-
-        <div class="attn-card">
-          <div class="attn-main" onclick="toggleDrawer('dm4',this)">
-            <div class="attn-bar u-low" style="background:var(--purple)"></div>
-            <div class="attn-body">
-              <div class="attn-title">DM with Tom — Monday calls confirmed, pool hosting channel access, 6-month reviews, Athletic proposal <span class="new-badge">NEW</span></div>
-              <div class="attn-why">Full summary of Brock–Tom DM threads this week: Monday call leadership confirmed, Team Call Agenda shared (pending Tom review before sharing with team), organizer transfer done, pool hosting channel access agreed, Zach/Rahul reviews targeting June scoping phase, $75K Athletic proposal sent with Brock's multi-year framing incorporated, Yahoo/Everett situation discussed.</div>
-              <div class="attn-footer">
-                <div class="attn-action">Two open items: (1) Tom to review Team Call Agenda, (2) confirm pool hosting channel access was granted</div>
-                <div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> Brock–Tom DM · May 18–21</span><button class="toggle-btn" id="btn-dm4"><i class="ti ti-message"></i> Summary <i class="ti ti-chevron-down chevron"></i></button></div>
-              </div>
-            </div>
-          </div>
-          <div class="task-drawer hidden" id="dm4">
-            <div class="dm-block"><div class="dm-who">May 18 — Monday calls + agenda</div>Brock shared updated Team Call Agenda to surface priority items. Tom confirmed leading Monday calls starting immediately. Brock made organizer of Team Call calendar event for Gemini notes automation.</div>
-            <div class="dm-block"><div class="dm-who">May 18 — AWS rep email</div>Tom forwarded AWS account rep email. Brock handled, set up a call to keep TR account "engaged."</div>
-            <div class="dm-block"><div class="dm-who">May 19 — Zach + Rahul 6-month reviews</div>Brock asked about status. Tom: "I haven't made any progress or done any more thinking about those yet." Targeting June scoping phase after seeing NFL and pool hosting outcomes.</div>
-            <div class="dm-block"><div class="dm-who">May 19 — pool hosting channel access</div>Brock raised feeling disconnected. Tom agreed to add Brock. Tom: "Just don't want anybody else spending time thinking about or weighing in on everything we're discussing outside of set points."</div>
-            <div class="dm-block"><div class="dm-who">May 21 — Athletic B2B proposal</div>Tom sent $75K white-label EPL game proposal to Mike Hume cc'ing Brock. Brock suggested multi-year partnership framing. Tom incorporated it.</div>
-            <div class="dm-block"><div class="dm-who">May 21 — Yahoo/Everett</div>No response since early February. Tom: "if they don't go for that and also don't make some sort of new proposal... probably time to move on."</div>
-            <div class="dm-block"><div class="dm-who">May 21 — golf email template error</div>Tom flagged a template error in a golf email. Brock confirmed he caught it too.</div>
           </div>
         </div>
       </div>
 
       <div class="sec">
-        <div class="sec-label">Public channels — recent activity</div>
-
+        <div class="sec-label">Public channels</div>
         <div class="attn-card">
           <div class="attn-main" onclick="toggleDrawer('s1',this)">
             <div class="attn-bar u-low"></div>
             <div class="attn-body">
-              <div class="attn-title">#dev-ops — MLB one-sided ML fix shipped May 21 + BigQuery cost discussion <span class="new-badge">NEW</span></div>
-              <div class="attn-why">David shipped fix for one-sided MLB ML prediction errors (23 files). CloudWatch alerting lambda live. Brock raised BigQuery integration cost discussion — long-term evaluation needed before summer.</div>
+              <div class="attn-title">#dev-ops — MLB moneyline fix complete today. CloudWatch active. BigQuery cost discussion ongoing.</div>
+              <div class="attn-why">David closed the MLB moneyline triage task this morning. CloudWatch alerting lambda live. Brock raised BigQuery integration cost in #dev-ops — storage bump + long-term evaluation needed before summer.</div>
               <div class="attn-footer"><div class="attn-action">Include BigQuery cost in June sprint planning</div><div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> #dev-ops</span><span class="tag t-info">FYI</span></div></div>
             </div>
           </div>
         </div>
-
         <div class="attn-card">
           <div class="attn-main" onclick="toggleDrawer('s2',this)">
             <div class="attn-bar u-low"></div>
             <div class="attn-body">
-              <div class="attn-title">#pool-hosting — Rahul ready to invite users, name selection active, prod launch imminent</div>
-              <div class="attn-why">Work complete. Tom/Rahul/Kenny prod sync still needed. Name survey circulating — Tom reviewing. Competitors already setting up World Cup pools on ESPN. June 11 = 20 days.</div>
-              <div class="attn-footer"><div class="attn-action">Schedule prod sync week of May 25</div><div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> #pool-hosting</span><span class="tag t-info">FYI</span></div></div>
+              <div class="attn-title">#pool-hosting — Rahul ready. Competitors running WC pools on ESPN. 20 days to June 11.</div>
+              <div class="attn-why">No new channel activity since May 15. Prod sync still needed. Name survey active. Competitors already setting up World Cup pools.</div>
+              <div class="attn-footer"><div class="attn-action">Schedule prod sync for week of May 25</div><div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> #pool-hosting</span><span class="tag t-info">FYI</span></div></div>
             </div>
-          </div>
-        </div>
-
-        <div class="attn-card">
-          <div class="attn-main" onclick="toggleDrawer('s3',this)">
-            <div class="attn-bar u-low"></div>
-            <div class="attn-body">
-              <div class="attn-title">#ab-testing — PR #413 now 29 days idle, desktop win confirmed, revenue declining</div>
-              <div class="attn-why">No new activity. Desktop +24% rev/visitor. PR ready. Affiliate revenue down. See Decisions tab.</div>
-              <div class="attn-footer"><div class="attn-action">See Decisions tab — needs Tom approval</div><div style="display:flex;align-items:center;gap:6px"><span class="src-tag"><i class="ti ti-brand-slack"></i> #ab-testing</span><span class="tag t-info">Context</span></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="sec">
-        <div class="sec-label">Channels quiet since last sync</div>
-        <div style="background:var(--bg-primary);border:0.5px solid var(--border-t);border-radius:var(--radius-lg);padding:12px 16px">
-          <div style="display:flex;flex-wrap:wrap;gap:6px">
-            <span class="tag" style="background:var(--bg-secondary);color:var(--text-tertiary)">#product</span>
-            <span class="tag" style="background:var(--bg-secondary);color:var(--text-tertiary)">#data-provider-integration</span>
-            <span class="tag" style="background:var(--bg-secondary);color:var(--text-tertiary)">#ops</span>
-            <span class="tag" style="background:var(--bg-secondary);color:var(--text-tertiary)">#site-optimization</span>
-            <span class="tag" style="background:var(--bg-secondary);color:var(--text-tertiary)">#reporting</span>
-            <span class="tag" style="background:var(--bg-secondary);color:var(--text-tertiary)">#pick-logic-adjustments</span>
-            <span class="tag" style="background:var(--bg-secondary);color:var(--text-tertiary)">#sport-setup</span>
-            <span class="tag" style="background:var(--bg-secondary);color:var(--text-tertiary)">#nfl-survivor-picks</span>
-            <span class="tag" style="background:var(--bg-secondary);color:var(--text-tertiary)">#football-pickem-picks</span>
-            <span class="tag" style="background:var(--bg-secondary);color:var(--text-tertiary)">#purchase-flow</span>
-            <span class="tag" style="background:var(--bg-secondary);color:var(--text-tertiary)">#soccer</span>
           </div>
         </div>
       </div>
     </div>
+
     <!-- WEEKLY BRIEF -->
     <div id="page-weekly" class="page">
       <div class="page-header">
-        <div><h1>Weekly brief</h1><div class="hdr-sub">Week of May 18–22, 2026 · Asana, Slack, Big Board &amp; Brock–Tom DMs</div></div>
-        <div class="asana-meta">
-          <div class="live-badge" style="background:var(--purple-bg);color:var(--purple)"><i class="ti ti-sparkles"></i> AI-synthesized</div>
-          <div class="last-updated">Generated May 22, 2026</div>
-        </div>
+        <div><h1>Weekly brief</h1><div class="hdr-sub">Week of May 18–22, 2026 · Friday team call edition</div></div>
+        <div class="asana-meta"><div class="live-badge" style="background:var(--purple-bg);color:var(--purple)"><i class="ti ti-sparkles"></i> AI-synthesized</div><div class="last-updated">Generated May 22, 2026</div></div>
       </div>
-
       <div class="sec">
         <div class="focus-card">
-          <p class="focus-text">The sprint's highest-output week. +46 tasks completed across both projects. Rahul finished pool hosting, Jon cleared 4 trial sub tasks the day before travel, Zach shipped CloudWatch alerting and AMI smoke-testing, Brock drove Q2 Ops to 44%, and David fixed a string of production issues. The only thread still open going into the weekend is PHP 8.4 — which must close before Monday's Pick'em &amp; Survivor launch. Off the product track: Brock is now formally leading Monday calls, Tom sent the Athletic B2B proposal, and the Zach/Rahul performance review conversations are targeting the June scoping phase.</p>
-          <div class="focus-meta"><i class="ti ti-sparkles"></i> Synthesized from 3 Asana projects · 19 Slack channels · May 15 + May 18 meetings · Brock–Tom DMs</div>
+          <p class="focus-text">The sprint's highest-output week — 47 tasks. PHP 8.4 and Circa pricing are the only things between today and Monday's Pick'em &amp; Survivor launch. Email automation scope is locked from the May 20 meeting: onboarding and free trial flows, internal-first, behavior-driven triggers. Tom and Brock's operating model is evolving — Monday calls confirmed, 1:1 moving to Thursdays. World Cup is 20 days away with no prod instance yet. Jon returns Monday with two linked threads to sequence: trial subscription part 2 and subscription structure definition for email automation.</p>
+          <div class="focus-meta"><i class="ti ti-sparkles"></i> Synthesized from 3 Asana projects · all Slack · May 15 + May 18 + May 20 meetings · all DMs</div>
         </div>
       </div>
 
       <div class="sec">
         <div class="sec-label">What moved this week</div>
         <div style="display:flex;flex-direction:column;gap:8px">
-          <div class="win-card">
-            <i class="ti ti-circle-check" style="color:var(--green);font-size:18px;flex-shrink:0;margin-top:1px"></i>
-            <div style="flex:1">
-              <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:3px"><div style="font-size:13px;font-weight:500">Q2 Ops: 2 → 24 complete (+22 tasks in one week)</div><div style="display:flex;align-items:center;gap:6px"><span style="font-size:10px;color:var(--text-tertiary)">Brock / Jason</span><span class="sp on-track" style="margin:0;font-size:10px">4% → 44% ✓</span></div></div>
-              <div style="font-size:12px;color:var(--text-secondary);line-height:1.5">Email plan, sales emails, CRM plan, content calendar, article calendar, article types audit, social, YouTube, Discord planning all moved. Best single-week Q2 Ops output of the sprint.</div>
-            </div>
-          </div>
-          <div class="win-card">
-            <i class="ti ti-circle-check" style="color:var(--green);font-size:18px;flex-shrink:0;margin-top:1px"></i>
-            <div style="flex:1">
-              <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:3px"><div style="font-size:13px;font-weight:500">Jon: 4 trial sub tasks done the day before travel</div><div style="display:flex;align-items:center;gap:6px"><span style="font-size:10px;color:var(--text-tertiary)">Jon Mires · May 20</span><span class="sp on-track" style="margin:0;font-size:10px">4 of 5 done ✓</span></div></div>
-              <div style="font-size:12px;color:var(--text-secondary);line-height:1.5">Spec, Stripe sandbox, Stripe API upgrade, and part 1 all done on Wednesday. Trial subs went from 8 days overdue to 4 of 5 tasks complete in a single day.</div>
-            </div>
-          </div>
-          <div class="win-card">
-            <i class="ti ti-circle-check" style="color:var(--green);font-size:18px;flex-shrink:0;margin-top:1px"></i>
-            <div style="flex:1">
-              <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:3px"><div style="font-size:13px;font-weight:500">Zach: CloudWatch alerting live + AMI smoke-testing done</div><div style="display:flex;align-items:center;gap:6px"><span style="font-size:10px;color:var(--text-tertiary)">Zach · May 19–21</span><span class="sp on-track" style="margin:0;font-size:10px">Both done ✓</span></div></div>
-              <div style="font-size:12px;color:var(--text-secondary);line-height:1.5">Lambda for long-running query detection live on dev + prod (May 19). AMI building/smoke-testing complete (May 21). Both infrastructure items that were on the critical path for the May sprint.</div>
-            </div>
-          </div>
-          <div class="win-card">
-            <i class="ti ti-circle-check" style="color:var(--green);font-size:18px;flex-shrink:0;margin-top:1px"></i>
-            <div style="flex:1">
-              <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:3px"><div style="font-size:13px;font-weight:500">David: MLB fix, dev DB storage, pool demo feedback, PHP 8.4 start</div><div style="display:flex;align-items:center;gap:6px"><span style="font-size:10px;color:var(--text-tertiary)">David · May 18–21</span><span class="sp on-track" style="margin:0;font-size:10px">4 items ✓</span></div></div>
-              <div style="font-size:12px;color:var(--text-secondary);line-height:1.5">Fixed MLB deadlocked queries, resolved dev DB storage alarm, gave pool hosting demo feedback, started PHP 8.4 upgrade, and shipped the one-sided ML prediction fix (23 files). Heavy week.</div>
-            </div>
-          </div>
-          <div class="win-card">
-            <i class="ti ti-circle-check" style="color:var(--green);font-size:18px;flex-shrink:0;margin-top:1px"></i>
-            <div style="flex:1">
-              <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:3px"><div style="font-size:13px;font-weight:500">Brock's operating role operationally active: Monday calls, ops setup, B2B coordination</div><div style="display:flex;align-items:center;gap:6px"><span style="font-size:10px;color:var(--text-tertiary)">Brock · May 18–21</span><span class="sp on-track" style="margin:0;font-size:10px">In motion ✓</span></div></div>
-              <div style="font-size:12px;color:var(--text-secondary);line-height:1.5">Tom confirmed Brock leads Monday calls and became organizer for Gemini automation. Brock set up Rahul + Kenny in Google Workspace, got Rahul AWS access, collaborated on the Athletic proposal. Chief of staff role is moving from defined to active.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="sec">
-        <div class="sec-label">What didn't move</div>
-        <div class="proj-tbl">
-          <div class="pr hdr"><div>Item</div><div>Owner</div><div>Status</div><div>Risk</div><div>Next step</div></div>
-          <div class="pr"><div><div class="pname">PHP 8.4 finish — 2 days overdue</div></div><div class="pown">David Hess</div><div style="font-size:11px;color:var(--text-secondary)">Start done ✓ · Finish still open</div><div><span class="tag t-blocker" style="font-size:10px">Blocks Monday</span></div><div style="font-size:10px;color:var(--text-tertiary)">Close today</div></div>
-          <div class="pr"><div><div class="pname">Trial sub part 2 (~25h)</div></div><div class="pown">Jon Mires</div><div style="font-size:11px;color:var(--text-secondary)">Jon travelling · No week assigned</div><div><span class="tag t-risk" style="font-size:10px">Likely June</span></div><div style="font-size:10px;color:var(--text-tertiary)">Assign Monday</div></div>
-          <div class="pr"><div><div class="pname">A/B desktop rollout — PR #413, 29 days</div></div><div class="pown">Tom / Jon</div><div style="font-size:11px;color:var(--text-secondary)">Confirmed win · Affiliate revenue down</div><div><span class="sp at-risk" style="margin:0">Revenue cost</span></div><div style="font-size:10px;color:var(--text-tertiary)">Approve now</div></div>
-          <div class="pr"><div><div class="pname">Tom + Rahul + Kenny pool sync</div></div><div class="pown">Tom</div><div style="font-size:11px;color:var(--text-secondary)">Cancelled May 12 · Never rescheduled</div><div><span class="tag t-risk" style="font-size:10px">20 days left</span></div><div style="font-size:10px;color:var(--text-tertiary)">Week of May 25</div></div>
-          <div class="pr"><div><div class="pname">Team Call Agenda — share with team</div></div><div class="pown">Tom / Brock</div><div style="font-size:11px;color:var(--text-secondary)">Awaiting Tom review</div><div><span class="tag t-decision" style="font-size:10px">Before Monday</span></div><div style="font-size:10px;color:var(--text-tertiary)">Follow up today</div></div>
+          <div class="win-card"><i class="ti ti-circle-check" style="color:var(--green);font-size:18px;flex-shrink:0;margin-top:1px"></i><div style="flex:1"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:3px"><div style="font-size:13px;font-weight:500">Q2 Ops: 2 → 24 complete (+22 tasks)</div><span class="sp on-track" style="margin:0;font-size:10px">4% → 44% ✓</span></div><div style="font-size:12px;color:var(--text-secondary);line-height:1.5">Email plan, sales emails, CRM plan, content calendar, article audit, social, YouTube, Discord planning all moved in one week. Best single-week Q2 Ops output of the sprint.</div></div></div>
+          <div class="win-card"><i class="ti ti-circle-check" style="color:var(--green);font-size:18px;flex-shrink:0;margin-top:1px"></i><div style="flex:1"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:3px"><div style="font-size:13px;font-weight:500">Email automation scope locked in May 20 meeting</div><span class="sp on-track" style="margin:0;font-size:10px">Aligned ✓</span></div><div style="font-size:12px;color:var(--text-secondary);line-height:1.5">Onboarding + free trial flows for June. Internal-first. Behavior-driven triggers. Claude eliminated content bottleneck — only remaining constraint is technical integration.</div></div></div>
+          <div class="win-card"><i class="ti ti-circle-check" style="color:var(--green);font-size:18px;flex-shrink:0;margin-top:1px"></i><div style="flex:1"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:3px"><div style="font-size:13px;font-weight:500">Jon: 4 trial sub tasks cleared the day before travel</div><span class="sp on-track" style="margin:0;font-size:10px">4 of 5 ✓</span></div><div style="font-size:12px;color:var(--text-secondary);line-height:1.5">Spec, Stripe sandbox, Stripe API, and part 1 all done May 20. Trial subs went from 8 days overdue to 4 of 5 complete.</div></div></div>
+          <div class="win-card"><i class="ti ti-circle-check" style="color:var(--green);font-size:18px;flex-shrink:0;margin-top:1px"></i><div style="flex:1"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:3px"><div style="font-size:13px;font-weight:500">Zach: CloudWatch live + AMI smoke-testing done</div><span class="sp on-track" style="margin:0;font-size:10px">Both ✓</span></div><div style="font-size:12px;color:var(--text-secondary);line-height:1.5">Lambda for long-running query detection live (May 19). AMI smoke-test complete (May 21). Both May sprint infrastructure items closed.</div></div></div>
+          <div class="win-card"><i class="ti ti-circle-check" style="color:var(--green);font-size:18px;flex-shrink:0;margin-top:1px"></i><div style="flex:1"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:3px"><div style="font-size:13px;font-weight:500">Brock–Tom operating model actively working</div><span class="sp on-track" style="margin:0;font-size:10px">In motion ✓</span></div><div style="font-size:12px;color:var(--text-secondary);line-height:1.5">Monday calls confirmed. Rahul + Kenny ops setup done. Acting as coordination layer for pool hosting GTM. 1:1 shifting to Thursdays.</div></div></div>
         </div>
       </div>
 
@@ -983,12 +800,13 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
         <div class="sec-label">Where to focus next week</div>
         <div class="proj-tbl">
           <div class="pr hdr"><div>Priority</div><div>Owner</div><div>What needs to happen</div><div>By when</div><div></div></div>
-          <div class="pr"><div><div class="pname">1. PHP 8.4 finish</div></div><div class="pown">David Hess</div><div style="font-size:11px;color:var(--text-secondary)">Close before Monday — Pick'em &amp; Survivor launches May 25–28</div><div style="font-size:11px;color:var(--text-tertiary)">Today or weekend</div><div><span class="tag t-blocker" style="font-size:10px">Critical path</span></div></div>
-          <div class="pr"><div><div class="pname">2. Tom + Rahul + Kenny pool hosting sync</div></div><div class="pown">Tom</div><div style="font-size:11px;color:var(--text-secondary)">Schedule for week of May 25 — June 11 is 20 days away</div><div style="font-size:11px;color:var(--text-tertiary)">Week of May 25</div><div><span class="tag t-risk" style="font-size:10px">Prod launch</span></div></div>
-          <div class="pr"><div><div class="pname">3. Pick'em &amp; Survivor launch week</div></div><div class="pown">David / Jason</div><div style="font-size:11px;color:var(--text-secondary)">8 tasks May 25–28. Build pre-launch QA checklist — every prior launch had bugs.</div><div style="font-size:11px;color:var(--text-tertiary)">May 25–28</div><div><span class="tag t-risk" style="font-size:10px">Pattern risk</span></div></div>
-          <div class="pr"><div><div class="pname">4. Trial sub part 2 — assign to Jon + week</div></div><div class="pown">Jon Mires</div><div style="font-size:11px;color:var(--text-secondary)">Jon back Monday — assign formal week based on June sprint planning outcome</div><div style="font-size:11px;color:var(--text-tertiary)">Monday</div><div><span class="tag t-decision" style="font-size:10px">June sprint</span></div></div>
-          <div class="pr"><div><div class="pname">5. A/B desktop rollout — approve PR #413</div></div><div class="pown">Tom / Jon</div><div style="font-size:11px;color:var(--text-secondary)">29 days, confirmed win, affiliate revenue down. Approve or formally close.</div><div style="font-size:11px;color:var(--text-tertiary)">This week</div><div><span class="tag t-risk" style="font-size:10px">Revenue</span></div></div>
-          <div class="pr"><div><div class="pname">6. Team Call Agenda — share with team</div></div><div class="pown">Brock</div><div style="font-size:11px;color:var(--text-secondary)">Follow up with Tom today — share with team before Monday's call</div><div style="font-size:11px;color:var(--text-tertiary)">Today</div><div><span class="tag t-decision" style="font-size:10px">Before Monday</span></div></div>
+          <div class="pr"><div><div class="pname">1. PHP 8.4 finish + Circa pricing</div></div><div class="pown">David Hess</div><div style="font-size:11px;color:var(--text-secondary)">Both must be done before Monday's Pick'em &amp; Survivor launch</div><div style="font-size:11px;color:var(--text-tertiary)">Today / weekend</div><div><span class="tag t-blocker" style="font-size:10px">Critical path</span></div></div>
+          <div class="pr"><div><div class="pname">2. Tom + Rahul + Kenny pool hosting sync</div></div><div class="pown">Tom / Brock</div><div style="font-size:11px;color:var(--text-secondary)">Schedule first thing Monday. Prod launch, domain, go-live checklist.</div><div style="font-size:11px;color:var(--text-tertiary)">Week of May 25</div><div><span class="tag t-risk" style="font-size:10px">20 days left</span></div></div>
+          <div class="pr"><div><div class="pname">3. Pick'em &amp; Survivor launch week</div></div><div class="pown">David / Jason</div><div style="font-size:11px;color:var(--text-secondary)">8 tasks May 25–28. Build pre-launch QA checklist — every prior launch had bugs.</div><div style="font-size:11px;color:var(--text-tertiary)">May 25–28</div><div><span class="tag t-risk" style="font-size:10px">Launch week</span></div></div>
+          <div class="pr"><div><div class="pname">4. Jon's subscription definition + trial sub part 2</div></div><div class="pown">Jon / Brock</div><div style="font-size:11px;color:var(--text-secondary)">Jon back Monday — subscription definition first, then Brock's flow design, then implementation</div><div style="font-size:11px;color:var(--text-tertiary)">Monday</div><div><span class="tag t-decision" style="font-size:10px">June sprint</span></div></div>
+          <div class="pr"><div><div class="pname">5. Kenny's GTM doc + Tom review</div></div><div class="pown">Brock / Tom</div><div style="font-size:11px;color:var(--text-secondary)">Raise on Monday's team call. Kenny needs Tom's review + answers to open questions.</div><div style="font-size:11px;color:var(--text-tertiary)">Monday call</div><div><span class="tag t-risk" style="font-size:10px">GTM blocked</span></div></div>
+          <div class="pr"><div><div class="pname">6. Rebook Tom–Brock 1:1 for Thursdays</div></div><div class="pown">Brock</div><div style="font-size:11px;color:var(--text-secondary)">Confirm time with Tom when back from Knoxville, update recurring event</div><div style="font-size:11px;color:var(--text-tertiary)">Monday</div><div><span class="tag t-decision" style="font-size:10px">Admin</span></div></div>
+          <div class="pr"><div><div class="pname">7. A/B desktop rollout — approve PR #413</div></div><div class="pown">Tom / Jon</div><div style="font-size:11px;color:var(--text-secondary)">29 days idle, confirmed win, revenue declining. Raise with Tom Monday.</div><div style="font-size:11px;color:var(--text-tertiary)">Monday</div><div><span class="tag t-risk" style="font-size:10px">Revenue</span></div></div>
         </div>
       </div>
 
@@ -996,13 +814,14 @@ body{font-family:var(--font);background:var(--bg-tertiary);color:var(--text-prim
         <div class="sec-label">Team pulse — end of week</div>
         <div class="proj-tbl">
           <div class="pr hdr"><div>Person</div><div>This week</div><div>Next week</div><div>Load</div><div></div></div>
-          <div class="pr"><div class="pname">David Hess</div><div style="font-size:11px;color:var(--text-secondary)">MLB fix, dev DB, pool demo, PHP 8.4 start, one-sided ML fix</div><div style="font-size:11px;color:var(--text-secondary)">PHP 8.4 close (today), Pick'em &amp; Survivor May 25–28</div><div><span class="sp at-risk" style="margin:0">Critical</span></div><div style="font-size:10px;color:var(--text-tertiary)">Available</div></div>
-          <div class="pr"><div class="pname">Brock Bormann</div><div style="font-size:11px;color:var(--text-secondary)">+22 Q2 Ops tasks, Monday call setup, Rahul/Kenny ops, Athletic proposal</div><div style="font-size:11px;color:var(--text-secondary)">Lead Monday call, MCP schema with Rahul, Q2 Ops execution</div><div><span class="sp on-track" style="margin:0">Strong</span></div><div style="font-size:10px;color:var(--text-tertiary)">Available</div></div>
-          <div class="pr"><div class="pname">Jon Mires</div><div style="font-size:11px;color:var(--text-secondary)">4 trial sub tasks Wed. WP plugin done. Travelled Thu/Fri.</div><div style="font-size:11px;color:var(--text-secondary)">Trial sub part 2 (back Mon), Survivor content rollover (May 26)</div><div><span class="sp on-track" style="margin:0">Returning Mon</span></div><div style="font-size:10px;color:var(--red)">Out today</div></div>
-          <div class="pr"><div class="pname">Rahul Caprihan</div><div style="font-size:11px;color:var(--text-secondary)">Pool hosting nearly complete. MCP week 2. Workspace setup done.</div><div style="font-size:11px;color:var(--text-secondary)">Live scoring pt2, QA pt2, analytics, hardening, prod sync</div><div><span class="sp on-track" style="margin:0">Finishing strong</span></div><div style="font-size:10px;color:var(--text-tertiary)">Available</div></div>
-          <div class="pr"><div class="pname">Zach Brownson</div><div style="font-size:11px;color:var(--text-secondary)">CloudWatch live, AMI smoke-test done.</div><div style="font-size:11px;color:var(--text-secondary)">AMI maples today, standup test May 27, Amazon Linux prep</div><div><span class="sp on-track" style="margin:0">On track</span></div><div style="font-size:10px;color:var(--text-tertiary)">Infra-only</div></div>
-          <div class="pr"><div class="pname">Jason Lisk</div><div style="font-size:11px;color:var(--text-secondary)">Pick popularity accuracy, Survivor process docs</div><div style="font-size:11px;color:var(--text-secondary)">Work with David on Survivor (May 27)</div><div><span class="sp on-track" style="margin:0">On track</span></div><div style="font-size:10px;color:var(--text-tertiary)">Available</div></div>
-          <div class="pr"><div class="pname">Tom Federico</div><div style="font-size:11px;color:var(--text-secondary)">June sprint planning Thu/Fri, Athletic proposal sent, pool naming kicked off</div><div style="font-size:11px;color:var(--text-secondary)">Back Monday — pool sync to schedule, agenda to review, A/B decision pending</div><div><span class="sp on-track" style="margin:0">On track</span></div><div style="font-size:10px;color:var(--red)">In Knoxville today</div></div>
+          <div class="pr"><div class="pname">David Hess</div><div style="font-size:11px;color:var(--text-secondary)">MLB fixes, dev DB, pool demo, PHP 8.4 start, moneyline fix</div><div style="font-size:11px;color:var(--text-secondary)">PHP 8.4 + Circa pricing (today), Pick'em &amp; Survivor May 25–28</div><div><span class="sp at-risk" style="margin:0">Critical</span></div><div style="font-size:10px;color:var(--text-tertiary)">Available</div></div>
+          <div class="pr"><div class="pname">Brock Bormann</div><div style="font-size:11px;color:var(--text-secondary)">+22 Q2 Ops, Monday calls live, email automation meeting, Rahul/Kenny ops</div><div style="font-size:11px;color:var(--text-secondary)">Monday call, 1:1 rebook, GTM flag, 5 email planning deliverables, ad vendor bake-off (May 29)</div><div><span class="sp on-track" style="margin:0">Strong</span></div><div style="font-size:10px;color:var(--text-tertiary)">Available</div></div>
+          <div class="pr"><div class="pname">Jon Mires</div><div style="font-size:11px;color:var(--text-secondary)">4 trial sub tasks cleared. Email automation meeting. Travelling Thu/Fri.</div><div style="font-size:11px;color:var(--text-secondary)">Subscription definition (email dep.), trial sub part 2, content rollover (May 26)</div><div><span class="sp on-track" style="margin:0">Returning Mon</span></div><div style="font-size:10px;color:var(--red)">Out today</div></div>
+          <div class="pr"><div class="pname">Rahul Caprihan</div><div style="font-size:11px;color:var(--text-secondary)">Pool hosting nearly complete. Alert protocols. MCP week 2.</div><div style="font-size:11px;color:var(--text-secondary)">Live scoring pt2, QA, analytics, hardening, prod sync</div><div><span class="sp on-track" style="margin:0">Finishing strong</span></div><div style="font-size:10px;color:var(--text-tertiary)">Available</div></div>
+          <div class="pr"><div class="pname">Zach Brownson</div><div style="font-size:11px;color:var(--text-secondary)">CloudWatch live, AMI smoke-test done.</div><div style="font-size:11px;color:var(--text-secondary)">AMI maples test today, standup test May 27</div><div><span class="sp on-track" style="margin:0">On track</span></div><div style="font-size:10px;color:var(--text-tertiary)">Infra-only</div></div>
+          <div class="pr"><div class="pname">Jason Lisk</div><div style="font-size:11px;color:var(--text-secondary)">NFL article sections, Circa data work, pick popularity accuracy</div><div style="font-size:11px;color:var(--text-secondary)">Work with David on Survivor adjustments (May 27)</div><div><span class="sp on-track" style="margin:0">On track</span></div><div style="font-size:10px;color:var(--text-tertiary)">Available</div></div>
+          <div class="pr"><div class="pname">Tom Federico</div><div style="font-size:11px;color:var(--text-secondary)">June sprint planning Thu/Fri. Athletic proposal sent. Pool naming kicked off.</div><div style="font-size:11px;color:var(--text-secondary)">Back Monday — prod sync, GTM review, 1:1 rebook, A/B decision</div><div><span class="sp on-track" style="margin:0">On track</span></div><div style="font-size:10px;color:var(--red)">In Knoxville today</div></div>
+          <div class="pr"><div class="pname">Kenny Long</div><div style="font-size:11px;color:var(--text-secondary)">GTM doc shared with Tom. Go-live checklist in progress.</div><div style="font-size:11px;color:var(--text-secondary)">Awaiting Tom review + answers to GTM questions</div><div><span class="sp on-track" style="margin:0">Waiting on Tom</span></div><div style="font-size:10px;color:var(--text-tertiary)">Available</div></div>
         </div>
       </div>
     </div>
@@ -1017,24 +836,14 @@ function showPage(id, el) {
   document.getElementById('page-' + id).classList.add('active');
   if (el) el.classList.add('active');
 }
-
 function markDecision(btn, action) {
-  var card = btn.closest('[style*="border-left"]') || btn.parentElement.parentElement;
   var colors = { delegated: '#EF9F27', deferred: '#888780' };
   var labels = { delegated: 'Delegated', deferred: 'Deferred' };
   var now = new Date().toLocaleTimeString('en-US', {hour:'numeric', minute:'2-digit', hour12:true});
+  btn.parentElement.innerHTML = '<span style="font-size:11px;font-weight:500;color:' + colors[action] + '">' + labels[action] + ' \xb7 ' + now + '</span><button onclick="location.reload()" style="font-size:10px;padding:2px 8px;border-radius:4px;border:0.5px solid #e0e0e0;background:transparent;cursor:pointer;color:#888;font-family:inherit;margin-left:8px">Reopen</button>';
+  var card = btn.closest('.dec-card');
   if (card) card.style.opacity = '0.6';
-  try {
-    var titleEl = card ? card.querySelector('[style*="font-weight:500"]') : null;
-    if (titleEl && window.localStorage) {
-      var key = 'cad_' + btoa(unescape(encodeURIComponent(titleEl.textContent.trim().substring(0, 40)))).replace(/\W/g,'');
-      localStorage.setItem(key, JSON.stringify({action:action, time:now, date:'May 22'}));
-    }
-  } catch(e) {}
-  var footer = btn.parentElement;
-  footer.innerHTML = '<span style="font-size:11px;font-weight:500;color:' + colors[action] + '">' + labels[action] + ' \xb7 ' + now + '</span><button onclick="location.reload()" style="font-size:10px;padding:2px 8px;border-radius:4px;border:0.5px solid #e0e0e0;background:transparent;cursor:pointer;color:#888;font-family:inherit;margin-left:8px">Reopen</button>';
 }
-
 function toggleDrawer(id) {
   var drawer = document.getElementById(id);
   var btn = document.getElementById('btn-' + id);
